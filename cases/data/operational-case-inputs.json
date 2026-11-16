@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "fictional teaching inputs, not benchmarks or provider settlement rules",
+  "failover": {
+    "payment_initiated_orders": 10000,
+    "submitted_auth_attempts": 10500,
+    "approved_auth_attempts": 9300,
+    "confirmed_paid_orders": 9100,
+    "challenges_started": 800,
+    "challenges_completed": 600,
+    "original_psp_timeout_operations": 100,
+    "later_approved": 60,
+    "definitively_declined": 25,
+    "still_unknown": 15
+  },
+  "marketplace": {
+    "currency": "SGD",
+    "seller_a_gross": "150.00",
+    "seller_b_gross": "100.00",
+    "platform_commission_rate": "0.10",
+    "processing_fee_rate": "0.02",
+    "processing_fixed_fee": "0.20",
+    "seller_a_initial_reserve": "20.00",
+    "seller_b_initial_reserve": "0.00",
+    "seller_a_later_refund": "40.00",
+    "seller_b_final_dispute_principal": "60.00",
+    "seller_b_dispute_fee_platform": "15.00"
+  }
+}
