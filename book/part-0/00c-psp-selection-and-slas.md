@@ -1,8 +1,12 @@
 # Part 0 · Selecting PSPs, managing partners and writing useful SLAs
 
-**Reading time:** ~17 minutes · **Prerequisites:** [Prioritization](00b-prioritization-and-tradeoffs.md) · **Status:** Editorial draft, 16 November 2026
+**Estimated study time:** ~17 minutes · **Prerequisites:** [Prioritization](00b-prioritization-and-tradeoffs.md) · **Status:** Editorial draft, 16 November 2026
 
 > A PSP is not merely a pricing line. It is an external dependency in the customer's experience, your transaction state machine and your finance controls.
+
+## Learning outcomes
+
+After this chapter, you should be able to: (1) distinguish gateway, acquiring, orchestration and PayFac contracting responsibilities; (2) translate provider selection into end-to-end failure-state tests; (3) build a weighted scorecard with non-negotiable compliance and financial-integrity gates; and (4) define SLA measurements, escalation and an exit/credential-portability plan.
 
 ## 0C.1 First decide what you are buying
 
