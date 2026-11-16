@@ -1,0 +1,79 @@
+name: Technical chapter or case review
+description: Provide evidence-backed specialist feedback on payments mechanisms, control ownership or worked accounting.
+title: "[Technical review] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reviewing. This is an editorial draft, not a production or scheme-operational instruction. Please share only publicly disclosable material, and do not post confidential scheme rules, customer or employer data, credentials, account numbers or PANs.
+  - type: input
+    id: chapter
+    attributes:
+      label: Chapter or case (GitHub path)
+      description: Provide an exact relative path.
+      placeholder: book/part-4/16-three-way-reconciliation.md
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Exact commit SHA reviewed
+      description: Reviews are tied to a revision, not an evergreen statement.
+    validations:
+      required: true
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Review lane
+      options:
+        - Issuing / EMV tokenization / 3DS
+        - Acquiring / PSP / PayFac / payment orchestration
+        - Disputes / fraud / compliance
+        - Reconciliation / treasury / settlement / accounting
+        - Real-time / open banking / stablecoins
+        - Agentic payments / identity / authorization
+        - General technical or PM review
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity if inaccurate
+      options:
+        - Blocker - potential customer harm, incorrect money movement or rule breach
+        - Major - material product or liability misunderstanding
+        - Minor - editorial clarity or limited scope qualification
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Exact claim and counterexample
+      description: Quote or link the passage, name the market/provider/version, and explain where it breaks.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public primary sources and affected scope
+      description: Provide official documentation URLs, dates and version. Describe any non-public constraints without disclosing confidential content.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction and test
+      description: Suggest a correction, a concrete failure-state or accounting test and an owner for expert confirmation.
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Reviewer assessment
+      options:
+        - Needs correction / more evidence
+        - Accurate only with stated caveat
+        - Appears correct for stated scope
+        - Not enough information to judge
+    validations:
+      required: true
