@@ -116,6 +116,8 @@ A naive optimization is to minimize challenges. A better outcome measure is **go
 
 **Product requirements sample:** Persist a single `payment_attempt_id` across app-switching; treat callbacks idempotently; expose an explicit `authentication_pending` state; query PSP status after ambiguous returns; never present “payment declined” solely because the customer closed an intermediate page.
 
+**Applied case:** [Authorization after a 3DS challenge is a separate event](../../cases/02-ambiguous-authorization-routing.md). Use O104 to test whether your product confuses successful authentication with a paid order.
+
 ## Check your understanding
 
 1. A customer passes a 3DS challenge, but the issuer declines the payment. Did authentication fail?
