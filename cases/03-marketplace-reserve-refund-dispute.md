@@ -48,7 +48,7 @@ A S$40 partial refund is made against the **A** line only. The fictional contrac
 
 With Seller A's remaining **S$20 held reserve** (still unreleased), the *seller debt funding bridge* is:
 
-| Source for S$40 customer refund | Amount |
+| Allocation of the S$40 customer refund | Amount |
 |---|---:|
 | Apply Seller A reserve toward A's S$36 liability | 20.00 |
 | Seller A receivable / negative balance still to recover | **16.00** |

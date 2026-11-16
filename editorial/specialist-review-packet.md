@@ -15,7 +15,9 @@ Line numbers are located by text at generation time and drift as the book change
 
 - Worked numbers in chapters and the answer key: `scripts/verify_chapter_arithmetic.py` (recomputes and binds each figure to the text).
 - HarborCart funnel, fees, payout and reconciliation: `scripts/verify_metrics.py`, `scripts/verify_harborcart_reconciliation.py`, `scripts/verify_case.py`.
+- Operational case labs 02 and 03: `scripts/verify_operational_cases.py` recomputes every figure from the JSON fixture and requires it in the text as a whole token. It proves each correct figure appears at least once, not that every mention agrees.
 - Links, reading order, answer-key coverage and Markdown rendering: `scripts/check_internal_links.py`, `scripts/check_answer_coverage.py`, `scripts/check_markdown_structure.py`.
+- Mermaid syntax: `scripts/check_mermaid.py` parses every diagram with the real Mermaid CLI, so a diagram that GitHub cannot render fails CI.
 - None of these checks whether a rule, threshold, fee or process is **true**. That is what this packet is for.
 
 ## Lane 1 — Card issuance and EMV tokenization (7, 7A, 8A, 11)
