@@ -13,7 +13,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-URL = re.compile(r"https?://[^\\s<>)\\]}\"']+")
+URL = re.compile(r"https?://[^\s<>)\]]+")
 REPORT = ROOT / "external-link-report.txt"
 USER_AGENT = "pm-payments-handbook-link-audit/1.0 (+https://github.com/aditti30-prog/pm-payments)"
 
@@ -66,9 +66,9 @@ def main():
     lines = [f"External URL audit: {len(urls)} distinct URLs"]
     for state in ("BROKEN", "UNVERIFIED", "OK"):
         group = [item for item in results if item[0] == state]
-        lines.append(f"\\n{state}: {len(group)}")
+        lines.append(f"\n{state}: {len(group)}")
         lines.extend(f"{reason}  {link}" for _, link, reason in group)
-    REPORT.write_text("\\n".join(lines) + "\\n", encoding="utf-8")
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Checked {len(urls)} unique links; BROKEN={sum(x[0]=='BROKEN' for x in results)}; UNVERIFIED={sum(x[0]=='UNVERIFIED' for x in results)}")
     return 1 if any(item[0] == "BROKEN" for item in results) else 0
 
