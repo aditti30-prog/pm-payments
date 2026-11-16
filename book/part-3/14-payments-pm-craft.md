@@ -1,6 +1,6 @@
 # 14. Payments PM craft: discovery, requirements, delivery and learning
 
-**Part III — Building Payment Products** · **Reading time:** ~17 minutes · **Prerequisites:** [The PM's decision rights](../part-0/00-payments-pm-ownership.md), [payment lifecycle](../part-1/03-card-payment-lifecycle.md), and [checkout state](10-checkout-and-payment-state.md).  
+**Part III — Building Payment Products** · **Estimated study time:** ~17 minutes · **Prerequisites:** [The PM's decision rights](../part-0/00-payments-pm-ownership.md), [payment lifecycle](../part-1/03-card-payment-lifecycle.md), and [checkout state](10-checkout-and-payment-state.md).  
 **Editorial status:** Working draft, 16 November 2026.
 
 ## Learning outcomes
