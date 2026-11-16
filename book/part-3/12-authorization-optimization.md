@@ -200,6 +200,8 @@ A strong answer starts with denominator, eligibility, segment, provider status s
 - [Stripe — Idempotent requests](https://docs.stripe.com/api/idempotent_requests)
 - [EMVCo — EMV 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/)
 
+**Applied case:** [Ambiguous authorization and unsafe cross-PSP failover](../../cases/02-ambiguous-authorization-routing.md). Compare the attempt-based and paid-order denominators before proposing any retry intervention.
+
 **Exercises:** [Worked solutions](../../answers/chapter-exercises.md#12-authorization-optimization) (companion answer key; review your reasoning before opening).
 
 **Next:** [13. Payment fraud, risk and controls](13-fraud-risk-and-payment-controls.md). Practice with the [worked diagnostic case](../../cases/01-authorization-rate-drop.md)
