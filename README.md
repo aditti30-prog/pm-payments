@@ -18,6 +18,8 @@ The objective is not to memorize payment jargon. Readers should understand **who
 
 **New Payments PM:** Start with Part 0 to understand role boundaries and work practices, then follow Parts I–IV in order. **Experienced PM or engineer:** Jump to the relevant payment-system chapter and use Part 0 as a working reference. Each chapter aims to explain the underlying mechanism and connect it to a product decision. Some chapters still require deeper examples and independent specialist review; a worked-solutions companion now covers all chapter exercises. v0.4 adds metrics, operational failure response and compliance control ownership. v0.5 adds marketplace funds flow, card-present/offline POS, cross-border FX/treasury, subscriptions/dunning, scam protection and draft chapters on real-time payments, stablecoins and agentic commerce.
 
+**Timing convention:** Where a chapter specifies *estimated study time*, this includes working through diagrams, questions and exercises. It is not a measured reading-speed benchmark. Chapters without estimates remain uncalibrated.
+
 **Editorial companions:** [Worked solutions for all 32 chapters](answers/chapter-exercises.md) · [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Primary-source audit (16 November 2026)](editorial/primary-source-audit-2026-11-16.md) · [Specialist review program](editorial/specialist-review-program.md) · [Specialist review packet: highest-risk claims](editorial/specialist-review-packet.md). **Independent specialist reviews are still pending.**
 
 ### Part 0 — The Payments PM's job
