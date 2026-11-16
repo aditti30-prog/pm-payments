@@ -1,6 +1,6 @@
 # 17. Payment operations, incident response and financial integrity
 
-**Part IV — Operating and Scaling Payments** · **Reading time:** ~30 minutes · **Prerequisites:** [Checkout and payment state](../part-3/10-checkout-and-payment-state.md), [3DS](../part-3/11-3d-secure.md), [authorization](../part-3/12-authorization-optimization.md), [disputes](15-chargebacks-and-disputes.md), [reconciliation](16-three-way-reconciliation.md), [metrics](16a-payment-metrics-and-observability.md)  
+**Part IV — Operating and Scaling Payments** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Checkout and payment state](../part-3/10-checkout-and-payment-state.md), [3DS](../part-3/11-3d-secure.md), [authorization](../part-3/12-authorization-optimization.md), [disputes](15-chargebacks-and-disputes.md), [reconciliation](16-three-way-reconciliation.md), [metrics](16a-payment-metrics-and-observability.md)  
 **Editorial status:** Working draft, 16 November 2026. All incident examples and timings are illustrative. Actual procedures, loss limits and reporting obligations require organization-specific approval.
 
 > **Guiding question:** When a payment system breaks, can the team minimize customer harm **without inventing a payment outcome, moving money twice, or losing the audit trail**?
