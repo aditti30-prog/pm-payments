@@ -21,13 +21,13 @@ sequenceDiagram
   participant P as Payer / wallet
   participant Net as Blockchain / token ledger
   participant Cust as Merchant custodian/wallet
-  participant Off as Off-ramp / issuer
+  participant Ramp as Off-ramp / issuer
   participant Bank as Merchant bank
   P->>Net: Send token to approved address
   Net-->>Cust: Token transfer confirmed under chain policy
-  Cust->>Off: Request eligible conversion/redemption
-  Off-->>Cust: KYC/limits/rate/processing status
-  Off->>Bank: Fiat payout through bank rails
+  Cust->>Ramp: Request eligible conversion/redemption
+  Ramp-->>Cust: KYC/limits/rate/processing status
+  Ramp->>Bank: Fiat payout through bank rails
   Bank-->>Cust: Fiat credit confirmation
 ```
 
