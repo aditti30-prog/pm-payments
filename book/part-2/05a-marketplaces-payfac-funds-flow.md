@@ -1,6 +1,6 @@
 # 5A. Marketplaces, payment facilitators and platform funds flow
 
-**Part II — Payment Products & Infrastructure** · **Reading time:** ~22 minutes · **Prerequisites:** [Merchant acquiring](05-merchant-acquiring.md), [payment economics](../part-1/04-payment-economics.md) · **Reviewed sources:** 16 November 2026 · **Status:** Working draft
+**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~22 minutes · **Prerequisites:** [Merchant acquiring](05-merchant-acquiring.md), [payment economics](../part-1/04-payment-economics.md) · **Reviewed sources:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** When a customer pays a platform, whose money is it, who may hold it, and which party must refund or absorb a chargeback?
 
