@@ -159,7 +159,7 @@ A high authorization rate can coexist with terrible financial integrity. A low m
 | --- | --- | --- |
 | 09:04 | `payment_unknown` backlog rises; no definitive issuer decline spike | Declare incident; display pending state, correlate attempts |
 | 09:09 | Provider confirms some auths succeeded | Stop automatic resubmission; query status by original payment operation |
-| 09:18 | 27 orders have captured payments but no confirmed order state | Freeze duplicate fulfilment, establish finance/operations exception queue |
+| 09:20 | 27 orders have captured payments but no confirmed order state | Freeze duplicate fulfilment, establish finance/operations exception queue |
 | 09:30 | Callback consumer rollback restored | Replay only with authenticated event IDs and idempotent order transitions |
 | 10:15 | All but two orders reconciled to authoritative payment/capture status | Keep two tracked exceptions open; targeted support communications |
 
