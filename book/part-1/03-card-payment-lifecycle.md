@@ -1,6 +1,6 @@
 # 3. How a card payment works, end to end
 
-**Reading time:** ~20 minutes · **Prerequisites:** [Chapter 1](01-what-is-a-payment.md) and [Chapter 2](02-ecosystem.md)
+**Estimated study time:** ~20 minutes · **Prerequisites:** [Chapter 1](01-what-is-a-payment.md) and [Chapter 2](02-ecosystem.md)
 
 ## Learning objectives
 
