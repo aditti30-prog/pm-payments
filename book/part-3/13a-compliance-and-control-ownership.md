@@ -110,6 +110,9 @@ An onboarding state model is better than a single `kyc_passed=true`:
 | `NEEDS_INFORMATION` | Specific missing or unverifiable evidence | Clear, permitted request; preserve history and deadlines |
 | `UNDER_REVIEW` | Compliance/risk evaluation underway | Avoid disclosing internal screening logic; support status access |
 | `APPROVED_WITH_CONTROLS` | Approved subject to configured restrictions | Disclose permitted limits/settlement constraints appropriately |
+| `REJECTED` | Final application decision under approved policy | Permitted communication and appeal/retention handling; no activation |
+| `ACTIVATING` | Provider setup requested, response not yet final | Show activation pending; do not accept payments before readiness confirmation |
+| `ACTIVATION_EXCEPTION` | Provider setup failed or returned unknown outcome | Reconcile provider reference, escalate, recover idempotently; do not falsely mark active |
 | `ACTIVE` | Required checks and integration enablement complete | First-transaction monitoring begins |
 | `RESTRICTED` / `OFFBOARDED` | Control action or termination | Protect existing balances, refunds, disputes and record retention |
 
