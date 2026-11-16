@@ -1,0 +1,28 @@
+name: Weekly external reference audit
+
+on:
+  schedule:
+    - cron: '15 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check external URLs (404/410 = broken; 403/429/timeouts = unverified)
+        run: python scripts/check_external_links.py
+      - name: Preserve link audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: external-link-audit
+          path: external-link-report.txt
+          if-no-files-found: warn
