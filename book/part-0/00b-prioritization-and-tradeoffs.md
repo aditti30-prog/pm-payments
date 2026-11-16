@@ -6,7 +6,7 @@
 
 Distinguish non-negotiable obligations from value-optimizing bets; compare initiatives across measurable customer, financial and operational consequences; document choices that survive scrutiny from risk, finance and engineering.
 
-## 1. Why ordinary feature prioritization breaks down
+## 0B.1 Why ordinary feature prioritization breaks down
 
 Payments roadmaps blend different kinds of work:
 
@@ -18,7 +18,7 @@ Payments roadmaps blend different kinds of work:
 
 These cannot all be ranked with one `impact × confidence ÷ effort` formula. A mandatory control cannot be postponed just because its revenue benefit is hard to estimate. But labeling every item “compliance” also destroys prioritization; insist on the specific source, obligation, owner, deadline and impacted transactions.
 
-## 2. Two-stage decision process
+## 0B.2 Two-stage decision process
 
 **Stage 1 — Guardrail / eligibility gate.** Ask whether a proposal violates a known legal/scheme requirement, exceeds approved risk appetite, creates unmitigated customer harm or compromises financial integrity. An initiative failing the gate needs remediation or specialist approval, not a higher score. Regulatory interpretations must be checked by responsible specialists.
 
@@ -35,13 +35,13 @@ Example decision dimensions:
 | Operational burden | Does this reduce reconciliations, disputes or support time? | Exception queues, staffing volumes |
 | Cost and reversibility | Can we safely run a limited rollout and rollback? | Eng design, partner contract, state-machine tests |
 
-## 3. Worked trade-off: reliability vs cost vs conversion
+## 0B.3 Worked trade-off: reliability vs cost vs conversion
 
 **Fictional monthly example**, deliberately simplified and *not* a forecast:
 
 - A merchant has 100,000 eligible monthly checkout orders; 90,000 currently become paid orders.
 - Average pre-payment contribution per fulfilled order is S$10, **before** variable payment costs and fraud/dispute losses.
-- Team has 20 engineer-weeks for near-term work.
+- Team has 12 engineer-weeks for near-term work. Candidates A–D below need 18, so something must wait.
 
 | Candidate | Hypothesis | Effort | Main risk / constraint |
 |---|---|---|---|
@@ -52,9 +52,9 @@ Example decision dimensions:
 
 Rough value screens: A produces `400 × S$10 = S$4,000` in gross incremental contribution **before** added payment and risk costs. B produces `90,000 × S$0.025 = S$2,250` in direct fee savings **if approval/volume remain stable**. C produces `180 × S$10 = S$1,800` before changed risk/fees. D should not be evaluated solely as a fee-savings feature: harm, incident severity, chargeback exposure and trust may impose a higher-priority safety obligation.
 
-**Decision example:** If D is an unresolved high-severity financial-integrity risk, fund its containment first. Then choose between A, B and C using *validated* causal impact, total contribution, guardrails and dependence on PSP capabilities. Do not add the stated impacts as if they are independent: initiatives can overlap in the same customer cohorts.
+**Decision example:** If D is an unresolved high-severity financial-integrity risk, fund its containment first (6 of the 12 engineer-weeks). The remaining 6 weeks fit only one of A (5), B (4) or C (3), so choose using *validated* causal impact, total contribution, guardrails and dependence on PSP capabilities. Do not add the stated impacts as if they are independent: initiatives can overlap in the same customer cohorts.
 
-## 4. How to write a decision record that is not performative
+## 0B.4 How to write a decision record that is not performative
 
 A one-page record should include:
 
@@ -68,13 +68,13 @@ A one-page record should include:
 
 Use the [decision record template](../../artifacts/payment-decision-record-template.md).
 
-## 5. A practical prioritization ritual
+## 0B.5 A practical prioritization ritual
 
 At a weekly meeting, review *change in risk and evidence* rather than re-ranking every item from scratch. Separate an **obligation lane** (scope, due date, approval status), an **incident/remediation lane** (severity, financial/customer exposure), and an **investment lane** (expected product improvement). Review provider and platform dependencies in all three lanes.
 
 If an issuer, acquirer or network deadline changes, date-stamp the source and update the decision register. A slide with the old threshold is not a defensible control artifact.
 
-## Exercise and answer check
+## 0B.6 Exercise and answer check
 
 **Question:** The growth team wants to disable 3DS to increase conversion; the risk team reports fraud losses are already near an approved ceiling. Can the PM trade a projected conversion uplift against fraud losses and launch alone?  
 **Answer check:** No. First identify applicable SCA, scheme and risk-control obligations; require risk/compliance sign-off; explore eligible low-friction authentication and better recovery. Test fraud-adjusted economics and customer outcomes, not challenge rate alone.
