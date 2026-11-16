@@ -107,7 +107,7 @@ The calculations are:
 
 Investigate issuer/BIN grouping (aggregated securely), network, PSP route, currency, merchant category, device/app version, token type, authentication outcome, amount band, and time. Be careful about small cohorts, statistical noise and unequal risk profiles. The example's segment difference is **not proof** that changing PSP routes improves approval.
 
-The [CSV fixture](../../cases/data/harborcart-metrics.csv) and [verification script](../../scripts/verify_metrics.py) reproduce the arithmetic.
+The [authorization-cohort CSV](../../cases/data/harborcart-metrics.csv), [full-funnel CSV](../../cases/data/harborcart-funnel.csv), and [verification script](../../scripts/verify_metrics.py) reproduce the case from data, including processing cost and mature fraud loss. The script also runs simple mutation checks to detect hard-coded, data-insensitive calculations.
 
 ## 16A.4 Measure failures in the right stage
 
