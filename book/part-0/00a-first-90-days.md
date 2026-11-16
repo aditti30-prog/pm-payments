@@ -4,11 +4,11 @@
 
 > Your first objective is not to ship a payment feature. It is to know where a transaction can go wrong, who notices, who is accountable, and which data can be trusted.
 
-## What you should produce by day 90
+## 0A.1 What you should produce by day 90
 
 A **payment-system map**, **metric dictionary**, **risk and obligations register**, **top three customer/merchant problems**, **prioritized opportunity portfolio**, and **at least one instrumented, low-risk improvement or validated design**. These deliverables are examples, not a universal hiring scorecard.
 
-## Days 1–30: map the business, system and controls
+## 0A.2 Days 1–30: map the business, system and controls
 
 **Customer and business:** Who pays? Who receives funds? Who is merchant of record? What contract governs acquiring, card processing, gateway service or bank sponsorship? Where are fees earned? Which markets, payment methods and user segments matter?
 
@@ -29,7 +29,7 @@ A **payment-system map**, **metric dictionary**, **risk and obligations register
 | Reconciliation match rate | Expected financial entries available for the same cutoff | Finance/treasury | Comparing differing settlement periods or currencies |
 | Duplicate settled charges | Confirmed duplicate financial captures per paid-order cohort | Finance + operations | Counting duplicate auth attempts as settled doubles |
 
-## Days 31–60: prioritize one problem with evidence
+## 0A.3 Days 31–60: prioritize one problem with evidence
 
 Run segmentation on real cohorts. Prioritize by customer harm, financial exposure, contractual/regulatory urgency, frequency, reversibility and effort. Investigate at least three hypotheses before prescribing a payment feature.
 
@@ -39,7 +39,7 @@ Example: checkout conversion falls. Before changing the UI, split failures into 
 
 **Deliverable 4 — decision record.** Use [the template](../../artifacts/payment-decision-record-template.md). Include what would cause you to reverse the decision.
 
-## Days 61–90: deliver a controlled, observable change
+## 0A.4 Days 61–90: deliver a controlled, observable change
 
 Pick an intervention where eligibility, rollout and rollback can be explicit: clearer pending-payment status, better decline-code mapping, logging a missing reconciliation reference, or a targeted error-recovery change. Avoid treating aggressive routing/retry changes or lowered fraud rules as starter tasks.
 
@@ -49,7 +49,7 @@ Pick an intervention where eligibility, rollout and rollback can be explicit: cl
 
 **Deliverable 5 — a learning memo:** hypothesis, observed impact, uncertainty, operational cost, decision to scale or rollback, and unresolved risks.
 
-## Role-specific emphasis
+## 0A.5 Role-specific emphasis
 
 | If you join... | Add to first-month investigation |
 |---|---|
@@ -58,8 +58,9 @@ Pick an intervention where eligibility, rollout and rollback can be explicit: cl
 | Gateway/orchestrator | Provider SLAs, outage playbooks, status contract, multi-PSP observability |
 | Acquirer/PayFac | Merchant lifecycle, KYB, reserves, settlement payout, disputes and underwriting |
 | Wallet/QR | Acceptance footprint, enrollment, identity versus payment, redemption and POS integration |
+| Risk / payment platform | Who owns each rule and threshold, change-approval and rollback path, false-positive measurement, dispute tooling and authentication/tokenization dependencies |
 
-## Ten questions for your first payments architecture review
+## 0A.6 Ten questions for your first payments architecture review
 
 1. Which event confirms an **approved authorization**? Which confirms capture?
 2. How do we distinguish *declined*, *failed*, and *unknown*?
@@ -72,7 +73,7 @@ Pick an intervention where eligibility, rollout and rollback can be explicit: cl
 9. What is the customer-support response for a “paid but not ordered” complaint?
 10. What did our last payment incident reveal that the roadmap missed?
 
-## Exercise and answer check
+## 0A.7 Exercise and answer check
 
 **Exercise:** You have 2,000 daily checkout failures, but the provider reports only 1,400 declines. Is the data inconsistent? Write a three-part investigation.  
 **Answer check:** Not necessarily. Map populations and denominators; reconcile failures before PSP submission, 3DS abandonment and unresolved/pending states; join by order and attempt IDs, rather than assuming all checkout failures are issuer declines.

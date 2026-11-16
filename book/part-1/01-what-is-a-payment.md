@@ -16,6 +16,7 @@ Keep four layers separate:
 2. **Instruction layer:** Someone initiates or authorizes a payment request. The instruction could be rejected before money moves.
 3. **Processing and settlement layer:** A payment rail or network communicates the instruction and participating institutions discharge financial obligations. Timing and finality depend on the rail.
 4. **Accounting layer:** Merchants and institutions record receivables, payables, fees, liabilities, refunds, and exceptions in ledgers. Reconciliation confirms whether independent records agree.
+
 This is why `order_placed`, `payment_authorised`, `payment_captured`, `merchant_paid_out`, and `bank_reconciled` are not interchangeable facts.
 
 ## 1.2 Money is not necessarily a packet travelling across the internet

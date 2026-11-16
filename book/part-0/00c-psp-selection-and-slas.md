@@ -4,13 +4,13 @@
 
 > A PSP is not merely a pricing line. It is an external dependency in the customer's experience, your transaction state machine and your finance controls.
 
-## 1. First decide what you are buying
+## 0C.1 First decide what you are buying
 
 A **gateway API**, **acquiring service**, **full-stack PSP**, **payment orchestrator** and **payment facilitator** have overlapping but different accountabilities. For each candidate, clarify: legal contracting entity; merchant of record; acquirer of record; scheme registration where applicable; funds custody; geographic coverage; sponsor-bank dependencies; underwriting ownership; liability allocation; and who produces the settlement/payout report.
 
 A processor promising “all payment methods” does not mean it supports the payment methods, countries, currencies, funding models and refund behaviors you need in production. Build your requirements around real transaction journeys.
 
-## 2. Write the RFP as testable journeys
+## 0C.2 Write the RFP as testable journeys
 
 For a merchant checkout product, include at least these end-to-end tests:
 
@@ -23,7 +23,7 @@ For a merchant checkout product, include at least these end-to-end tests:
 
 For issuing, also test authorization controls, reversals, settlement files, card lifecycle and token provisioning. For acquiring/PayFac, include KYB, underwriting, reserves, delayed payouts, negative balances, funding failure and merchant termination.
 
-## 3. Score providers transparently, then stress-test winners
+## 0C.3 Score providers transparently, then stress-test winners
 
 **Illustrative weighted scorecard — not a universal ranking.** Score 1 (poor) to 5 (strong) against evidence, then multiply by the weight. Scores are hypotheses until tested by proofs of concept and contract reviews.
 
@@ -43,7 +43,7 @@ Provider A: `0.20×5 + 0.25×3 + 0.20×3 + 0.15×4 + 0.10×5 + 0.10×5 = 3.95`. 
 
 Downloadable [evaluation template](../../artifacts/psp-evaluation-template.md).
 
-## 4. SLAs need a measurement contract, not just “99.9% uptime”
+## 0C.4 SLAs need a measurement contract, not just “99.9% uptime”
 
 A useful SLA distinguishes:
 
@@ -57,7 +57,7 @@ A useful SLA distinguishes:
 
 **Sample (hypothetical) SLO, not a provider promise:** For payment status queries, 99.95% successful technical responses over 30 days, measured from two production regions, excluding invalid merchant requests. Even then, define how a query returns `pending`, and never interpret transport availability as payment approval rate.
 
-## 5. Contract, commercial and exit risks
+## 0C.5 Contract, commercial and exit risks
 
 The lowest MDR can conceal cross-border markups, refunds/chargeback fees, FX spreads, dispute administration charges, token-vault dependency, reserves, minimum commitments or settlement financing costs. Compare **cost per confirmed paid order**, adjusted for acceptance, risk and operations, instead of simply comparing transaction fee percentages.
 
@@ -65,13 +65,13 @@ Ask about token portability before storing millions of credentials with one PSP.
 
 Plan for exit: how will you migrate credentials where legally/permissibly supported, retrieve transaction/dispute history, retain settlement files, and continue refunds on old transactions? A provider outage is a test of your state machine; a provider termination is a test of your architecture and operational ownership.
 
-## 6. Partner operating cadence
+## 0C.6 Partner operating cadence
 
 Set up weekly operational review for approval/failure segmentation, incidents and dispute aging; monthly product review for roadmap, feature flags, integrations, cost, treasury and reliability; quarterly commercial review for volumes, terms, reserves and switching risk. Record the precise owner and due date for every unresolved status mismatch or settlement exception.
 
 The PM should be able to answer **“What could this partner stop us from doing?”** and **“What evidence will tell us a contract is no longer fit?”**. This is partner *product management*, not merely procurement.
 
-## Exercise and answer check
+## 0C.7 Exercise and answer check
 
 **Scenario:** Provider A offers 15 bps lower processing fees, but has no reliable status-query API and settlement reports arrive two days late. Your checkout experiences ambiguous outcomes and finance has a daily close requirement. What should determine the decision?  
 **Answer check:** Treat status certainty and finance reporting as hard requirements; quantify duplicate-charge exposure, reconciliation cost, and recovery limitations. Only compare headline price among eligible providers; insist on an integration pilot and finance sign-off.
