@@ -11,7 +11,6 @@ Distinguish a payment instrument from the interface that presents it, understand
 A wallet could be a user interface for network-tokenized cards, a stored-value account, a bank-transfer initiation app, a QR payment acceptance network or a combination. Two products both called "wallet" may have different funding sources, merchant contracts, settlement schedules, risk controls and dispute mechanisms. Therefore, ask **what funds the payment and what rail settles it** rather than treating a wallet logo as a technical specification.
 
 A merchant sees alternatives such as cards, local wallets, pay-later products, bank redirects, QR, and real-time account transfers. Each has eligibility, conversion, cost, fraud, refund, and reconciliation consequences.
-
 ## 8.2 QR conveys information; the funding mechanism is separate
 
 A **merchant-presented QR** may encode a merchant identifier, account/proxy, order reference or dynamic amount. A **customer-presented QR** may encode a payment credential or identifier for the merchant to scan. QR can also be used solely for **identity or loyalty recognition**, with payment completed through another tender. These are different products despite sharing a scanning interaction.
@@ -30,6 +29,7 @@ flowchart TD
 ### Static versus dynamic QR
 
 A static QR often identifies a recipient and leaves amount entry to the payer. A dynamic QR can be generated for a specific checkout session with amount/reference information; actual capabilities depend on scheme and implementation. Dynamic QR can help reduce manual amount errors and link payments to orders, but does not remove the need to verify the incoming payment with an authoritative provider event.
+
 ## 8.3 Singapore as a learning example
 
 MAS describes **SGQR** as a shared QR code framework, **PayNow** as proxy addressing, and **FAST** as underlying fund-transfer infrastructure. They occupy different layers. A PM working on in-store checkout needs to know which service is doing identity recognition, which one initiates a transfer, and which event confirms receipt. [MAS e-payments](https://www.mas.gov.sg/development/e-payments).

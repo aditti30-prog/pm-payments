@@ -1,6 +1,6 @@
-# Chapter 3 — Improving payment authorization rates
+# 12. Improving payment authorization rates
 
-**Reading time:** ~20 minutes · **Prerequisites:** [Chapter 2](../part-1/03-card-payment-lifecycle.md)
+**Reading time:** ~20 minutes · **Prerequisites:** [Chapter 3](../part-1/03-card-payment-lifecycle.md)
 
 ## Learning objectives
 
@@ -18,9 +18,9 @@ A dashboard says "Authorization rate: 89%." Is that good or bad? Before answerin
 
 A useful attempt-based measure is:
 
-\[
+$$
 \text{Attempt authorization rate} = \frac{\text{Approved authorization attempts}}{\text{Eligible submitted authorization attempts}}
-\]
+$$
 
 But teams differ in how they treat reversals, zero-value verification, asynchronous payments, repeated attempts, pre-PSP rejections, offline approvals or timeouts. Write the inclusion and exclusion rules before comparing providers.
 
@@ -92,7 +92,6 @@ Strong: "The decrease is concentrated in the cross-border card cohort recently m
 You may need to adjust for issuer mix, traffic quality and selection effects. **Correlated segments are not proof of causality.**
 
 ## 4. What levers might a Payments PM consider?
-
 | Lever | Possible upside | Important constraint |
 | --- | --- | --- |
 | Better request data / credential freshness | Fewer avoidable invalid/expired credentials | Provider/network rules and customer consent |
@@ -112,6 +111,7 @@ You may need to adjust for issuer mix, traffic quality and selection effects. **
 **Supporting measures:** Payment attempts per successful order, timeout/unknown-state rate, time to payment confirmation, 3DS completion, share of customers taking a successful recovery action.
 
 **Guardrails:** Fraud loss/chargebacks, duplicate authorization or capture incidents, payment processing cost per successful order, customer support contact rate, latency, reconciliation exception volume, and provider/network rule compliance.
+
 ### A simple economic check
 
 Suppose a hypothetical experiment recovers 100 additional **valid orders**. Average contribution margin *after product costs but before incremental payment costs* is S$12 each, for **S$1,200** in incremental contribution before payment-related effects. If additional processing fees cost S$250, extra fraud losses S$150 and extra support S$100, the illustrative net incremental contribution is **S$700**.
@@ -199,4 +199,4 @@ A strong answer starts with denominator, eligibility, segment, provider status s
 - [Stripe — Idempotent requests](https://docs.stripe.com/api/idempotent_requests)
 - [EMVCo — EMV 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/)
 
-**Next:** [Worked diagnostic case →](../../cases/01-authorization-rate-drop.md)
+**Next:** [13. Payment fraud, risk and controls](13-fraud-risk-and-payment-controls.md). Practice with the [worked diagnostic case](../../cases/01-authorization-rate-drop.md)

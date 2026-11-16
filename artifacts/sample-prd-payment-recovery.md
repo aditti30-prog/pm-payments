@@ -91,8 +91,7 @@ This does **not** assume all providers implement the same status lookup, idempot
 4. **Late success:** If an authenticated PSP event later confirms approval, the internal payment state can advance without triggering a second authorization or duplicate fulfillment.
 5. **Duplicate callback:** Replaying the same PSP event has no second business side effect.
 6. **Out-of-order event:** Older or incompatible events cannot roll a verified payment state backward.
-7. **Mismatch:** If payment and order state remain inconsistent beyond an operationally agreed threshold, an exception appears in monitoring with responsible owner and trace IDs.
-8. **Reconciliation:** Captured funds and refund operations retain their own event identities, not inferred from the authorization alone.
+7. **Mismatch:** If payment and order state remain inconsistent beyond an operationally agreed threshold, an exception appears in monitoring with responsible owner and trace IDs.8. **Reconciliation:** Captured funds and refund operations retain their own event identities, not inferred from the authorization alone.
 9. **Support:** Support can see the latest verified status and reference IDs without seeing sensitive credentials.
 10. **Recovery:** A final decline offers only permitted next actions; non-retryable responses do not trigger repeated automatic attempts.
 
@@ -131,4 +130,4 @@ This does **not** assume all providers implement the same status lookup, idempot
 - [Stripe — Idempotent requests](https://docs.stripe.com/api/idempotent_requests)
 - [Adyen — Payments lifecycle](https://docs.adyen.com/account/payments-lifecycle)
 
-**Related reading:** [Chapter 2](../book/part-1/03-card-payment-lifecycle.md) and [Chapter 3](../book/part-3/12-authorization-optimization.md).
+**Related reading:** [Chapter 3](../book/part-1/03-card-payment-lifecycle.md) and [Chapter 12](../book/part-3/12-authorization-optimization.md).

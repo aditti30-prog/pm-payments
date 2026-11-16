@@ -16,7 +16,6 @@ Keep four layers separate:
 2. **Instruction layer:** Someone initiates or authorizes a payment request. The instruction could be rejected before money moves.
 3. **Processing and settlement layer:** A payment rail or network communicates the instruction and participating institutions discharge financial obligations. Timing and finality depend on the rail.
 4. **Accounting layer:** Merchants and institutions record receivables, payables, fees, liabilities, refunds, and exceptions in ledgers. Reconciliation confirms whether independent records agree.
-
 This is why `order_placed`, `payment_authorised`, `payment_captured`, `merchant_paid_out`, and `bank_reconciled` are not interchangeable facts.
 
 ## 1.2 Money is not necessarily a packet travelling across the internet
@@ -36,6 +35,7 @@ Do not assume that any given rail is immediate, irrevocable, universal, or avail
 | What should the PM monitor? | Order conversion, attempt success, captures, settlement, disputes | Valid instructions, transfer outcomes, posting, reconciliation, mistaken transfers |
 
 ## 1.3 Three kinds of certainty
+
 **Technical acknowledgement:** an API received the request. **Payment outcome:** the institution or payment system confirmed a specific state. **Financial certainty:** the appropriate ledger entries and settlement/payout obligations have actually been posted and reconciled. A 200 HTTP response proves little unless its business state is inspected. An asynchronous webhook may arrive later; duplicates and out-of-order messages are possible.
 
 ### Worked example: one basket, multiple money events

@@ -1,5 +1,4 @@
 # Primary sources and editorial notes
-
 **Source review date:** 15 November 2026. These references supplement the original explanation in this textbook; they do not imply provider endorsement.
 
 ## Payment lifecycle and implementation

@@ -44,7 +44,7 @@ flowchart TB
   E --> F[Merchant order + finance ledger]
 ```
 
-**Important constraint:** failover is not equivalent to "retry at another PSP." A first attempt may be approved while the merchant timed out; blindly creating a second charge through PSP B can duplicate the financial effect. Many card retries also face scheme/provider limitations. Only retry after an appropriately verified state and within applicable rules. See [Chapter 11](../part-3/10-checkout-and-payment-state.md).
+**Important constraint:** failover is not equivalent to "retry at another PSP." A first attempt may be approved while the merchant timed out; blindly creating a second charge through PSP B can duplicate the financial effect. Many card retries also face scheme/provider limitations. Only retry after an appropriately verified state and within applicable rules. See [Chapter 10](../part-3/10-checkout-and-payment-state.md).
 
 ## 6.4 A good routing decision considers eligibility first
 

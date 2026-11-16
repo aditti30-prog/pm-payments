@@ -45,7 +45,8 @@ Definitions are intentionally concise and provider-neutral where possible. Speci
 | **Challenge 3DS** | Authentication that asks the cardholder to take an additional action (e.g., OTP or bank-app confirmation) |
 | **SCA (Strong Customer Authentication)** | Regulatory requirement in certain jurisdictions/use cases requiring qualifying authentication; exact applicability/exemptions vary |
 | **False decline** | Legitimate payment rejected, whether by issuer or risk system; measurement requires careful validation |
-| **Soft vs hard decline** | Informal/provider-specific classification of declines as potentially recoverable vs effectively final; do not assume uniform mapping or retry permissions || **FPAN (Funding PAN)** | Underlying card account payment credential number associated with the card; not the same as a bank deposit-account number |
+| **Soft vs hard decline** | Informal/provider-specific classification of declines as potentially recoverable vs effectively final; do not assume uniform mapping or retry permissions |
+| **FPAN (Funding PAN)** | Underlying card account payment credential number associated with the card; not the same as a bank deposit-account number |
 | **DPAN (Device PAN)** | Network-tokenized payment credential provisioned for a device or wallet context; often has different last four digits from the FPAN |
 | **Network token** | EMV payment token usable through compatible payment rails within applicable token-domain restrictions, distinct from a provider vault token |
 | **Token service provider (TSP)** | Entity/system implementing the payment-token programme's token issuance, mapping and lifecycle controls |

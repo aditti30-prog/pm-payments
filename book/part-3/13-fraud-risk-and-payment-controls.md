@@ -49,6 +49,12 @@ The commerce team sees a higher decline rate after a risk rules release. Investi
 
 **Exercise:** Propose a review policy for a first-time, high-value cross-border card payment. Identify eligible actions, required collaboration with risk and compliance, two user-experience guardrails, and how you'd measure false-positive harm over time.
 
+### Dated Singapore case — Shared Responsibility Framework (effective 16 December 2024)
+
+The [MAS/IMDA Shared Responsibility Framework guidelines](https://www.imda.gov.sg/-/media/imda/files/regulations-and-licensing/regulations/consultations/2024/shared-responsibility-framework-for-phishing-scams/guidelines-on-shared-responsibility-framework.pdf) set out duties for specified banks/payment-account issuers and telecom providers relating to defined **seemingly authorised phishing-scam transactions**. Their loss-responsibility model is **not a blanket rule for every scam or every payment rail**. The guidelines specifically state that the SRF liability-sharing framework does **not** apply to transactions using credit, charge and debit cards issued in Singapore, which have other protections.
+
+**Product implications:** define scam type, protected-account eligibility, event audit trail, customer-reporting and blocking paths, notification controls, and specialist review of any responsibility/allocation policy. **Do not** map a card chargeback rule onto bank transfer scam remediation simply because both involve losses. Source checked 16 November 2026; consult MAS/IMDA for current updates.
+
 **Next:** [14. Payments PM craft](14-payments-pm-craft.md).
 
 ## Further reading

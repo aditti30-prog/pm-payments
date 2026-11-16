@@ -2,9 +2,11 @@
 
 **An open-source textbook on how modern payments work — and how product managers design, operate, and improve them.**
 
-> **Editorial status: v0.2 working manuscript (November 2026).** Parts I–IV contain draft chapters and teaching examples. Part V is planned, not written. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
+> **Editorial status: v0.3 working manuscript (16 November 2026).** Parts I–IV contain draft chapters and teaching examples. Part V is planned, not written. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
 
 The objective is not to memorize payment jargon. Readers should understand **who does what**, **where money and obligations move**, **what can fail**, **who bears risk**, and **which decisions a PM can influence**.
+
+**Maintained by [@aditti30-prog](https://github.com/aditti30-prog).** Specialist peer review is welcome; chapters are editorial drafts, not certified standards guidance.
 
 ## Who should read this?
 
@@ -14,7 +16,16 @@ The objective is not to memorize payment jargon. Readers should understand **who
 
 ## How to use the book
 
-Read the chapters in order if payments are new to you. If you're already building payments, start with the relevant deep dive. Every chapter aims to include definitions, flows, a practical example, PM trade-offs, exercises and primary-source references. Some survey chapters are shorter and will be expanded in subsequent editorial passes.
+**New Payments PM:** Start with Part 0 to understand role boundaries and work practices, then follow Parts I–IV in order. **Experienced PM or engineer:** Jump to the relevant payment-system chapter and use Part 0 as a working reference. Each chapter aims to explain the underlying mechanism and connect it to a product decision. Some chapters still require deeper examples, answer keys and specialist review.
+
+### Part 0 — The Payments PM's job
+
+- [What a Payments PM owns — archetypes, decision rights and example RACI](book/part-0/00-payments-pm-ownership.md)
+- [First 90 days: mapping systems, metrics, risk and partners](book/part-0/00a-first-90-days.md)
+- [Prioritization: obligations, financial integrity, reliability and growth](book/part-0/00b-prioritization-and-tradeoffs.md)
+- [PSP selection: partner scorecards, integrations and SLAs](book/part-0/00c-psp-selection-and-slas.md)
+
+Supporting tools: [decision record template](artifacts/payment-decision-record-template.md) and [PSP evaluation template](artifacts/psp-evaluation-template.md).
 
 ### Part I — Understanding Payments
 
@@ -52,7 +63,7 @@ Read the chapters in order if payments are new to you. If you're already buildin
 19. Stablecoins and programmable money *(not written)*
 20. Agentic commerce, delegated payment credentials and customer consent *(not written)*
 
-See [ROADMAP.md](ROADMAP.md) for the editorial plan and unfilled coverage areas.
+See [ROADMAP.md](ROADMAP.md) for the editorial plan, known limitations and unfilled coverage areas.
 
 ## Start with a real problem
 

@@ -1,6 +1,6 @@
-# Chapter 2 — How a card payment works, end to end
+# 3. How a card payment works, end to end
 
-**Reading time:** ~20 minutes · **Prerequisites:** [Chapter 1](01-what-is-a-payment.md)
+**Reading time:** ~20 minutes · **Prerequisites:** [Chapter 1](01-what-is-a-payment.md) and [Chapter 2](02-ecosystem.md)
 
 ## Learning objectives
 
@@ -204,7 +204,7 @@ A strong answer says **"we need to verify the outcome"** when the state is uncer
 - [EMVCo — EMV 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/)
 - [PCI SSC — Document Library](https://www.pcisecuritystandards.org/document_library/)
 
-**Next:** [Improving authorization rates →](../part-3/12-authorization-optimization.md)
+**Next:** [4. Payment economics](04-payment-economics.md). For an optional applied case, see [authorization optimization](../part-3/12-authorization-optimization.md)
 
 ## Continue into operational depth
 

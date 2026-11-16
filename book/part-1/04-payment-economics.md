@@ -39,7 +39,6 @@ Suppose a merchant has 100,000 legitimate card attempts, with approval improving
 **PM mistake:** claiming "S$120K revenue recovered" while calling it profit and not accounting for provider fees or retries.
 
 ## 4.3 Take rate is a denominator choice
-
 A PSP might report `net revenue / processed volume` as a take rate. Another business might report `gross payments revenue / total payment volume`, and a marketplace might use a separate commission take rate on **GMV**. Gross transaction value, net payment volume, merchant gross merchandise value and settled volume are not automatically the same.
 
 Always label the numerator and denominator. To illustrate, **S$30,000 net payment revenue on S$2,000,000 processed volume = 1.5% net revenue take rate**. That cannot be compared directly with a marketplace's 15% merchandise commission without understanding the accounting model.
@@ -59,6 +58,7 @@ A PM designing merchant onboarding must balance conversion and time-to-first-pay
 - **Bank transfers:** often have different cost structures but introduce account validation, fraud/scam exposure, returns or payout tooling needs.
 
 ## 4.6 Product decisions grounded in economics
+
 When evaluating "add another PSP," build a model with eligible volume by segment, expected approval uplift **at order level**, provider fixed/variable cost, engineering integration cost, reconciliation cost, operational complexity, and projected risk. Calculate both base case and downside. A more robust system is not automatically cheaper; the resilience benefit may justify some cost even without an immediate uplift.
 
 ## Check your understanding

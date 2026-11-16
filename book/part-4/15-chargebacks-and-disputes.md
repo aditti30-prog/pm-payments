@@ -81,7 +81,14 @@ A good product metric is not just the “win rate.” Analyze **fraud dispute ra
 
 **3DS link:** qualifying authentication can shift liability for certain fraud disputes, but does not remove refund obligations or all other chargeback categories. Review [Chapter 11](../part-3/11-3d-secure.md) for the authentication and liability distinction.
 
+### Dated network-program anchor — Visa VAMP (source checked 16 November 2026)
+
+Visa's [VAMP fact sheet](https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf) describes a **count-based** monitoring ratio using fraud reports (TC40) and disputes (TC15) relative to settled transactions (TC05), subject to exclusions, minimum counts and region-dependent rules. It states that the excessive merchant threshold in **Asia Pacific, Canada, the EU and the US** reduced from **220 basis points (2.2%) to 150 basis points (1.5%) on 1 April 2026**. LAC and CEMEA have separate conditions; applicability depends on the acquirer/program status and other eligibility thresholds. This is a **scheme-monitoring metric**, not a generic cardholder dispute win rate or a universal chargeback target. Confirm current requirements with your acquiring partner and scheme documentation before using it in a production decision.
+
+**PM implications:** establish ownership of scheme alerts; forecast with the **scheme-defined denominator** rather than checkout attempts; segment by merchant descriptor, acquirer and region; and account for delayed fraud/dispute reports. A percentage without the minimum count, reporting clock and regional scope is incomplete.
+
 ## 15.6 A PM's product requirements
+
 At minimum, define:
 
 - **Data model:** `payment_id`, `order_id`, `capture_id`, `dispute_id`, provider/scheme references, reason code, financial transaction ID, deadline, evidence version, status history. All values shown here are illustrative normalized fields.
