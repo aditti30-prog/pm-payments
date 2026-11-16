@@ -140,6 +140,8 @@ Finance owns financial policy and general-ledger treatment; treasury/bank operat
 
 **Answer guidance:** (1) fees, refunds, chargebacks, reserves, adjustments. (2) Stable capture/provider and payout references, scoped by entity. (3) Operational unresolved/authorization monitoring, not settled gross. (4) No, append a reversal event and clear outstanding balances. (5) No, transaction-level mismatches remain.
 
+**Extended worked case:** [Marketplace gross-to-net and later adjustments](../../cases/03-marketplace-reserve-refund-dispute.md) traces sale, platform commission, PSP fee, seller reserve and payouts before separate refund/dispute periods. Do not force them into a single transaction-date bank reconciliation.
+
 **Exercises:** [Worked solutions](../../answers/chapter-exercises.md#16-three-way-reconciliation) (companion answer key; review your reasoning before opening).
 
 **Next:** [16A. Payment metrics and observability](16a-payment-metrics-and-observability.md).
