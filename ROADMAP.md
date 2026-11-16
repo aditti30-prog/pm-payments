@@ -59,6 +59,8 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [x] Added [PSP failover and ambiguous-authorization case lab](cases/02-ambiguous-authorization-routing.md): differentiated issuer approval, paid-order outcome, 3DS challenge, duplicate callbacks and unknown status. *Fictional scenario.*
 - [x] Added [marketplace reserve/refund/dispute case lab](cases/03-marketplace-reserve-refund-dispute.md): S$250 gross-to-net waterfall, S$20 seller reserve, S$40 post-payout refund and S$60 later dispute. *Fictional contractual model.*
 - [x] Added a [reproducible JSON fixture](cases/data/operational-case-inputs.json) and [Python numeric check](scripts/verify_operational_cases.py) to GitHub Actions CI.
+- [x] Standardized existing time estimates as *estimated study time*, and added explicit learning outcomes to the two Part 0 chapters that lacked them.
+- [x] Published a structured [technical-review issue form](.github/ISSUE_TEMPLATE/technical-review.yml) to collect claims, scoped counterexamples and first-party evidence without implying sign-off.
 - [x] Cross-linked both case labs from gateway, 3DS, authorization, acquiring/PayFac, disputes, reconciliation and payment-operations chapters.
 - [x] Extended the [specialist review packet](editorial/specialist-review-packet.md) with explicit counterexample tests and the [primary-source audit](editorial/primary-source-audit-2026-11-16.md) with provider-specific anchors.
 - [ ] **Unchanged:** No independent professional/scheme review or certified provider-contract validation has occurred. Automated tests establish consistency, not legal compliance or a commercially supportable design.
