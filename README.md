@@ -2,7 +2,7 @@
 
 **An open-source textbook on how modern payments work — and how product managers design, operate, and improve them.**
 
-> **Editorial status: v0.3 working manuscript (16 November 2026).** Parts I–IV contain draft chapters and teaching examples. Part V is planned, not written. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
+> **Editorial status: v0.4 working manuscript (16 November 2026).** Parts I–IV contain draft chapters and teaching examples. Part V is planned, not written. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
 
 The objective is not to memorize payment jargon. Readers should understand **who does what**, **where money and obligations move**, **what can fail**, **who bears risk**, and **which decisions a PM can influence**.
 
@@ -16,7 +16,7 @@ The objective is not to memorize payment jargon. Readers should understand **who
 
 ## How to use the book
 
-**New Payments PM:** Start with Part 0 to understand role boundaries and work practices, then follow Parts I–IV in order. **Experienced PM or engineer:** Jump to the relevant payment-system chapter and use Part 0 as a working reference. Each chapter aims to explain the underlying mechanism and connect it to a product decision. Some chapters still require deeper examples, answer keys and specialist review.
+**New Payments PM:** Start with Part 0 to understand role boundaries and work practices, then follow Parts I–IV in order. **Experienced PM or engineer:** Jump to the relevant payment-system chapter and use Part 0 as a working reference. Each chapter aims to explain the underlying mechanism and connect it to a product decision. Some chapters still require deeper examples, answer keys and specialist review. The added v0.4 material teaches metrics, operational failure response and control ownership with dated sources and fictional cases.
 
 ### Part 0 — The Payments PM's job
 
@@ -25,7 +25,7 @@ The objective is not to memorize payment jargon. Readers should understand **who
 - [Prioritization: obligations, financial integrity, reliability and growth](book/part-0/00b-prioritization-and-tradeoffs.md)
 - [PSP selection: partner scorecards, integrations and SLAs](book/part-0/00c-psp-selection-and-slas.md)
 
-Supporting tools: [decision record template](artifacts/payment-decision-record-template.md) and [PSP evaluation template](artifacts/psp-evaluation-template.md).
+Supporting tools: [decision record template](artifacts/payment-decision-record-template.md), [PSP evaluation template](artifacts/psp-evaluation-template.md), [compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md), [payment API checklist](artifacts/payment-api-requirements-checklist.md), [metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md), [incident review template](artifacts/payment-incident-review-template.md), and [merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md).
 
 ### Part I — Understanding Payments
 
@@ -49,12 +49,14 @@ Supporting tools: [decision record template](artifacts/payment-decision-record-t
 11. **Deep dive:** [EMV 3-D Secure: frictionless, challenge and liability](book/part-3/11-3d-secure.md)
 12. [Authorization optimization](book/part-3/12-authorization-optimization.md)
 13. [Payment fraud, risk decisions and controls](book/part-3/13-fraud-risk-and-payment-controls.md)
+    - **Deep dive:** [13A. Compliance, PCI scope, KYC/KYB/AML and control ownership](book/part-3/13a-compliance-and-control-ownership.md)
 14. [The Payments PM's craft: discovery, metrics and delivery](book/part-3/14-payments-pm-craft.md)
 
 ### Part IV — Operating and Scaling Payments
 
 15. **Deep dive:** [Chargebacks and disputes](book/part-4/15-chargebacks-and-disputes.md)
 16. **Deep dive:** [Three-party reconciliation: merchant, PSP and bank](book/part-4/16-three-way-reconciliation.md)
+    - **Deep dive:** [16A. Payments metrics and observability](book/part-4/16a-payment-metrics-and-observability.md)
 17. [Payment reliability, incidents and operations](book/part-4/17-reliability-and-payment-operations.md)
 
 ### Part V — Modern and Emerging Payments · planned

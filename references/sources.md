@@ -1,5 +1,6 @@
 # Primary sources and editorial notes
-**Source review date:** 15 November 2026. These references supplement the original explanation in this textbook; they do not imply provider endorsement.
+
+**Source review date:** 16 November 2026 (new compliance and measurement references; some older chapters still require their own re-check). These references supplement the original explanation in this textbook; they do not imply provider endorsement.
 
 ## Payment lifecycle and implementation
 
@@ -37,3 +38,14 @@ Before publishing or updating a payments claim:
 - Label hypothetical statistics and sample customer journeys as illustrative.
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for contribution standards.
+
+## v0.4 — Compliance scope and operational decisions (checked 16 November 2026)
+
+- **PCI SSC — SAQ A embedded script FAQ #1588**: https://www.pcisecuritystandards.org/faqs/1588/ — specific eligibility guidance; consult full current SAQ and acquirer.
+- **PCI SSC — SAQ A ASV scanning FAQ #1604**: https://www.pcisecuritystandards.org/faqs/1604/ — scope of remaining scanning obligations even with outsourced payment processing.
+- **FATF — Recommendations, updated June 2026**: https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html — international AML/CFT framework implemented per jurisdiction.
+- **MAS — Payment Services Act**: https://www.mas.gov.sg/regulation/payments — Singapore licensing and payments regulation overview.
+- **MAS — Notice PSN01**: https://www.mas.gov.sg/regulation/notices/psn01-aml-cft-notice---specified-payment-services — rules for specified payment service providers, not a universal merchant rule.
+- **Stripe — Comparing authorization metrics**: https://stripe.com/guides/maintaining-payments-performance-when-adopting-stripe — first-attempt, raw and de-duplicated definitions (provider-specific).
+- **OWASP — Webhook Security Cheat Sheet**: https://cheatsheetseries.owasp.org/cheatsheets/Webhook_Security_Cheat_Sheet.html — signature/replay/duplicate safety.
+- **Adyen — Invoice reconciliation**: https://docs.adyen.com/reporting/invoice-reconciliation/ — provider-specific settlement/cost reporting.

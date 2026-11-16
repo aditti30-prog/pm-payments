@@ -3,6 +3,7 @@
 **Part IV — Operating and Scaling Payments** · Prerequisites: Chapters 3, 4, 5 and 15
 
 > **Central idea:** A green checkout success screen is not proof that every financial ledger agrees. Reconciliation compares independent records, explains timing/fee differences, and identifies missing, duplicated or incorrectly posted money movements.
+
 ## Learning outcomes
 
 Explain three-way reconciliation in a merchant-acquiring context, design join keys and matching rules, reconcile gross captured sales to net bank payout, and classify exceptions without hiding real financial losses behind timing differences.
@@ -33,8 +34,7 @@ These are not three independent equal-value comparisons: **gross merchant transa
 flowchart LR
   M[Merchant orders / payment ledger] -->|Capture / refund IDs| P[PSP settlement detail]
   P -->|Payout batch ID; net movement| B[Bank statement]
-  M -->|Gross-to-net bridge + receivable clearing| B
-  P --> E[Exceptions queue]
+  M -->|Gross-to-net bridge + receivable clearing| B  P --> E[Exceptions queue]
   M --> E
   B --> E
   E --> O[Investigation, owner, aging, resolution]
@@ -140,7 +140,7 @@ Finance owns financial policy and general-ledger treatment; treasury/bank operat
 
 **Answer guidance:** (1) fees, refunds, chargebacks, reserves, adjustments. (2) Stable capture/provider and payout references, scoped by entity. (3) Operational unresolved/authorization monitoring, not settled gross. (4) No, append a reversal event and clear outstanding balances. (5) No, transaction-level mismatches remain.
 
-**Next:** [17. Payment reliability and operations](17-reliability-and-payment-operations.md).
+**Next:** [16A. Payment metrics and observability](16a-payment-metrics-and-observability.md).
 
 ## Further reading
 

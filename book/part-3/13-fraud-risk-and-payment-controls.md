@@ -55,7 +55,7 @@ The [MAS/IMDA Shared Responsibility Framework guidelines](https://www.imda.gov.s
 
 **Product implications:** define scam type, protected-account eligibility, event audit trail, customer-reporting and blocking paths, notification controls, and specialist review of any responsibility/allocation policy. **Do not** map a card chargeback rule onto bank transfer scam remediation simply because both involve losses. Source checked 16 November 2026; consult MAS/IMDA for current updates.
 
-**Next:** [14. Payments PM craft](14-payments-pm-craft.md).
+**Next:** [13A. Compliance and control ownership](13a-compliance-and-control-ownership.md).
 
 ## Further reading
 

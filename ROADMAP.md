@@ -9,11 +9,21 @@ The textbook is organized around **the PM job → understanding payments → pro
 | 0 — Payments PM role and operating model | Four working chapters (00–00C) | Drafts: archetypes, 90-day guide, prioritization and PSP selection |
 | I — Understanding payments | 1–4 | Written first drafts; follow-up review for depth and citations |
 | II — Products/infrastructure | 5–9, including 7A | Written first drafts; 7A is a detailed network-token deep dive |
-| III — Building | 10–14 | Written first drafts; 11 (3DS) and 12 (authorization) are detailed |
-| IV — Operating | 15–17 | Written first drafts; 15 (chargebacks) and 16 (3-way recon) are detailed |
+| III — Building | 10–14, including 13A | Working drafts; 11 (3DS), 12 (authorization) and 13A (compliance/controls) contain deep dives |
+| IV — Operating | 15–17, including 16A | Working drafts; 15 (disputes), 16 (3-way recon), 16A (metrics) and 17 (runbooks) contain deep dives |
 | V — Emerging | 18–20 | Planned — no chapters yet |
 
 **Written draft** does not mean expert-reviewed, production-ready or complete.
+
+## Delivered in v0.4 (16 November 2026)
+
+- [x] Added **13A: Compliance and control ownership** (PCI DSS integration questions, SAQ caveats, merchant KYB/AML, underwriting boundaries, dated primary sources).
+- [x] Added **16A: Payments metrics and observability** (metric contracts, attempt/order denominator separation, synthetic HarborCart case, operational alerting).
+- [x] Expanded **Chapter 17** into actionable runbooks for uncertain outcomes, duplicate charges, settlement/payout delays, three-party reconciliation breaks and dispute workflow failures.
+- [x] Added **five practical artifacts**: compliance RACI, payment API checklist, metrics dashboard specification, incident review and merchant onboarding PRD.
+- [x] Added synthetic cohort CSV, reproducible metrics checks and CI validation.
+
+The added chapters and examples are **drafts** requiring practitioner review; the workflow checks links and arithmetic, not legal or scheme compliance.
 
 ## Planned improvements
 
@@ -45,7 +55,7 @@ The textbook is organized around **the PM job → understanding payments → pro
 ### Additional coverage gaps
 - Cross-border/FX, bank payouts/treasury/liquidity, marketplace/PayFac funds flow.
 - Card-present and POS integrations; recurring billing/subscriptions/dunning.
-- KYC/KYB/AML, scheme-monitoring and jurisdiction/regulation map.
+- Deeper jurisdiction-by-jurisdiction regulation mapping and scheme-monitoring (Chapter 13A is a scoped foundation, not a full legal inventory).
 - Scam-fraud protection and jurisdiction-specific user-protection frameworks.
 - More worked PRDs, answer keys and dated rule anchor boxes.
 

@@ -1,0 +1,20 @@
+name: Validate handbook
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check links and reading order
+        run: python scripts/check_internal_links.py
+      - name: Check authorization case numbers
+        run: python scripts/verify_case.py
+      - name: Check HarborCart metric arithmetic
+        run: python scripts/verify_metrics.py

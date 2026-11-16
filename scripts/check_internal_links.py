@@ -35,9 +35,11 @@ CHAPTERS = [
     "book/part-3/11-3d-secure.md",
     "book/part-3/12-authorization-optimization.md",
     "book/part-3/13-fraud-risk-and-payment-controls.md",
+    "book/part-3/13a-compliance-and-control-ownership.md",
     "book/part-3/14-payments-pm-craft.md",
     "book/part-4/15-chargebacks-and-disputes.md",
     "book/part-4/16-three-way-reconciliation.md",
+    "book/part-4/16a-payment-metrics-and-observability.md",
     "book/part-4/17-reliability-and-payment-operations.md",
 ]
 
