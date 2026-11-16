@@ -1,8 +1,12 @@
 # Part 0 · First 90 days as a Payments PM
 
-**Reading time:** ~15 minutes · **Prerequisites:** [Payments PM ownership](00-payments-pm-ownership.md) · **Status:** Editorial draft, 16 November 2026
+**Estimated study time:** ~15 minutes · **Prerequisites:** [Payments PM ownership](00-payments-pm-ownership.md) · **Status:** Editorial draft, 16 November 2026
 
 > Your first objective is not to ship a payment feature. It is to know where a transaction can go wrong, who notices, who is accountable, and which data can be trusted.
+
+## Learning outcomes
+
+After this chapter, you should be able to: (1) map one complete payment from customer intent to bank payout and name its owners; (2) produce a metric dictionary and a risk/obligation register; (3) identify three evidenced customer or merchant problems; and (4) stage a safe, measurable first improvement with cross-functional approval.
 
 ## 0A.1 What you should produce by day 90
 
