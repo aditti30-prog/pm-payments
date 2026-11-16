@@ -2,7 +2,7 @@
 
 **An open-source textbook on how modern payments work — and how product managers design, operate, and improve them.**
 
-> **Editorial status: v0.5 working manuscript (16 November 2026).** All five parts plus Part 0 now have chapter drafts and examples; technical and specialist review remain outstanding. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
+> **Editorial status: v0.5.1 working manuscript (16 November 2026).** All five parts plus Part 0 now have chapter drafts and examples; technical and specialist review remain outstanding. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
 
 The objective is not to memorize payment jargon. Readers should understand **who does what**, **where money and obligations move**, **what can fail**, **who bears risk**, and **which decisions a PM can influence**.
 
@@ -73,6 +73,8 @@ Supporting tools: [decision record template](artifacts/payment-decision-record-t
 **Practice:** [Agentic Checkout Intent & Permission Test](artifacts/agentic-checkout-intent-test.md) contains a deterministic, simulated-policy case and eight executable test fixtures. These check customer constraints but are not a production implementation of any payment protocol.
 
 See [ROADMAP.md](ROADMAP.md) for the editorial plan, known limitations and unfilled coverage areas.
+
+**Post-review quality patch (v0.5.1):** Singapore SRF and Protection from Scams Act scope, MAS stablecoin consultation dates and EU/US comparators, AP2 v0.2/FIDO governance, FATF Recommendation 16, treasury liquidity example and CSV-driven HarborCart metric checks. A [weekly external reference-link audit](.github/workflows/external-link-audit.yml) reports confirmed 404/410 failures separately from links that cannot be verified. Specialist review and exercise-answer coverage remain incomplete.
 
 ## Read from an actual product decision
 
