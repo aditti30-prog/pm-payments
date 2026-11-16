@@ -1,6 +1,6 @@
 # 12. Improving payment authorization rates
 
-**Reading time:** ~20 minutes · **Prerequisites:** [Chapter 3](../part-1/03-card-payment-lifecycle.md)
+**Estimated study time:** ~20 minutes · **Prerequisites:** [Chapter 3](../part-1/03-card-payment-lifecycle.md)
 
 ## Learning objectives
 
