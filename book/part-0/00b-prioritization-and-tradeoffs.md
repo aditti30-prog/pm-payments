@@ -1,6 +1,6 @@
 # Part 0 · Prioritizing payment work when everything seems urgent
 
-**Reading time:** ~16 minutes · **Prerequisites:** [First 90 days](00a-first-90-days.md) · **Status:** Editorial draft, 16 November 2026
+**Estimated study time:** ~16 minutes · **Prerequisites:** [First 90 days](00a-first-90-days.md) · **Status:** Editorial draft, 16 November 2026
 
 ## Learning outcomes
 
