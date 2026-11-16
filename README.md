@@ -2,7 +2,7 @@
 
 **An open-source textbook on how modern payments work — and how product managers design, operate, and improve them.**
 
-> **Editorial status: v0.6 working manuscript (16 November 2026).** All five parts plus Part 0 now have chapter drafts and examples; technical and specialist review remain outstanding. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
+> **Editorial status: v0.6.1 working manuscript (16 November 2026).** All five parts plus Part 0 now have chapter drafts and examples; technical and specialist review remain outstanding. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
 
 The objective is not to memorize payment jargon. Readers should understand **who does what**, **where money and obligations move**, **what can fail**, **who bears risk**, and **which decisions a PM can influence**.
 
@@ -100,6 +100,17 @@ Each artifact is linked from the chapter it supports. They are teaching template
 **An AI agent changes a shopping cart after consent.** Read [Chapter 20](book/part-5/20-agentic-commerce-delegated-payments.md) and the [intent-preservation test](artifacts/agentic-checkout-intent-test.md) to distinguish permission, checkout, credential and payment execution.
 
 **A platform owes several sellers while payouts fail.** Read [Chapter 5A](book/part-2/05a-marketplaces-payfac-funds-flow.md) and the [funds-flow spec](artifacts/platform-funds-flow-spec.md) before introducing split payments.
+
+## Operational failure labs — follow the IDs and the money
+
+These two synthetic labs connect provider events, merchant state, customer outcomes and finance reconciliation. They are **teaching examples**, not production procedures or independent specialist sign-off.
+
+| Lab | Start here | Why a PM needs it |
+|---|---|---|
+| [02 — Timeout and unsafe PSP failover](cases/02-ambiguous-authorization-routing.md) | One original request may be approved even if the merchant saw a timeout | Protect against duplicate authorizations/captures; distinguish 3DS, approval and paid orders |
+| [03 — Seller reserve, refund and dispute waterfall](cases/03-marketplace-reserve-refund-dispute.md) | A platform owes two sellers after a S$250 capture | Prove gross-to-net allocations, reserve liability, a seller receivable and post-payout dispute exposure |
+
+The inputs are kept in [operational-case-inputs.json](cases/data/operational-case-inputs.json), and [CI recomputes the outcomes](scripts/verify_operational_cases.py). Arithmetic checks cannot substitute for legal, scheme-rule or provider-contract validation.
 
 ## Start with a real problem
 
