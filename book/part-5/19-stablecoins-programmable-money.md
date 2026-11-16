@@ -1,6 +1,6 @@
 # 19. Stablecoins, settlement and programmable money
 
-**Part V — Modern and Emerging Payments** · **Reading time:** ~26 minutes · **Prerequisites:** [Payment economics](../part-1/04-payment-economics.md), [cross-border/treasury](../part-2/09a-cross-border-fx-and-treasury.md), [compliance](../part-3/13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part V — Modern and Emerging Payments** · **Estimated study time:** ~26 minutes · **Prerequisites:** [Payment economics](../part-1/04-payment-economics.md), [cross-border/treasury](../part-2/09a-cross-border-fx-and-treasury.md), [compliance](../part-3/13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** If a token moves in seconds, has the merchant received usable money—and what could still fail?
 
@@ -53,17 +53,29 @@ In many chains, a transfer to an incorrect address cannot simply be reversed by 
 
 For an illustrative scenario, assume the platform sells the 1,000 token units for USD 997 after execution spread and fees. The USD 3 difference must be assigned to a documented fee/spread/valuation treatment according to finance policy. Never infer the legally permitted gain/loss treatment from the arithmetic alone.
 
+**Connection to [Chapter 20: agentic commerce](20-agentic-commerce-delegated-payments.md):** AP2 can supply evidence of delegated purchase/payment authority; a stablecoin may be one settlement asset. The AP2 project publishes an **x402 payment example**, not a rule that all AP2 payments use stablecoins or x402. Chain finality, off-ramp liquidity, refunds, disputes and screening remain separate. [AP2 documentation](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
+
 ## 19.5 Why programmable money is a PM problem
 
 Smart contracts can condition actions on on-chain events (e.g., escrow or programmatic disbursement), but **smart contract execution cannot verify off-chain delivery or consumer consent without trusted external evidence**. Dispute outcomes, delivery proof, human overrides and fraud investigations must be handled in product policy and/or trusted intermediaries. Do not market an escrow contract as risk-free simply because it uses code.
 
 Consider a split-merchant settlement: funds are released to a seller only after a delivery oracle reports success. What if the buyer disputes delivery, the oracle is compromised or a shipment is partially delivered? Product policy needs state, governance, deadlines, review and auditable override mechanisms. Fully automated irreversible release can worsen rather than improve customer outcomes.
 
-## 19.6 Regulatory status must be dated
+## 19.6 Regulatory status must be dated and jurisdiction-specific
 
-**Singapore anchor, checked 16 November 2026:** MAS published a stablecoin-framework consultation dated **1 September 2026** proposing legislative amendments to the Payment Services Act. A consultation is **not itself enacted law**. Do not claim an issuer or product is MAS-approved solely on that basis. Confirm current licences, notices, legal interpretation, reserve and redemption obligations with responsible counsel. [MAS consultation, 1 September 2026](https://www.mas.gov.sg/publications/consultations/2026/consultation-on-proposed-amendments-to-the-payment-services-act-for-stablecoin-regulation).
+**Singapore (checked 16 November 2026):** MAS finalised its single-currency stablecoin *policy framework* in August 2023, distinguishing tokens eligible to be called **“MAS-regulated stablecoins”** from other digital payment tokens. This **designation is not mandatory for every token branded a stablecoin**; nor does declining the designation waive applicable digital-payment-token services, custody, AML or other licensing responsibilities. Check the actual issuer and intermediaries. [MAS 2023 framework announcement](https://www.mas.gov.sg/news/media-releases/2023/mas-finalises-stablecoin-regulatory-framework).
 
-BIS analysis highlights systemic concerns about stablecoin integrity, convertibility and liquidity under stress; those concerns should be evaluated rather than assumed away by an issuer's marketing. [BIS Annual Economic Report 2025](https://www.bis.org/publications/aer-2025/next-generation-monetary-financial-system).
+MAS published a [consultation on proposed Payment Services Act amendments](https://www.mas.gov.sg/publications/consultations/2026/consultation-on-proposed-amendments-to-the-payment-services-act-for-stablecoin-regulation) on **1 September 2026**. It **closed on 16 October 2026**. The consultation proposals are **not themselves enacted legal obligations**; confirm the legislation, effective notices and regulatory status on the launch date.
+
+| Jurisdiction | Primary-source anchor | PM scoping question |
+|---|---|---|
+| **Singapore** | [MAS 2023 framework](https://www.mas.gov.sg/news/media-releases/2023/mas-finalises-stablecoin-regulatory-framework) and [closed 2026 consultation](https://www.mas.gov.sg/publications/consultations/2026/consultation-on-proposed-amendments-to-the-payment-services-act-for-stablecoin-regulation) | Is this an eligible SCS issuer seeking the MAS-regulated label, a different DPT, a custodian or an intermediary? Which obligations are in force? |
+| **European Union** | [MiCA Regulation (EU) 2023/1114](https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng), whose asset-referenced-token and e-money-token titles became applicable **30 June 2024** | Is it a single-currency **e-money token**, an **asset-referenced token**, or another asset? Who is authorised to issue, service, redeem and hold it? |
+| **United States** | [GENIUS Act signed into law **18 July 2025**](https://www.whitehouse.gov/briefings-statements/2025/07/the-president-signed-into-law-s-1582/) | What implementing rules and effective dates apply to the issuer, reserves, redemptions, service partners and AML/sanctions? Passage and operational readiness are different milestones. |
+
+**PM launch gate:** Do not reuse the same redemption promise, yield language, regulatory badge, reserve assumption or customer protection across jurisdictions. Require documented legal/compliance review of the token, issuer, custodian, off-ramp and corridor.
+
+The [BIS Annual Economic Report 2025](https://www.bis.org/publications/aer-2025/next-generation-monetary-financial-system) discusses systemic concerns about stablecoin integrity, convertibility and liquidity under stress. Evaluate those instead of assuming an issuer's marketing removes the risks.
 
 ## 19.7 PM metrics and decision gates
 
@@ -77,6 +89,11 @@ Monitor rate of token transfers that reach your finality policy, on-chain-to-usa
 **Next:** [20. Agentic commerce and delegated payments](20-agentic-commerce-delegated-payments.md).
 
 ## Primary sources
+
+- [MAS — Finalised 2023 SCS policy framework](https://www.mas.gov.sg/news/media-releases/2023/mas-finalises-stablecoin-regulatory-framework).
+- [EU — MiCA Regulation](https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng).
+- [US — GENIUS Act signing, 18 July 2025](https://www.whitehouse.gov/briefings-statements/2025/07/the-president-signed-into-law-s-1582/).
+- [AP2 — official documentation and x402 example](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
 
 - [Circle — USDC mint/burn model](https://www.circle.com/usdc) (one issuer, not a universal stablecoin rule).
 - [Circle — USDC Terms](https://www.circle.com/legal/usdc-terms) (issuer-specific legal terms; accessed 16 November 2026).
