@@ -86,6 +86,8 @@ Monitor rate of token transfers that reach your finality policy, on-chain-to-usa
 **Question:** A buyer sends token value to a merchant wallet, but the app shows “payment failed” due to an indexer outage. Should the app request the buyer send again?  
 **Answer check:** No. The transfer may have occurred. Query authoritative chain/provider references and reconcile wallet receipts before enabling another payment. Preserve transaction hash, chain ID, destination, token contract and intended invoice; do not treat an app indexing failure as proof that no money moved.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#19-stablecoins-programmable-money) (companion answer key; review your reasoning before opening).
+
 **Next:** [20. Agentic commerce and delegated payments](20-agentic-commerce-delegated-payments.md).
 
 ## Primary sources

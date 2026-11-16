@@ -113,6 +113,8 @@ The PM's intervention is to improve event integrity: one shared order reference,
 
 **Answer prompts:** (1) Refund/chargeback overlap, potential second credit and provider adjustment. (2) No, only evidence was sent. (3) Separate dispute financial event with references, not a rewrite of the original capture. (4) Cohort by transaction date and maturity; track open cases. (5) Attempt/capture identifiers and matched order history.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#15-chargebacks-and-disputes) (companion answer key; review your reasoning before opening).
+
 **Next:** [16. Three-party reconciliation](16-three-way-reconciliation.md).
 
 ## Further reading

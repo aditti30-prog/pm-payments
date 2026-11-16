@@ -178,6 +178,8 @@ A downloadable [incident-review template](../../artifacts/payment-incident-revie
 **Exercise C:** A bank credit is S$200 below expected net, but a provider CSV with a new fee category arrived after close. What is the safe response?  
 **Answer:** Reopen the corresponding exception, validate the fee's contract/source batch and sign, recompute the gross-to-net bridge, record any finance-approved accounting change and close only with bank-reference evidence.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#17-reliability-and-payment-operations) (companion answer key; review your reasoning before opening).
+
 **Next:** [18. Real-time payments and open banking](../part-5/18-real-time-open-banking-payment-initiation.md).
 
 ## Further reading

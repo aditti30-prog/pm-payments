@@ -187,6 +187,8 @@ Use *intention-to-treat* where possible; don't condition the treatment cohort on
 **Exercise C:** A small PSP returns `HTTP 200` but marks the payment refused in its payload. Should the team classify it as approved?  
 **Answer:** No. A successful API response is not necessarily an approved payment. Inspect the provider's documented payment status/result, then normalize merchant and provider event mapping.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#16a-payment-metrics-and-observability) (companion answer key; review your reasoning before opening).
+
 **Next:** [17. Payment reliability and operations](17-reliability-and-payment-operations.md).
 
 ## Further reading

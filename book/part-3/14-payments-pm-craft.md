@@ -87,4 +87,6 @@ For vendor/API work, see [PSP selection and SLAs](../part-0/00c-psp-selection-an
 3. **Who should approve a reconciliation mapping change?**  
    *Answer check:* The ledger/finance accountable owner, with engineering implementation review and operations/PSP reconciliation confirmation; PM ensures customer/product requirements and controls are represented.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#14-payments-pm-craft) (companion answer key; review your reasoning before opening).
+
 **Next:** [15. Chargebacks and disputes](../part-4/15-chargebacks-and-disputes.md).

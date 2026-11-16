@@ -77,6 +77,8 @@ Customer requests a SGD 10 partial refund. A bank transfer used for purchase can
 **Exercise:** Shopper shows a “transfer successful” screenshot but your merchant bank webhook is delayed. Should a marketplace seller instantly ship a high-value order?  
 **Answer check:** Establish what evidence is authoritative for the rail and merchant. Use a clear pending state and permitted reconciliation/status retrieval rather than trusting an unverifiable screenshot. Risk and fulfillment thresholds may differ for low-value versus high-value orders; document the policy.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#18-real-time-open-banking-payment-initiation) (companion answer key; review your reasoning before opening).
+
 **Next:** [19. Stablecoins and programmable money](19-stablecoins-programmable-money.md).
 
 ## Primary sources

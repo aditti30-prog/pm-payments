@@ -179,6 +179,8 @@ Risk strategy should separate **trusted agent identity**, **user permission evid
 **D.** What is the difference between ACP and AP2?  
 **Answer:** ACP describes commerce/checkout interoperability (with provider integrations supporting payment), while AP2 emphasizes cryptographic evidence of delegated checkout and payment authorization. They solve different layers and should not be conflated. Always state protocol revision and integration maturity.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#20-agentic-commerce-delegated-payments) (companion answer key; review your reasoning before opening).
+
 **Next:** End of the current textbook. Use the [roadmap](../../ROADMAP.md) for pending reviews and further chapters.
 
 ## Primary sources (checked 16 November 2026)
