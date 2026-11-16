@@ -61,6 +61,8 @@ For a new merchant segment, define the accepted business models, target countrie
 
 Sketch the minimum viable onboarding and monitoring flow for (a) a neighborhood café accepting QR, and (b) a pre-order travel merchant accepting cards. Which controls change, and why?
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#05-merchant-acquiring) (companion answer key; review your reasoning before opening).
+
 **Next:** [5A. Marketplaces, PayFacs and funds flow](05a-marketplaces-payfac-funds-flow.md).
 
 ## Further reading

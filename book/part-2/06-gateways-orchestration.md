@@ -75,6 +75,8 @@ Track unique orders successfully paid (not just attempts approved), routing shar
 
 Compare two strategies: (A) route purely by lowest processing cost; (B) route by expected contribution from successfully fulfilled orders minus payment and operational costs. What additional data does B require?
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#06-gateways-orchestration) (companion answer key; review your reasoning before opening).
+
 **Next:** [7. Issuing and tokenization](07-issuing-tokenization.md).
 
 ## Further reading

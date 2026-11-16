@@ -53,6 +53,8 @@ Eligible applications → account opening → credential creation → activation
 
 Design a virtual card product for employee expenses. Specify two spend controls, account/card/token identifiers, what happens when a card is suspended, and the approval/fraud guardrails.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#07-issuing-tokenization) (companion answer key; review your reasoning before opening).
+
 **Next:** [7A. Network tokenization, FPAN and DPAN](07a-network-tokenization-fpan-dpan.md).
 
 ## Further reading

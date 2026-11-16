@@ -86,6 +86,8 @@ Proposed policy ingredients: eligible card schemes; per-tender and per-terminal 
 **Question:** A terminal displays an offline receipt but the POS has no PSP reference. Should the PM mark this tender `SETTLED`?  
 **Answer:** No. Retain the terminal/tender reference and a provisional state, then wait for the documented forwarding outcome, issuer response and settlement evidence. Reconcile later with the provider and correct the customer/merchant outcome if the offline attempt is rejected.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#08a-card-present-pos-and-offline) (companion answer key; review your reasoning before opening).
+
 **Next:** [9. Bank transfers, instant payments and BNPL](09-transfers-real-time-bnpl.md).
 
 ## Primary references

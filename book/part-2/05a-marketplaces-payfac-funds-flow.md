@@ -90,6 +90,8 @@ Use the [platform funds-flow specification](../../artifacts/platform-funds-flow-
 **Question:** Seller A is due S$80 and Seller B S$40 after commission. The platform sees a S$120 provider-ledger transfer but only S$80 of bank credits. Is the missing S$40 proof of lost money?  
 **Answer:** No. Reconcile external payouts and bank dates/IDs separately from provider internal transfer bookings. The S$40 might be pending, held for a reserve, rejected, or incorrectly routed. Do not issue a duplicate payout until its original status is known.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#05a-marketplaces-payfac-funds-flow) (companion answer key; review your reasoning before opening).
+
 **Next:** [6. Gateways and payment orchestration](06-gateways-orchestration.md).
 
 ## Primary references

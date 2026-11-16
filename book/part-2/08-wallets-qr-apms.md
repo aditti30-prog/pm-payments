@@ -54,6 +54,8 @@ A grocery shopper scans an app QR to identify their membership, apply vouchers a
 
 Compare a shopper-presented loyalty QR with a merchant-presented PayNow QR. List actor, purpose, data encoded, payment rail, success condition, refund route and highest-risk failure.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#08-wallets-qr-apms) (companion answer key; review your reasoning before opening).
+
 **Next:** [8A. Card-present POS and offline acceptance](08a-card-present-pos-and-offline.md).
 
 ## Further reading
