@@ -1,7 +1,7 @@
 # Part 0 · The job — What a Payments Product Manager owns
 
 **Audience:** PMs moving into payments, and experienced payments PMs moving across domains.  
-**Reading time:** ~18 minutes · **Prerequisites:** None · **Status:** Editorial draft, 16 November 2026
+**Estimated study time:** ~18 minutes · **Prerequisites:** None · **Status:** Editorial draft, 16 November 2026
 
 > **Guiding question:** What changes when you are accountable for a product whose outcomes must be correct in the app, in a processor, and in the ledger?
 
