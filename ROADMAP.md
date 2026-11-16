@@ -34,7 +34,7 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [x] Added 13B: Scam patterns, APP-fraud distinction and a Singapore-specific regulatory scope map.
 - [x] Drafted Part V Chapters 18–20; Chapter 20 includes dated ACP/UCP/AP2 and network-program comparisons.
 - [x] Added funds-flow, subscription-recovery, cross-border payout and agentic-intent artifacts, plus synthetic tests.
-- [ ] Specialist review, all-chapter exercise answer keys, primary rulebook updates and production implementation validation remain open.
+- [ ] Independent specialist review, complete scheme-rulebook updates and production implementation validation remain open; worked solutions are included in v0.6.
 
 ## Delivered in v0.5.1 — editorial quality patch (16 November 2026)
 
@@ -47,13 +47,20 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [ ] Add all-chapter answer keys and deeper worked scenarios.
 - [x] Add weekly scheduled external-link audit; 403/429 and network restrictions remain explicitly unverified.
 
+## Delivered in v0.6 — editorial quality pass (16 November 2026)
+
+- [x] Published [worked solutions](answers/chapter-exercises.md) across all 32 chapters and a reader-facing answer-key index.
+- [x] Added a [transaction-to-payout case lab](editorial/harborcart-case-lab.md) with a reproducible S$100 authorization, S$80 capture, S$10 refund, S$1.80 fee and S$68.20 payout.
+- [x] Added a dated [public primary-source audit](editorial/primary-source-audit-2026-11-16.md) and a [specialist review framework](editorial/specialist-review-program.md).
+- [ ] Independent reviewers, production provider-contract checks and comprehensive current scheme-rulebook validation remain **open**. Public-source verification is not a substitute for specialist sign-off.
+
 ## Planned improvements
 
 ### P0 — Editorial and navigation quality
 - [x] Correct chapter 3, 12 and 14 headings, old cross-references, math delimiter and forward reading path.
 - [x] Fix metadata to match this GitHub repository; delete the previous publishing scaffold.
 - [x] Upgrade local checks to validate chapter order, headings, Next navigation and chapter-numbered references.
-- [ ] Add answer keys or answer checks to every chapter exercise.
+- [x] Add worked solutions for every chapter exercise and an automated coverage check (v0.6).
 - [ ] Ask at least one specialist in issuing, acquiring, disputes and reconciliation for review.
 
 ### P1 — The PM role
