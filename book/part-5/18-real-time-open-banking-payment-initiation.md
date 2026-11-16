@@ -1,6 +1,6 @@
 # 18. Real-time payments, open banking and payment initiation
 
-**Part V — Modern and Emerging Payments** · **Reading time:** ~24 minutes · **Prerequisites:** [Bank transfers](../part-2/09-transfers-real-time-bnpl.md), [cross-border FX and treasury](../part-2/09a-cross-border-fx-and-treasury.md), [compliance](../part-3/13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part V — Modern and Emerging Payments** · **Estimated study time:** ~24 minutes · **Prerequisites:** [Bank transfers](../part-2/09-transfers-real-time-bnpl.md), [cross-border FX and treasury](../part-2/09a-cross-border-fx-and-treasury.md), [compliance](../part-3/13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** Can a retailer replace cards with instant account-to-account payments and keep the same conversion, refunds, dispute outcomes and customer service?
 
