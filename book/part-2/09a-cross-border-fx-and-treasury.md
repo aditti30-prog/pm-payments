@@ -1,6 +1,6 @@
 # 9A. Cross-border payments, FX, treasury and payouts
 
-**Part II — Payment Products & Infrastructure** · **Reading time:** ~23 minutes · **Prerequisites:** [Bank transfers](09-transfers-real-time-bnpl.md), [payment economics](../part-1/04-payment-economics.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~23 minutes · **Prerequisites:** [Bank transfers](09-transfers-real-time-bnpl.md), [payment economics](../part-1/04-payment-economics.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** The provider says a cross-border payout is completed, but the recipient has not received their expected amount. Which question do you ask first?
 
@@ -50,6 +50,20 @@ Money movement depends on **prefunding**, cash balances in each currency, intrad
 
 Ask finance/treasury: What balance is legally held by whom? When is it available? Do we pre-fund overseas accounts? What happens when currency liquidity is depleted at 4pm Friday? What provider/rail supports recall? Is the quoted FX rate valid at execution or at initiation? What does finance need to close daily books?
 
+### Treasury worked example: liquidity versus payment obligations
+
+**Fictional USD corridor; same-day figures:** An overseas payout account holds USD **40,000** in confirmed prefunding, and another USD **7,000** has been credited and is available. Treasury policy requires a USD **10,000** minimum buffer. The team has USD **45,000** of valid payouts due before cutoff.
+
+- Available total: USD 40,000 + USD 7,000 = **USD 47,000**.
+- Sendable under the buffer: USD 47,000 − USD 10,000 = **USD 37,000**.
+- Uncovered due payouts: USD 45,000 − USD 37,000 = **USD 8,000**.
+
+A functioning payment API cannot create the missing USD 8,000. The PM must define an `AWAITING_LIQUIDITY` status, escalation to treasury, permitted payout ordering (rather than arbitrary silent reprioritisation), revised customer ETA, and financial reconciliation. This is a teaching scenario, not a treasury policy recommendation.
+
+### Payment transparency and FATF Recommendation 16
+
+[FATF Recommendation 16's payment-transparency update of June 2025](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html) addresses originator and beneficiary information in payment messages. The applicable fields, checks and implementation timetable depend on the type of transfer, national implementation and regulated actors. Virtual-asset **Travel Rule** arrangements require separate assessment; do not assume one universal remittance payload. A Payments PM should make party-data validation, permissible disclosure, screening, record retention and exception handling testable acceptance criteria.
+
 ## 9A.4 Worked case: payout marked success before beneficiary credit
 
 A fictional SG platform instructs a USD 500 payout. PSP returns `transfer_submitted`, correspondent reports `in_progress`, foreign bank rejects an account-name mismatch, and the original amount is later returned net of an allowed bank fee. A dashboard keyed only to the PSP submit event overstates success.
@@ -64,6 +78,8 @@ A fictional SG platform instructs a USD 500 payout. PSP returns `transfer_submit
 - **Risk:** screening hit handling, sanctions obligations, beneficiary verification, prohibited countries/currencies and fraud.
 - **Operations:** exceptions per corridor, oldest unresolved payout, partner ack delay and reconciliation cutoffs.
 
+Use the [cross-border payout checklist](../../artifacts/cross-border-payout-checklist.md) to turn this into a launch/readiness review.
+
 **The corridor is the unit of analysis.** A Singapore-to-India payout using one local partner cannot be assumed to behave like a Europe-to-UK payment. Cost, time, laws and returnability vary.
 
 ## Exercise and answer check
@@ -74,6 +90,8 @@ A fictional SG platform instructs a USD 500 payout. PSP returns `transfer_submit
 **Next:** [10. Checkout and payment state](../part-3/10-checkout-and-payment-state.md).
 
 ## Primary references
+
+- [FATF — Recommendation 16 payment transparency update, June 2025](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html) (jurisdictional adoption differs).
 
 - [FSB — G20 cross-border payment targets](https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/g20-targets-for-enhancing-cross-border-payments-2/) (targets, not statements that every corridor meets them; accessed 16 November 2026).
 - [BIS — FX settlement risk and PvP, June 2026](https://www.bis.org/publications/qr-202606/uncovering-fx-settlement-risk-new-measures-2025-bis-triennial-survey) (FX wholesale context, not a retail remittance API specification).
