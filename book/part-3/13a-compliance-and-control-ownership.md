@@ -1,6 +1,6 @@
 # 13A. Compliance and control ownership for Payments PMs
 
-**Part III — Building Payment Products** · **Reading time:** ~30 minutes · **Prerequisites:** [Merchant acquiring](../part-2/05-merchant-acquiring.md), [checkout state](10-checkout-and-payment-state.md), [fraud controls](13-fraud-risk-and-payment-controls.md)  
+**Part III — Building Payment Products** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Merchant acquiring](../part-2/05-merchant-acquiring.md), [checkout state](10-checkout-and-payment-state.md), [fraud controls](13-fraud-risk-and-payment-controls.md)  
 **Editorial status:** Working draft, 16 November 2026. Regulatory/standards examples below are dated, jurisdiction-specific and require legal, compliance and security review; they are **not a compliance determination**.
 
 > **Guiding question:** Before the team ships a faster payment or onboarding experience, can the PM identify who is legally responsible, what data the product touches, which controls are mandatory, and which evidence must survive an audit?
