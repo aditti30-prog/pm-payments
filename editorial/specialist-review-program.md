@@ -2,6 +2,8 @@
 
 **Review status, 16 November 2026: NOT STARTED.** Automated checks, author/editor desk review and public documentation review **do not count as an independent specialist review**. No reviewer name, credential or sign-off should be listed until a real reviewer has examined the exact commit and approved the stated scope. Ask reviewers before public attribution.
 
+**Submit a review:** Use the [technical review issue form](https://github.com/aditti30-prog/pm-payments/issues/new?template=technical-review.yml) or provide a review against the exact commit SHA. The form collects the affected claim, counterexample, source date/version, severity and suggested correction; filing an issue is **not** an approval.
+
 ## How to review a chapter
 
 1. Select a chapter, specific repo commit SHA, jurisdiction/rail and your competence area. State potential conflicts and whether you can review public material.
