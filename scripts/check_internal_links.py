@@ -26,21 +26,29 @@ CHAPTERS = [
     "book/part-1/03-card-payment-lifecycle.md",
     "book/part-1/04-payment-economics.md",
     "book/part-2/05-merchant-acquiring.md",
+    "book/part-2/05a-marketplaces-payfac-funds-flow.md",
     "book/part-2/06-gateways-orchestration.md",
     "book/part-2/07-issuing-tokenization.md",
     "book/part-2/07a-network-tokenization-fpan-dpan.md",
     "book/part-2/08-wallets-qr-apms.md",
+    "book/part-2/08a-card-present-pos-and-offline.md",
     "book/part-2/09-transfers-real-time-bnpl.md",
+    "book/part-2/09a-cross-border-fx-and-treasury.md",
     "book/part-3/10-checkout-and-payment-state.md",
+    "book/part-3/10a-subscriptions-stored-credentials-and-dunning.md",
     "book/part-3/11-3d-secure.md",
     "book/part-3/12-authorization-optimization.md",
     "book/part-3/13-fraud-risk-and-payment-controls.md",
     "book/part-3/13a-compliance-and-control-ownership.md",
+    "book/part-3/13b-scams-and-regulatory-map.md",
     "book/part-3/14-payments-pm-craft.md",
     "book/part-4/15-chargebacks-and-disputes.md",
     "book/part-4/16-three-way-reconciliation.md",
     "book/part-4/16a-payment-metrics-and-observability.md",
     "book/part-4/17-reliability-and-payment-operations.md",
+    "book/part-5/18-real-time-open-banking-payment-initiation.md",
+    "book/part-5/19-stablecoins-programmable-money.md",
+    "book/part-5/20-agentic-commerce-delegated-payments.md",
 ]
 
 def slug(text: str) -> str:
@@ -108,7 +116,7 @@ def check() -> tuple[list[str], int]:
             errors.append(f"WRONG CHAPTER HEADER: {rel} -> {first} (expected '{number}.')")
 
         if idx == len(CHAPTERS) - 1:
-            # Final written chapter points to the planned Part V and cannot have a live Next link.
+            # Final written chapter points to the roadmap and has no further chapter link.
             if "**Next:**" not in content:
                 errors.append(f"MISSING NEXT-PLANNED MARKER: {rel}")
             continue

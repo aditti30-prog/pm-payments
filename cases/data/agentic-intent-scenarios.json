@@ -1,0 +1,121 @@
+{
+  "fictional": true,
+  "purpose": "Educational pre-payment consent policy regression examples. No credentials or network transactions.",
+  "intent": {
+    "id": "INT-1001",
+    "merchant": "HARBOR-1",
+    "sku": "SKU-OAT-A-500",
+    "quantity": 2,
+    "max_total_minor": 2400,
+    "currency": "SGD",
+    "delivery_date": "2026-11-17",
+    "expires_at": "2026-11-16T05:00:00Z",
+    "substitution_allowed": false
+  },
+  "evaluated_at": "2026-11-16T04:00:00Z",
+  "scenarios": [
+    {
+      "id": "approved",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 2,
+      "total_minor": 2200,
+      "currency": "SGD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": []
+    },
+    {
+      "id": "substitution",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-B-750",
+      "quantity": 2,
+      "total_minor": 2100,
+      "currency": "SGD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": [
+        "sku_mismatch"
+      ]
+    },
+    {
+      "id": "overspend",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 2,
+      "total_minor": 2600,
+      "currency": "SGD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": [
+        "amount_over_cap"
+      ]
+    },
+    {
+      "id": "qty_changed",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 3,
+      "total_minor": 3100,
+      "currency": "SGD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": [
+        "quantity_mismatch",
+        "amount_over_cap"
+      ]
+    },
+    {
+      "id": "late_delivery",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 2,
+      "total_minor": 2200,
+      "currency": "SGD",
+      "delivery_date": "2026-11-18",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": [
+        "delivery_mismatch"
+      ]
+    },
+    {
+      "id": "wrong_merchant",
+      "merchant": "HARBOR-2",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 2,
+      "total_minor": 2200,
+      "currency": "SGD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": [
+        "merchant_mismatch"
+      ]
+    },
+    {
+      "id": "expired",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 2,
+      "total_minor": 2200,
+      "currency": "SGD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T06:00:00Z",
+      "expected": [
+        "permission_expired"
+      ]
+    },
+    {
+      "id": "currency",
+      "merchant": "HARBOR-1",
+      "sku": "SKU-OAT-A-500",
+      "quantity": 2,
+      "total_minor": 2200,
+      "currency": "USD",
+      "delivery_date": "2026-11-17",
+      "evaluated_at": "2026-11-16T04:00:00Z",
+      "expected": [
+        "currency_mismatch"
+      ]
+    }
+  ]
+}

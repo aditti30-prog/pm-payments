@@ -5,7 +5,6 @@
 ## Learning outcomes
 
 Understand how a payment gateway differs from an acquirer, what an orchestration layer can and cannot solve, and how to assess routing, fallbacks, retries and observability across PSPs.
-
 ## 6.1 A gateway is an integration product
 
 A **gateway** exposes interfaces that allow a merchant application to submit payment requests and receive outcomes. It may tokenize credentials, manage client-side components, normalize payment methods, and provide webhooks, reconciliation exports and operational tooling. A **processor** handles transactions; an **acquirer** enables scheme-backed merchant acceptance. Their capabilities may come from one provider but are not conceptually identical.

@@ -11,6 +11,7 @@ Distinguish a payment instrument from the interface that presents it, understand
 A wallet could be a user interface for network-tokenized cards, a stored-value account, a bank-transfer initiation app, a QR payment acceptance network or a combination. Two products both called "wallet" may have different funding sources, merchant contracts, settlement schedules, risk controls and dispute mechanisms. Therefore, ask **what funds the payment and what rail settles it** rather than treating a wallet logo as a technical specification.
 
 A merchant sees alternatives such as cards, local wallets, pay-later products, bank redirects, QR, and real-time account transfers. Each has eligibility, conversion, cost, fraud, refund, and reconciliation consequences.
+
 ## 8.2 QR conveys information; the funding mechanism is separate
 
 A **merchant-presented QR** may encode a merchant identifier, account/proxy, order reference or dynamic amount. A **customer-presented QR** may encode a payment credential or identifier for the merchant to scan. QR can also be used solely for **identity or loyalty recognition**, with payment completed through another tender. These are different products despite sharing a scanning interaction.
@@ -53,7 +54,7 @@ A grocery shopper scans an app QR to identify their membership, apply vouchers a
 
 Compare a shopper-presented loyalty QR with a merchant-presented PayNow QR. List actor, purpose, data encoded, payment rail, success condition, refund route and highest-risk failure.
 
-**Next:** [9. Bank transfers, real-time rails and BNPL](09-transfers-real-time-bnpl.md).
+**Next:** [8A. Card-present POS and offline acceptance](08a-card-present-pos-and-offline.md).
 
 ## Further reading
 

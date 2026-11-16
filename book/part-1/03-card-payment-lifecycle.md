@@ -68,7 +68,6 @@ sequenceDiagram
 - A provider can combine gateway and acquirer, so the internal handoffs may not match the conceptual arrows.
 - A timeout at the merchant does **not** imply issuer decline. The issuer may have approved while the merchant missed the response.
 - Card-present EMV/contactless transactions involve additional device and terminal flows; this chapter focuses on **online card-not-present** payments.
-
 ## 3. What happens next?
 
 A common two-step card flow is:

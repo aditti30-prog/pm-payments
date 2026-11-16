@@ -9,7 +9,6 @@
 Explain three-way reconciliation in a merchant-acquiring context, design join keys and matching rules, reconcile gross captured sales to net bank payout, and classify exceptions without hiding real financial losses behind timing differences.
 
 ## 16.1 What are the three “parties”?
-
 For a merchant receiving PSP-managed card payments, a useful three-way model is:
 
 | Source | What it records | Why it differs |
@@ -34,7 +33,8 @@ These are not three independent equal-value comparisons: **gross merchant transa
 flowchart LR
   M[Merchant orders / payment ledger] -->|Capture / refund IDs| P[PSP settlement detail]
   P -->|Payout batch ID; net movement| B[Bank statement]
-  M -->|Gross-to-net bridge + receivable clearing| B  P --> E[Exceptions queue]
+  M -->|Gross-to-net bridge + receivable clearing| B
+  P --> E[Exceptions queue]
   M --> E
   B --> E
   E --> O[Investigation, owner, aging, resolution]

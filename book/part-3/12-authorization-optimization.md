@@ -92,6 +92,7 @@ Strong: "The decrease is concentrated in the cross-border card cohort recently m
 You may need to adjust for issuer mix, traffic quality and selection effects. **Correlated segments are not proof of causality.**
 
 ## 4. What levers might a Payments PM consider?
+
 | Lever | Possible upside | Important constraint |
 | --- | --- | --- |
 | Better request data / credential freshness | Fewer avoidable invalid/expired credentials | Provider/network rules and customer consent |

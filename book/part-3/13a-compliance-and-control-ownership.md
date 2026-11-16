@@ -162,7 +162,7 @@ Use the [control-ownership template](../../artifacts/compliance-control-ownershi
 
 **Answer guidance:** Map the complete browser/script/payment data flow; ask the PCI owner/acquirer to re-evaluate SAQ eligibility and required controls, referencing the current PCI SSC criteria. Split seller verification, compliance decision, underwriting and payment activation into independent states. Request responsible specialists' approval for screening, data retention, underwriting limits, exception handling and launch conditions. Preserve customer-conversion goals without asserting control decisions yourself.
 
-**Next:** [14. Payments PM craft](14-payments-pm-craft.md).
+**Next:** [13B. Scam protection and regulation](13b-scams-and-regulatory-map.md).
 
 ## Further reading — authoritative starting points
 

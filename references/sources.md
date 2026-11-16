@@ -1,6 +1,6 @@
 # Primary sources and editorial notes
 
-**Source review date:** 16 November 2026 (new compliance and measurement references; some older chapters still require their own re-check). These references supplement the original explanation in this textbook; they do not imply provider endorsement.
+**Source review date:** 16 November 2026 (new compliance, measurement and v0.5 topic references; older chapters still require periodic specialist review). These references supplement the original explanation in this textbook; they do not imply provider endorsement.
 
 ## Payment lifecycle and implementation
 
@@ -49,3 +49,23 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for contribution standards.
 - **Stripe — Comparing authorization metrics**: https://stripe.com/guides/maintaining-payments-performance-when-adopting-stripe — first-attempt, raw and de-duplicated definitions (provider-specific).
 - **OWASP — Webhook Security Cheat Sheet**: https://cheatsheetseries.owasp.org/cheatsheets/Webhook_Security_Cheat_Sheet.html — signature/replay/duplicate safety.
 - **Adyen — Invoice reconciliation**: https://docs.adyen.com/reporting/invoice-reconciliation/ — provider-specific settlement/cost reporting.
+
+## v0.5 — Platform funds flow, modern rails and agentic commerce (checked 16 November 2026)
+
+- **Adyen — Marketplace split transactions:** https://docs.adyen.com/platforms/online-payments/split-transactions — specific provider allocation behavior, not universal PayFac law.
+- **Adyen — Offline POS payments:** https://docs.adyen.com/point-of-sale/offline-payment — offline EMV and store-and-forward, including merchant exposure.
+- **Adyen — Stored credential payments:** https://docs.adyen.com/online-payments/tokenization/make-token-payments — shopper-initiated vs merchant-initiated distinctions.
+- **FSB — Cross-border payment targets:** https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/g20-targets-for-enhancing-cross-border-payments-2/ — targets, not a claim of achieved outcomes.
+- **BIS — FX settlement risk (June 2026):** https://www.bis.org/publications/qr-202606/uncovering-fx-settlement-risk-new-measures-2025-bis-triennial-survey — risk evidence.
+- **MAS — Combatting scams and SRF:** https://www.mas.gov.sg/regulation/combatting-scams — defined Singapore phishing-scam scope, not a universal reimbursement guarantee.
+- **ABS — PayNow:** https://www.abs.org.sg/e-payments/pay-now — Singapore alias/FAST mechanism.
+- **UK Open Banking — PIS guidelines (March 2026):** https://standards.openbanking.org.uk/customer-experience-guidelines/payment-initiation-services/latest/ — UK-specific payment initiation.
+- **Circle — USDC terms:** https://www.circle.com/legal/usdc-terms — issuer-specific redemption and transfer risks.
+- **MAS — Stablecoin consultation (September 2026):** https://www.mas.gov.sg/publications/consultations/2026/consultation-on-proposed-amendments-to-the-payment-services-act-for-stablecoin-regulation — proposal, not enacted law.
+- **Stripe — ACP:** https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce — OpenAI/Stripe commerce standard announcement.
+- **UCP — Protocol announcements and version updates:** https://github.com/Universal-Commerce-Protocol/ucp/blob/main/docs/documentation/announcements.md — versioned commerce protocol.
+- **Google — AP2 v0.2 specification:** https://github.com/google-agentic-commerce/AP2/blob/main/docs/ap2/specification.md — Checkout/Payment Mandates, not automatic issuer approval.
+- **Visa — Intelligent Commerce:** https://developer.visa.com/capabilities/visa-intelligent-commerce/overview — Visa-specific program, restrictions.
+- **Mastercard — Agent Pay:** https://www.mastercard.com/sg/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai.html — Mastercard-specific network-token program.
+
+**Version discipline:** Where sources describe **AP2 v0.2**, do not substitute older `CartMandate` examples for `CheckoutMandate`. An open protocol, preview, pilot or partner announcement does not demonstrate universal market or merchant availability.

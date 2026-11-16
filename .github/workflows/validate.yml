@@ -18,3 +18,5 @@ jobs:
         run: python scripts/verify_case.py
       - name: Check HarborCart metric arithmetic
         run: python scripts/verify_metrics.py
+      - name: Check fictional agentic checkout consent constraints
+        run: python scripts/verify_agentic_cases.py

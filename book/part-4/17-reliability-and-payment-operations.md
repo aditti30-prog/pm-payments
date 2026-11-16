@@ -83,6 +83,7 @@ flowchart TD
 **Trigger:** Two financial operations appear for the same intended order, or a customer reports double charge.
 
 **First establish the fact pattern:** Two pending **authorization holds** are not necessarily two posted card charges; two capture operations may have two financially settled debits; duplicate refunds are a different failure mode. Never promise an immediate reversal before checking scheme/provider state and refund windows.
+
 **Detect:** Duplicate `capture_id` correlation, same order and amount with multiple *confirmed captures*, repeated event delivery causing duplicated downstream side effects, financial event uniqueness violations, customer tickets and dispute evidence.
 
 **Contain:** Stop unsafe retry/replay paths and prevent new duplicate fulfilment. Engineering freezes affected handler or feature flag; finance identifies captured/settled value; risk monitors possible abuse.
@@ -177,7 +178,7 @@ A downloadable [incident-review template](../../artifacts/payment-incident-revie
 **Exercise C:** A bank credit is S$200 below expected net, but a provider CSV with a new fee category arrived after close. What is the safe response?  
 **Answer:** Reopen the corresponding exception, validate the fee's contract/source batch and sign, recompute the gross-to-net bridge, record any finance-approved accounting change and close only with bank-reference evidence.
 
-**Next:** Part V — Emerging Payments (chapters planned in the roadmap).
+**Next:** [18. Real-time payments and open banking](../part-5/18-real-time-open-banking-payment-initiation.md).
 
 ## Further reading
 

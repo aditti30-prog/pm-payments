@@ -36,7 +36,7 @@ Make the decision by **eligible customer reach**, completion lift versus canniba
 
 A merchant offers cards, FAST bank transfers, and BNPL. Build a comparison table covering payment confirmation, payout, refund mechanism, customer recourse, merchant cost and operational burden. Identify where you need provider-specific evidence.
 
-**Next:** [10. Checkout product design](../part-3/10-checkout-and-payment-state.md).
+**Next:** [9A. Cross-border FX, treasury and payouts](09a-cross-border-fx-and-treasury.md).
 
 ## Further reading
 

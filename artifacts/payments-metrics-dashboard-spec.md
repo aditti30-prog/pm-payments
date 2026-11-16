@@ -55,7 +55,8 @@ Leadership sees conflicting “payment success” numbers in checkout analytics 
 
 ## Sample diagnostic SQL sketch (not deployable without schema mapping)
 
-```sql-- First establish a de-duplicated eligible authorization-attempt cohort.
+```sql
+-- First establish a de-duplicated eligible authorization-attempt cohort.
 -- Do not use this result as unique-order success.
 SELECT
   DATE(submitted_at) AS auth_date_utc,

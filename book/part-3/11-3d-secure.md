@@ -91,7 +91,6 @@ In jurisdictions such as the European Economic Area, Strong Customer Authenticat
 Example: a merchant requests an eligible transaction-risk-analysis exemption; authorization succeeds. This may offer a smoother customer journey, but the merchant should not assume the issuer now bears fraud chargeback liability. Compare the PSP's and scheme's specific exemption/liability treatment.
 
 ## 11.6 Product trade-offs: optimize successful good orders
-
 A naive optimization is to minimize challenges. A better outcome measure is **good orders successfully paid and ultimately fulfilled** at an acceptable fraud, liability, cost and customer-experience level.
 
 | Lever | Why it might help | What to watch |

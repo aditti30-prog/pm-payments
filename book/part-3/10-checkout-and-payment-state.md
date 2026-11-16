@@ -58,7 +58,7 @@ Balanced metrics include: paid-order conversion, unique-order payment success, a
 
 A customer sees S$60 at checkout, applies a S$10 coupon and pays with a card plus S$5 loyalty points. One item is removed after picking. Define: the revised amount and funding allocation; when and how to restore points; the customer receipt; capture/refund behavior; and what finance should reconcile. Include a merchant and provider failure state at every transition.
 
-**Next:** [11. 3-D Secure](11-3d-secure.md).
+**Next:** [10A. Subscriptions and dunning](10a-subscriptions-stored-credentials-and-dunning.md).
 
 ## Further reading
 

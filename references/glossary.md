@@ -80,3 +80,24 @@ Definitions are intentionally concise and provider-neutral where possible. Speci
 - [Chapter 12: Authorization optimization](../book/part-3/12-authorization-optimization.md)
 - [Chapter 15: Chargebacks](../book/part-4/15-chargebacks-and-disputes.md)
 - [Chapter 16: Three-party reconciliation](../book/part-4/16-three-way-reconciliation.md)
+
+## Modern platforms, treasury and AI agents (v0.5)
+
+| Term | Working definition / PM implication |
+|---|---|
+| **Sub-merchant** | Seller supported within a PayFac/platform acquiring arrangement; assess underwriting and liability by actual contract |
+| **Platform liable balance** | PSP/provider balance to which platform obligations, fees or shortfalls can be booked; not necessarily revenue |
+| **Negative balance** | Seller/provider balance below zero due to refunds, disputes, fees or advances; requires owner and recovery policy |
+| **Off-ramp** | Converts a token/digital asset into fiat through eligible providers; token receipt does not guarantee bank credit |
+| **FX rate lock** | Quote validity constraint; conversion rate may expire before money is sent |
+| **Offline EMV / store and forward** | Terminal-local acceptance modes during connectivity loss; final financial outcome may remain pending |
+| **Dunning** | Communications and permitted collection recovery for overdue subscription invoices |
+| **APP scam** | Authorized-push-payment fraud where a payer can be deceived into initiating a valid bank transfer |
+| **Agentic commerce** | Agent-assisted discovery and purchasing involving commerce, customer permission and payment execution as separate layers |
+| **Checkout Mandate (AP2)** | Verifiable authorization for a specific or constrained checkout under a versioned AP2 specification |
+| **Payment Mandate (AP2)** | Verifiable permission for a scoped payment, tied to a checkout; distinct from issuer authorization |
+| **ACP** | Agentic Commerce Protocol; commerce/checkout interoperability initiative from OpenAI and Stripe |
+| **UCP** | Universal Commerce Protocol; a versioned commerce standard with capability descriptions, checkout and extensibility |
+| **Scoped payment credential** | Token or reference limited to allowed merchant/amount/time or other controls as supported; not unlimited PAN authority |
+
+See [Chapter 20](../book/part-5/20-agentic-commerce-delegated-payments.md) for the differences between agent identity, customer intent, credential issuance and payment authorization.
