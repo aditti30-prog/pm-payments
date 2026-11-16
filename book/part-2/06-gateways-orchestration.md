@@ -71,6 +71,8 @@ At 10:05, the primary provider times out for 20% of transactions. At 10:08, the 
 
 Track unique orders successfully paid (not just attempts approved), routing share, authorization by eligible cohort, provider error/timeout share, p95/p99 latency, recovery latency for ambiguous states, duplicate-capture incidents, cost per successful order, unmatched settlement items and incident minutes. A routing experiment must compare equivalent cohorts and watch risk.
 
+**Operational case lab:** [PSP A timed out; should checkout fail over to PSP B?](../../cases/02-ambiguous-authorization-routing.md) Work through the provider-scoped idempotency problem and design a safe pending state before changing routing policy.
+
 ## Practice
 
 Compare two strategies: (A) route purely by lowest processing cost; (B) route by expected contribution from successfully fulfilled orders minus payment and operational costs. What additional data does B require?
