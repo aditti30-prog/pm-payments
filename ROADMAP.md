@@ -54,6 +54,15 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [x] Added a dated [public primary-source audit](editorial/primary-source-audit-2026-11-16.md) and a [specialist review framework](editorial/specialist-review-program.md).
 - [ ] Independent reviewers, production provider-contract checks and comprehensive current scheme-rulebook validation remain **open**. Public-source verification is not a substitute for specialist sign-off.
 
+## Delivered in v0.6.1 — operational depth and review readiness (16 November 2026)
+
+- [x] Added [PSP failover and ambiguous-authorization case lab](cases/02-ambiguous-authorization-routing.md): differentiated issuer approval, paid-order outcome, 3DS challenge, duplicate callbacks and unknown status. *Fictional scenario.*
+- [x] Added [marketplace reserve/refund/dispute case lab](cases/03-marketplace-reserve-refund-dispute.md): S$250 gross-to-net waterfall, S$20 seller reserve, S$40 post-payout refund and S$60 later dispute. *Fictional contractual model.*
+- [x] Added a [reproducible JSON fixture](cases/data/operational-case-inputs.json) and [Python numeric check](scripts/verify_operational_cases.py) to GitHub Actions CI.
+- [x] Cross-linked both case labs from gateway, 3DS, authorization, acquiring/PayFac, disputes, reconciliation and payment-operations chapters.
+- [x] Extended the [specialist review packet](editorial/specialist-review-packet.md) with explicit counterexample tests and the [primary-source audit](editorial/primary-source-audit-2026-11-16.md) with provider-specific anchors.
+- [ ] **Unchanged:** No independent professional/scheme review or certified provider-contract validation has occurred. Automated tests establish consistency, not legal compliance or a commercially supportable design.
+
 ## Planned improvements
 
 ### P0 — Editorial and navigation quality
