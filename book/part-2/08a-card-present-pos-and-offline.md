@@ -1,6 +1,6 @@
 # 8A. Card-present, POS integrations and offline payment risk
 
-**Part II — Payment Products & Infrastructure** · **Reading time:** ~20 minutes · **Prerequisites:** [Wallets and QR](08-wallets-qr-apms.md), [payment lifecycle](../part-1/03-card-payment-lifecycle.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~20 minutes · **Prerequisites:** [Wallets and QR](08-wallets-qr-apms.md), [payment lifecycle](../part-1/03-card-payment-lifecycle.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** A shopper walks out with goods while the terminal is offline. Has the retailer been paid?
 
