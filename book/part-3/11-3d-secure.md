@@ -126,6 +126,10 @@ A naive optimization is to minimize challenges. A better outcome measure is **go
 
 **Answer guidance:** (1) No, authentication and authorization differ. (2) No. (3) Eligibility, issuer discretion, fraud, liability, market and rules. (4) Matured fraud/chargebacks. (5) Stable attempt and order identifiers, idempotency and authoritative PSP state.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#11-3d-secure) (companion answer key; review your reasoning before opening).
+
+> **Draft-versus-production note (16 November 2026):** EMVCo lists a **draft** 3DS v2.4.0.0 protocol published 4 November 2026. A published draft is not evidence that an issuer ACS, merchant PSP or card network implements it. Confirm actual supported versions and network rules. [EMVCo listings](https://www.emvco.com/emv-technologies/3-d-secure/).
+
 **Next:** [12. Authorization optimization](12-authorization-optimization.md).
 
 ## Further reading

@@ -70,6 +70,8 @@ Do not compare a 30-day matured recovery cohort against yesterday's due invoices
 **Question:** A processor times out after charging a recurring S$25 invoice. The scheduler runs again. Should it create a new authorization?  
 **Answer:** Not based solely on the timeout. Resolve the first operation via permitted status queries and callbacks using a durable invoice/attempt reference, then determine whether a fresh attempt is allowed. An invoice being unpaid in your ledger does not prove the payment never succeeded at the processor.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#10a-subscriptions-stored-credentials-and-dunning) (companion answer key; review your reasoning before opening).
+
 **Next:** [11. EMV 3-D Secure](11-3d-secure.md).
 
 ## Primary references

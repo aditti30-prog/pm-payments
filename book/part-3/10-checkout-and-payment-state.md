@@ -58,6 +58,8 @@ Balanced metrics include: paid-order conversion, unique-order payment success, a
 
 A customer sees S$60 at checkout, applies a S$10 coupon and pays with a card plus S$5 loyalty points. One item is removed after picking. Define: the revised amount and funding allocation; when and how to restore points; the customer receipt; capture/refund behavior; and what finance should reconcile. Include a merchant and provider failure state at every transition.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#10-checkout-and-payment-state) (companion answer key; review your reasoning before opening).
+
 **Next:** [10A. Subscriptions and dunning](10a-subscriptions-stored-credentials-and-dunning.md).
 
 ## Further reading

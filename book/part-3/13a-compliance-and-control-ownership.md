@@ -165,6 +165,10 @@ Use the [control-ownership template](../../artifacts/compliance-control-ownershi
 
 **Answer guidance:** Map the complete browser/script/payment data flow; ask the PCI owner/acquirer to re-evaluate SAQ eligibility and required controls, referencing the current PCI SSC criteria. Split seller verification, compliance decision, underwriting and payment activation into independent states. Request responsible specialists' approval for screening, data retention, underwriting limits, exception handling and launch conditions. Preserve customer-conversion goals without asserting control decisions yourself.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#13a-compliance-and-control-ownership) (companion answer key; review your reasoning before opening).
+
+> **Dated PCI source note (16 November 2026):** [PCI SSC FAQ 1588](https://www.pcisecuritystandards.org/faqs/1588/) clarifies a specific PCI DSS v4.0.1 SAQ A embedded-payment-page script eligibility criterion. It does **not** establish blanket SAQ A eligibility; confirm the full environment and applicable controls with the acquirer/assessor. See the [primary-source audit](../../editorial/primary-source-audit-2026-11-16.md).
+
 **Next:** [13B. Scam protection and regulation](13b-scams-and-regulatory-map.md).
 
 ## Further reading — authoritative starting points

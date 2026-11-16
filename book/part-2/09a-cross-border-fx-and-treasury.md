@@ -87,6 +87,8 @@ Use the [cross-border payout checklist](../../artifacts/cross-border-payout-chec
 **Question:** The payout provider returns `processed` on Monday; the recipient says nothing arrived on Wednesday. Which records do you need before promising a refund?  
 **Answer:** Contractual meaning of `processed`, local bank/partner references, settlement/FX and beneficiary confirmation or reject, cutoff calendar and return policy. Investigate the destination leg, not merely the API request. Avoid a duplicate send until the first attempt is reconciled.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#09a-cross-border-fx-and-treasury) (companion answer key; review your reasoning before opening).
+
 **Next:** [10. Checkout and payment state](../part-3/10-checkout-and-payment-state.md).
 
 ## Primary references

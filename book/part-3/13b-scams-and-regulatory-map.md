@@ -77,6 +77,8 @@ Instrument attempted and confirmed scam loss separately, risk-trigger cohorts, f
 **Question:** A Singapore customer is tricked into voluntarily sending money to a scammer. Is the bank necessarily liable under SRF?  
 **Answer:** Generally **no**. A transfer the customer voluntarily initiated after deception usually falls **outside** the SRF's defined phishing-credential transaction scope. Verify the facts, but don't present SRF as general compensation. Trigger immediate bank/police reporting, trace/recovery where possible, approved scam controls and consideration of other legal protections (including the Protection from Scams Act). Authentication does not prove the customer was not deceived.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#13b-scams-and-regulatory-map) (companion answer key; review your reasoning before opening).
+
 **Next:** [14. Payments PM craft](14-payments-pm-craft.md).
 
 ## Primary references
