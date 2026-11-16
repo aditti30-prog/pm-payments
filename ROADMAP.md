@@ -36,7 +36,7 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [x] Added funds-flow, subscription-recovery, cross-border payout and agentic-intent artifacts, plus synthetic tests.
 - [ ] Specialist review, all-chapter exercise answer keys, primary rulebook updates and production implementation validation remain open.
 
-## Editorial corrections after v0.5 (16 November 2026)
+## Delivered in v0.5.1 — editorial quality patch (16 November 2026)
 
 - [x] Tightened Chapter 13B's SRF coverage: defined phishing scope, Singapore-issued card exclusion and Protection from Scams Act restriction orders; renamed heading to Singapore-focused scoping.
 - [x] Dated MAS stablecoin consultation close and added MiCA/GENIUS comparison in Chapter 19.
@@ -44,7 +44,8 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [x] Added Chapter 9A treasury-liquidity arithmetic and FATF Recommendation 16; linked its payout checklist and Chapter 10A's subscription PRD.
 - [x] Replaced static metric assertions with CSV-driven funnel calculations; aligned onboarding states and incident timestamp.
 - [ ] Complete specialist legal and technical review; educational scope notes are not a substitute.
-- [ ] Add chapter answer keys, external-link monitoring and deeper worked scenarios.
+- [ ] Add all-chapter answer keys and deeper worked scenarios.
+- [x] Add weekly scheduled external-link audit; 403/429 and network restrictions remain explicitly unverified.
 
 ## Planned improvements
 
