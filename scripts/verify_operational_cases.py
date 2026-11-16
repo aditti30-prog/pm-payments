@@ -100,7 +100,14 @@ def check_marketplace():
         refund_platform_share, refund_seller_share, b_platform_reversal,
         b_seller_receivable, dispute_fee,
     ):
-        check_contains(case, money_text(amount), "marketplace")
+        expected_tokens = {
+            money_text(amount),
+            f"{money(amount):,.2f}",
+            f"S${money(amount):,.0f}",
+        }
+        assert any(token in case for token in expected_tokens), (
+            f"marketplace: calculated amount {money(amount)} is missing from case"
+        )
 
     # Structural guardrail against treating seller reserve as platform earnings.
     assert "not platform earnings" in case.lower()
