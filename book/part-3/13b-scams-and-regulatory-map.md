@@ -1,6 +1,6 @@
-# 13B. Scam protection and a jurisdictional regulation map
+# 13B. Scam protection and regulatory scoping: Singapore examples
 
-**Part III — Building Payment Products** · **Reading time:** ~19 minutes · **Prerequisites:** [Risk controls](13-fraud-risk-and-payment-controls.md), [compliance ownership](13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part III — Building Payment Products** · **Estimated study time:** ~19 minutes · **Prerequisites:** [Risk controls](13-fraud-risk-and-payment-controls.md), [compliance ownership](13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** A payment can be properly authorized and still be a scam. What can the product prevent, and who is responsible for the customer's loss?
 
@@ -36,11 +36,21 @@ flowchart TD
 
 Design intervention choices with risk/legal approval: beneficiary-name confirmation where available, new-payee friction, unusually large transfer thresholds, device-change protection, time-limited hold for specific approved circumstances, accessible emergency reporting and trusted callback channels. Avoid promising recall/funds recovery on irreversible rails.
 
-## 13B.3 Singapore anchor: the Shared Responsibility Framework
+## 13B.3 Singapore: distinguish SRF phishing from authorised-payment scams
 
-**As of 16 November 2026:** Singapore MAS describes the **Shared Responsibility Framework (SRF)** for a **defined scope of phishing scams**, assigning duties to financial institutions and telcos and an investigation workflow. **Do not extrapolate it to every scam, merchant payment, wallet or QR transfer.** Eligibility and liability depend on the current legal guidance and facts. See the [MAS scam protection overview](https://www.mas.gov.sg/regulation/combatting-scams) and [MAS payments regulation](https://www.mas.gov.sg/regulation/payments).
+**Scope anchor — checked 16 November 2026:** The MAS/IMDA **Shared Responsibility Framework (SRF)** took effect on **16 December 2024**. Its loss-sharing rules concern a *defined phishing-credential compromise* sequence: a scammer impersonates a legitimate organisation, obtains account credentials through a digital message and fabricated platform, and uses them to execute a transaction the account user **did not intend**. SRF is **not** a general reimbursement scheme for customers who intentionally initiate payments after being deceived, such as typical investment or romance scams. [MAS/IMDA SRF Guidelines](https://www.imda.gov.sg/-/media/imda/files/regulations-and-licensing/regulations/consultations/2024/shared-responsibility-framework-for-phishing-scams/guidelines-on-shared-responsibility-framework.pdf); [MAS scam overview](https://www.mas.gov.sg/regulation/combatting-scams).
 
-A product requirement should specify: whether the institution is within the framework; applicable consumer channels and scam types; mandatory controls and reporting; documented investigation/appeal process; data and escalation retention; and who may decide on remediation. Policy interpretation belongs to compliance/legal.
+**Separate card treatment:** SRF's loss-sharing provisions explicitly **exclude transactions on Singapore-issued credit, charge and debit cards** (footnote 1 of the Guidelines). Card-specific and other applicable protections require separate analysis.
+
+**Authorised-transfer scam intervention:** Singapore's **Protection from Scams Act 2025** commenced **1 July 2025**. It empowers **Police**—when statutory criteria are met—to issue Restriction Orders to banks restricting access to relevant banking and credit facilities to help prevent transfers or withdrawals benefitting scammers. It is **not** blanket authority for a product team to block any payment it dislikes. [Ministry of Home Affairs commencement notice](https://www.mha.gov.sg/media-room/newsroom/commencement-of-the-protection-from-scams-act/).
+
+| Fictional situation | SRF status | Operational PM action |
+|---|---|---|
+| A phishing site captures protected-account credentials; attacker transfers money | **Potentially in scope**, only if all statutory/guideline facts and duties fit | Secure account, preserve records and apply appropriate investigation/reporting workflow |
+| Customer voluntarily sends funds to a fake investment adviser | **Generally out of scope** of SRF's phishing-credential definition | Immediate bank/police reporting, trace/recall if supported, authorised controls and scam-support response |
+| Customer disputes a scam card transaction on a Singapore-issued card | **Excluded from SRF loss-sharing rules** | Follow applicable card, bank, dispute and fraud pathways |
+
+**Product requirement:** Record payment instrument, account, who initiated the transaction, credentials compromised, scam type, legal basis, response owner, reporting and remediation promises. Compliance/legal determines scheme/regulatory scope; the PM makes the approved policy implementable.
 
 ## 13B.4 Regulatory scoping is a product discovery task
 
@@ -65,11 +75,14 @@ Instrument attempted and confirmed scam loss separately, risk-trigger cohorts, f
 ## Exercise and answer check
 
 **Question:** A Singapore customer is tricked into voluntarily sending money to a scammer. Is the bank necessarily liable under SRF?  
-**Answer:** No. Determine whether the **specific scam and actors** meet the framework's defined scope and duty-breach conditions. In parallel initiate timely support and recovery processes irrespective of eligibility. Never equate a successful authentication with proof the transfer was not a scam.
+**Answer:** Generally **no**. A transfer the customer voluntarily initiated after deception usually falls **outside** the SRF's defined phishing-credential transaction scope. Verify the facts, but don't present SRF as general compensation. Trigger immediate bank/police reporting, trace/recovery where possible, approved scam controls and consideration of other legal protections (including the Protection from Scams Act). Authentication does not prove the customer was not deceived.
 
 **Next:** [14. Payments PM craft](14-payments-pm-craft.md).
 
 ## Primary references
+
+- [MAS/IMDA — SRF Guidelines (effective 16 December 2024)](https://www.imda.gov.sg/-/media/imda/files/regulations-and-licensing/regulations/consultations/2024/shared-responsibility-framework-for-phishing-scams/guidelines-on-shared-responsibility-framework.pdf) (definition, duties and card exclusion).
+- [MHA — Protection from Scams Act commenced 1 July 2025](https://www.mha.gov.sg/media-room/newsroom/commencement-of-the-protection-from-scams-act/) (Police-issued restriction orders).
 
 - [MAS — Combatting scams and the Shared Responsibility Framework](https://www.mas.gov.sg/regulation/combatting-scams) (Singapore only; accessed 16 November 2026).
 - [MAS — Payment Services Act regulatory overview](https://www.mas.gov.sg/regulation/payments) (Singapore only; accessed 16 November 2026).
