@@ -14,6 +14,10 @@ jobs:
           python-version: '3.12'
       - name: Check links and reading order
         run: python scripts/check_internal_links.py
+      - name: Check all chapter answer keys and links
+        run: python scripts/check_answer_coverage.py
+      - name: Check HarborCart transaction-to-payout accounting
+        run: python scripts/verify_harborcart_reconciliation.py
       - name: Check authorization case numbers
         run: python scripts/verify_case.py
       - name: Check HarborCart metric arithmetic
