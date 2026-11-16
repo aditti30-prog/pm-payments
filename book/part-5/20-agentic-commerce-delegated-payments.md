@@ -1,6 +1,6 @@
 # 20. Agentic commerce, delegated credentials and customer consent
 
-**Part V — Modern and Emerging Payments** · **Reading time:** ~35 minutes · **Prerequisites:** [Network tokens](../part-2/07a-network-tokenization-fpan-dpan.md), [3DS](../part-3/11-3d-secure.md), [checkout state](../part-3/10-checkout-and-payment-state.md), [compliance](../part-3/13a-compliance-and-control-ownership.md), [disputes](../part-4/15-chargebacks-and-disputes.md) · **Source review:** 16 November 2026 · **Status:** Working draft. Rapidly evolving standards; version-check before implementation.
+**Part V — Modern and Emerging Payments** · **Estimated study time:** ~35 minutes · **Prerequisites:** [Network tokens](../part-2/07a-network-tokenization-fpan-dpan.md), [3DS](../part-3/11-3d-secure.md), [checkout state](../part-3/10-checkout-and-payment-state.md), [compliance](../part-3/13a-compliance-and-control-ownership.md), [disputes](../part-4/15-chargebacks-and-disputes.md) · **Source review:** 16 November 2026 · **Status:** Working draft. Rapidly evolving standards; version-check before implementation.
 
 > **Guiding question:** The customer asks an AI agent to “buy my usual groceries under S$60.” Who decides what “usual” means, what exactly was authorized, and what happens if the agent buys the wrong items?
 
@@ -48,11 +48,15 @@ Distinguish product discovery, commerce orchestration, delegated user intent, cr
 
 **Sources:** [Stripe ACP announcement](https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce), [Stripe Agentic Commerce Suite](https://stripe.com/blog/agentic-commerce-suite), [UCP project announcements](https://github.com/Universal-Commerce-Protocol/ucp/blob/main/docs/documentation/announcements.md), [AP2 v0.2 specification](https://github.com/google-agentic-commerce/AP2/blob/main/docs/ap2/specification.md), [Visa Intelligent Commerce](https://developer.visa.com/capabilities/visa-intelligent-commerce/overview), [Mastercard Agent Pay](https://www.mastercard.com/sg/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai.html).
 
+**Governance anchor (as of 16 November 2026):** Google released **AP2 v0.2.0 on 28 April 2026** with support for human-not-present flows, and contributed the AP2 core specification to the **FIDO Alliance** for broader standards work. FIDO also announced work incorporating Mastercard's **Verifiable Intent** contribution. Google's repository now focuses future contributions on SDKs and examples while core standards work moves through FIDO. Do not equate this standards process with universal PSP/issuer production support. [AP2 releases](https://github.com/google-agentic-commerce/AP2/releases); [FIDO announcement, 28 April 2026](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/); [AP2 contribution guidelines](https://github.com/google-agentic-commerce/AP2/blob/main/CONTRIBUTING.md).
+
 **Important version note:** Older AP2 examples use **CartMandate** terminology. The AP2 v0.2 specification uses **Checkout Mandate**. Always pin a protocol revision and review its current validation rules before implementing or quoting exact field semantics. Public standards and pilots must not be presented as universally available production functionality. [AP2 v0.2](https://github.com/google-agentic-commerce/AP2/blob/main/docs/ap2/specification.md); [UCP protocol announcements](https://github.com/Universal-Commerce-Protocol/ucp/blob/main/docs/documentation/announcements.md).
 
 ### Which one should a merchant choose?
 
 First ask which AI channels and markets the merchant is actually targeting, what their commerce backend supports, who processes their payments, and whether the protocol/partner is accessible under current onboarding. The choice may be **multiple adapters** to a single canonical order/payment state machine. A cross-merchant checkout integration is not the same as an issuer/network token issuance program. Treat a provider feature request, protocol experiment and production commitment as different roadmap investments.
+
+**Settlement is a separate question:** AP2's published samples include both card payments and a **human-not-present x402 payment example**. This does not make x402 a mandatory settlement rail or imply that every AP2 transaction uses a stablecoin. A verifiable mandate is not itself an issuer approval, token transfer or merchant fiat payout. See [Chapter 19: stablecoins and settlement](19-stablecoins-programmable-money.md) and the [AP2 project overview](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
 
 ## 20.4 Two purchase modes require different authorization models
 
@@ -178,6 +182,10 @@ Risk strategy should separate **trusted agent identity**, **user permission evid
 **Next:** End of the current textbook. Use the [roadmap](../../ROADMAP.md) for pending reviews and further chapters.
 
 ## Primary sources (checked 16 November 2026)
+
+- [AP2 v0.2.0 — official GitHub release, 28 April 2026](https://github.com/google-agentic-commerce/AP2/releases).
+- [FIDO Alliance — agentic commerce/authentication standards initiative, 28 April 2026](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/).
+- [AP2 — official x402 and card examples](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
 
 - [Stripe — ACP standard announcement, September 2025](https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce).
 - [Stripe — Agentic Commerce Suite and scoped Shared Payment Tokens, December 2025](https://stripe.com/blog/agentic-commerce-suite).
