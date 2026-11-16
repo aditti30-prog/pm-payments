@@ -1,0 +1,8 @@
+metric,value
+eligible_checkout_sessions,100000
+payment_initiated_orders,80000
+confirmed_paid_orders,72000
+captured_sales_sgd,3600000
+processing_cost_sgd,70560
+mature_captured_sales_sgd,3600000
+mature_confirmed_fraud_loss_sgd,3600
