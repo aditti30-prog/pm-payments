@@ -34,7 +34,7 @@ sequenceDiagram
     C->>I: Raise a concern / dispute
     I->>N: Submit eligible dispute under scheme process
     N->>A: Route dispute and reason
-    A->>M: Notify; request response/evidence
+    A->>M: Notify and request response/evidence
     alt Merchant accepts / does not respond
       M-->>A: Accept or no defense
     else Merchant contests
