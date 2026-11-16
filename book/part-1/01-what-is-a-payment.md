@@ -68,6 +68,8 @@ This is the essential shift: from **button and API** to **contract, money state,
 3. Why might the final order value differ from the original authorized amount?
 4. Design a minimal identifier scheme linking order, payment, attempt, capture, refund, and payout.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#01-what-is-a-payment) (companion answer key; review your reasoning before opening).
+
 **Next:** [2. The payments ecosystem](02-ecosystem.md).
 
 ## Further reading

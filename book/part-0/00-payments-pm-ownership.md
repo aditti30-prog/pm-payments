@@ -87,4 +87,6 @@ A fictional merchant observes that 1.3% of payment attempts end in a gateway tim
 3. **A risk team's false-positive losses and a growth team's approval metrics conflict.** Who decides?  
    *Answer check:* Agree on risk appetite and decision rights in advance; evaluate legitimate-order conversion **and** fraud-adjusted contribution; escalate beyond the PM when approved control limits are implicated.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00-payments-pm-ownership) (companion answer key; review your reasoning before opening).
+
 **Next:** [First 90 days as a Payments PM](00a-first-90-days.md).

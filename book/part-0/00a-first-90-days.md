@@ -78,4 +78,6 @@ Pick an intervention where eligibility, rollout and rollback can be explicit: cl
 **Exercise:** You have 2,000 daily checkout failures, but the provider reports only 1,400 declines. Is the data inconsistent? Write a three-part investigation.  
 **Answer check:** Not necessarily. Map populations and denominators; reconcile failures before PSP submission, 3DS abandonment and unresolved/pending states; join by order and attempt IDs, rather than assuming all checkout failures are issuer declines.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00a-first-90-days) (companion answer key; review your reasoning before opening).
+
 **Next:** [Prioritization under competing obligations](00b-prioritization-and-tradeoffs.md).

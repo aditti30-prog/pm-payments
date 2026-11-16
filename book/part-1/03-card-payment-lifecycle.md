@@ -203,6 +203,8 @@ A strong answer says **"we need to verify the outcome"** when the state is uncer
 - [EMVCo — EMV 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/)
 - [PCI SSC — Document Library](https://www.pcisecuritystandards.org/document_library/)
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#03-card-payment-lifecycle) (companion answer key; review your reasoning before opening).
+
 **Next:** [4. Payment economics](04-payment-economics.md). For an optional applied case, see [authorization optimization](../part-3/12-authorization-optimization.md)
 
 ## Continue into operational depth

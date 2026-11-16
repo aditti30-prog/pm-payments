@@ -79,4 +79,6 @@ If an issuer, acquirer or network deadline changes, date-stamp the source and up
 **Question:** The growth team wants to disable 3DS to increase conversion; the risk team reports fraud losses are already near an approved ceiling. Can the PM trade a projected conversion uplift against fraud losses and launch alone?  
 **Answer check:** No. First identify applicable SCA, scheme and risk-control obligations; require risk/compliance sign-off; explore eligible low-friction authentication and better recovery. Test fraud-adjusted economics and customer outcomes, not challenge rate alone.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00b-prioritization-and-tradeoffs) (companion answer key; review your reasoning before opening).
+
 **Next:** [PSP selection, contracts and SLAs](00c-psp-selection-and-slas.md).

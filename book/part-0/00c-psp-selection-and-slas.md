@@ -76,4 +76,6 @@ The PM should be able to answer **“What could this partner stop us from doing?
 **Scenario:** Provider A offers 15 bps lower processing fees, but has no reliable status-query API and settlement reports arrive two days late. Your checkout experiences ambiguous outcomes and finance has a daily close requirement. What should determine the decision?  
 **Answer check:** Treat status certainty and finance reporting as hard requirements; quantify duplicate-charge exposure, reconciliation cost, and recovery limitations. Only compare headline price among eligible providers; insist on an integration pilot and finance sign-off.
 
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00c-psp-selection-and-slas) (companion answer key; review your reasoning before opening).
+
 **Next:** [1. What is a payment?](../part-1/01-what-is-a-payment.md).
