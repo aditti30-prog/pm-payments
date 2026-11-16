@@ -1,6 +1,6 @@
 # 10A. Subscriptions, stored credentials and dunning
 
-**Part III — Building Payment Products** · **Reading time:** ~21 minutes · **Prerequisites:** [Checkout state](10-checkout-and-payment-state.md), [network tokens](../part-2/07a-network-tokenization-fpan-dpan.md), [3DS](11-3d-secure.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part III — Building Payment Products** · **Estimated study time:** ~21 minutes · **Prerequisites:** [Checkout state](10-checkout-and-payment-state.md), [network tokens](../part-2/07a-network-tokenization-fpan-dpan.md), [3DS](11-3d-secure.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** A subscription is overdue. Should you retry the card, pause the service, ask for authentication, or cancel the contract?
 
@@ -62,6 +62,8 @@ Do not compare a 30-day matured recovery cohort against yesterday's due invoices
 - **API requirements:** `subscription_id`, `invoice_id`, payment operation IDs, credential permission and renewal references; deduplicate webhooks and ensure exact one paid-invoice transition.
 - **Risk checks:** cloned cards, customer-initiated verification, request validity, amount caps, excessive retries, authorization code classifications and scheme obligations.
 - **Customer UX:** clear next collection date and amount; access to cancellation; accurate “payment pending” versus “payment unsuccessful”; payment method update flows.
+
+**Companion artifact:** Use the [subscription recovery PRD](../../artifacts/subscription-recovery-prd.md) to specify retry eligibility, invoice versus payment versus entitlement state, customer notices, revocation/consent controls and recovery guardrails. It is a teaching template, not authority to retry every decline.
 
 ## Exercise and answer check
 
