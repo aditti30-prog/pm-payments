@@ -80,6 +80,20 @@ Line numbers are located by text at generation time and drift as the book change
 | 3 | [20](../book/part-5/20-agentic-commerce-delegated-payments.md) · L59 | AP2 samples include an x402 example; this does not make x402 or stablecoins mandatory. | Major | AP2 docs index; chapter 19 cross-reference. |
 | 4 | [20](../book/part-5/20-agentic-commerce-delegated-payments.md) · L49 | Vendor announcements are labelled as such and not presented as standards or production support. | Minor | Each vendor page and date. |
 
+## Review wave 1 — two operational counterexample labs (v0.6.1)
+
+These are **review scenarios, not certifications**. They are deliberately designed to make a specialist find a counterexample to the example's assumptions before an implementer copies an approach. Record the reviewed commit, provider/market/version, evidence and outcome using the [review program](specialist-review-program.md). Automated fixture checks confirm arithmetic, **not** legal correctness.
+
+| Lab / relevant chapters | What the reviewer should try to break | Evidence to request | Risk if missed | Review status |
+|---|---|---|---|---|
+| [02: Unknown auth / PSP failover](../cases/02-ambiguous-authorization-routing.md), 6/11/12/17 | Is “pending until resolved” sufficient when provider A is unavailable beyond its idempotency window? Are A/B attempts really distinct? Could a late approval be captured automatically? | Both PSP idempotency/timeout docs, status response semantics, actual capture mode, waiver/void behavior, webhook ordering | **Blocker** — duplicate customer exposure or an incorrect decline | **Unreviewed** |
+| [02: 3DS vs auth](../cases/02-ambiguous-authorization-routing.md), 11/12 | Are successful authentication outcomes ever interpreted as completed purchase or blanket fraud liability transfer? | EMV 3DS result mapping, PSP auth response, scheme/region liability rules | **Major** — false payment status or incorrect liability promise | **Unreviewed** |
+| [03: Seller reserve and payout](../cases/03-marketplace-reserve-refund-dispute.md), 5A/16 | Would the S$20 reserve be an actual seller payable, restricted funds, risk reserve, or a different account classification in this model? Could the platform legally hold it? | Acquirer agreement, merchant-of-record/PayFac roles, finance posting policy, safeguarding rules, provider balance account report | **Blocker** — misallocated client money | **Unreviewed** |
+| [03: Refund after payout](../cases/03-marketplace-reserve-refund-dispute.md), 5A/15/16 | Can the S$40 refund really debit seller funds after prior payout? What is an uncollected receivable versus a bank credit? | Split-refund configuration, reserve release conditions, executed refund ID, seller negative-balance policy | **Major** — fake recovery or unsupported debit | **Unreviewed** |
+| [03: B dispute, principal and fee](../cases/03-marketplace-reserve-refund-dispute.md), 15/16 | Does the case correctly distinguish chargeback stages, principal, provider dispute fee and final contractual allocation? | Brand/acquirer dispute lifecycle, provider journal entry types, B's seller agreement, actual loss-funding arrangement | **Major** — double posting or misstated loss | **Unreviewed** |
+
+**Acceptance criteria for a completed review:** (1) identify one integration or jurisdiction that would invalidate the lab's simplified assumptions; (2) show the necessary wording or state changes; (3) recompute at least one source-fixture number; (4) cite at least two current primary sources plus any necessary provider contract; (5) explicitly mark remaining unknowns. **Do not infer reviewer approval from a green CI badge.**
+
 ## Cross-chapter consistency checks
 
 | Check | What to compare |
