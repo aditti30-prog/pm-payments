@@ -14,6 +14,8 @@
 
 ## Review lanes and unresolved questions
 
+For the specific claims to attack in each lane, with line locations and the source to check against, use the [specialist review packet](specialist-review-packet.md).
+
 | Lane | Chapters to prioritize | Questions the reviewer should answer | Status |
 |---|---|---|---|
 | Card issuance, EMV tokenization | 7, 7A, 8A, 11 | Are FPAN/DPAN/device vs merchant token domains described accurately? What differs by issuer/TSP? Are cryptograms and 3DS/authorization correctly separated? | **Unassigned** |

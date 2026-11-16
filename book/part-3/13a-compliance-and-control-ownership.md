@@ -118,6 +118,8 @@ An onboarding state model is better than a single `kyc_passed=true`:
 
 **Do not automatically show exact internal sanctions screening results or suspicious-transaction reports to users**; communications must follow compliance advice and applicable law.
 
+**Companion artifact:** The [merchant-onboarding PRD with compliance and underwriting gates](../../artifacts/sample-prd-merchant-onboarding-controls.md) turns this state model into requirements, transitions and acceptance criteria. It is a teaching example, not a statement of any provider's or regulator's requirements.
+
 ## 13A.4 Limits, holds and reserves are product behavior
 
 For an acquirer or PayFac, underwriting may lead to settlement delays, rolling reserves, payout minimums, transaction amount caps, exposure limits or extra review. Not every arrangement uses a merchant deposit, and these controls have distinct purposes. Define the unit and enforcement point explicitly:

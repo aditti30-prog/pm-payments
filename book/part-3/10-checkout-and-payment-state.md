@@ -54,6 +54,8 @@ Track the full journey: checkout start → order total confirmed → payment int
 
 Balanced metrics include: paid-order conversion, unique-order payment success, authorization approval, 3DS completion, recovery success, timeout/unknown-state share, payment confirmation latency, duplicate capture incidence, customer complaints, processing cost per paid order, fraud loss and reconciliation exception rate. Apply an appropriate mature observation window to delayed metrics.
 
+**Companion artifact:** Turn this chapter into acceptance tests with the [payment API and state-machine requirements checklist](../../artifacts/payment-api-requirements-checklist.md): identifiers, retry semantics, unknown outcomes, webhooks and reconciliation hooks.
+
 ## 10.5 PM exercise: partial grocery fulfillment
 
 A customer sees S$60 at checkout, applies a S$10 coupon and pays with a card plus S$5 loyalty points. One item is removed after picking. Define: the revised amount and funding allocation; when and how to restore points; the customer receipt; capture/refund behavior; and what finance should reconcile. Include a merchant and provider failure state at every transition.

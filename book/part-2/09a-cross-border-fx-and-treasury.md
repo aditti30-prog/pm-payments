@@ -25,7 +25,7 @@ flowchart LR
   F -.-> J[Recipient acknowledgment]
 ```
 
-**Payment chain versus FX trade:** Some products guarantee the end-user's converted amount while treasury absorbs rate movement; others disclose a live floating conversion. The **payment** may still be pending after an **FX trade** is booked. Where FX counterparties exchange currencies, payment-versus-payment (PvP) arrangements reduce principal settlement risk. The BIS distinguishes PvP from other methods that only mitigate FX settlement risk. [BIS, June 2026](https://www.bis.org/publications/qr-202606/uncovering-fx-settlement-risk-new-measures-2025-bis-triennial-survey).
+**Payment chain versus FX trade:** Some products guarantee the end-user's converted amount while treasury absorbs rate movement; others disclose a live floating conversion. The **payment** may still be pending after an **FX trade** is booked. Where FX counterparties exchange currencies, payment-versus-payment (PvP) arrangements reduce principal settlement risk. The BIS distinguishes PvP from other methods that only mitigate FX settlement risk. [BIS, June 2026](https://www.bis.org/publ/qtrpdf/r_qt2606c.htm).
 
 ## 9A.2 Define the money fields precisely
 
@@ -96,5 +96,5 @@ Use the [cross-border payout checklist](../../artifacts/cross-border-payout-chec
 - [FATF — Recommendation 16 payment transparency update, June 2025](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html) (jurisdictional adoption differs).
 
 - [FSB — G20 cross-border payment targets](https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/g20-targets-for-enhancing-cross-border-payments-2/) (targets, not statements that every corridor meets them; accessed 16 November 2026).
-- [BIS — FX settlement risk and PvP, June 2026](https://www.bis.org/publications/qr-202606/uncovering-fx-settlement-risk-new-measures-2025-bis-triennial-survey) (FX wholesale context, not a retail remittance API specification).
+- [BIS — FX settlement risk and PvP, June 2026](https://www.bis.org/publ/qtrpdf/r_qt2606c.htm) (FX wholesale context, not a retail remittance API specification).
 - [MAS — Licensing for payment services](https://www.mas.gov.sg/regulation/payments/licensing-for-payment-service-providers) (Singapore only).

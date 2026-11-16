@@ -241,9 +241,11 @@ No. A processor timeout after S$25 billing leaves the outcome **unknown**, not a
 
 ## 13b-scams-and-regulatory-map
 
-**Chapter:** [13B. Scam protection and a jurisdictional regulation map](../book/part-3/13b-scams-and-regulatory-map.md)
+**Chapter:** [13B. Scam protection and regulatory scoping: Singapore examples](../book/part-3/13b-scams-and-regulatory-map.md)
 
-No blanket bank liability follows from a customer-authorized transfer. Singapore's Shared Responsibility Framework is scoped to defined phishing-scam scenarios and specified FI/telco duties; evaluate actual facts, consumer report timing, in-scope entities and breaches using the current MAS/IMDA guidance. A voluntary transfer induced through another scam may require a *different* investigation and applicable protections. In all cases, initiate rapid freeze/recall coordination where possible, preserve transfer and device references, and direct customers to official reporting. Distinguish **authorized payment** (credential/authentication event) from **non-fraudulent intent** (the customer was not deceived). Product metrics include case time-to-report, first-response SLA and recovery outcomes without implying every successful authentication proves valid consent.
+**Generally no.** Singapore's Shared Responsibility Framework (effective 16 December 2024) covers a *defined phishing-credential* sequence in which the account user did **not** intend the transaction. A customer who knowingly sends money after being deceived by a fake investment adviser or a romance scammer usually falls **outside** it, and SRF loss-sharing also excludes Singapore-issued credit, charge and debit card transactions. Verify the facts (who initiated the transfer, whether credentials were phished, which instrument, who is in scope) against the current MAS/IMDA Guidelines; compliance/legal decide scope.
+
+For the voluntary-transfer case, act on what the product can control: immediate bank and police reporting, rapid freeze/recall coordination where the rail supports it, evidence preservation (transfer, device and session references), approved friction such as beneficiary confirmation and warnings, and accurate customer messaging. The Protection from Scams Act 2025 lets Police issue restriction orders to banks when statutory criteria are met; it is not blanket authority for a product team to block payments. Distinguish an **authenticated** payment from a **non-deceived** customer: a successful login or 3DS result does not show valid intent. Track time-to-report, first-response SLA, recovery outcomes and false blocks.
 
 ---
 

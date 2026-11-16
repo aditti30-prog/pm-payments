@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check Markdown renders correctly (fences, Mermaid, labels, tables)
+        run: python scripts/check_markdown_structure.py
       - name: Check links and reading order
         run: python scripts/check_internal_links.py
       - name: Check all chapter answer keys and links
@@ -22,5 +24,7 @@ jobs:
         run: python scripts/verify_case.py
       - name: Check HarborCart metric arithmetic
         run: python scripts/verify_metrics.py
+      - name: Check worked chapter and answer-key arithmetic
+        run: python scripts/verify_chapter_arithmetic.py
       - name: Check fictional agentic checkout consent constraints
         run: python scripts/verify_agentic_cases.py

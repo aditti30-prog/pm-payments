@@ -29,6 +29,10 @@ def check() -> list[str]:
         token=f"../../answers/chapter-exercises.md#{path.stem}"
         if f"[Worked solutions]({token})" not in raw:
             errors.append(f"NO CHAPTER-TO-KEY LINK: {chapter}")
+        key_title=re.search(rf"^## {path.stem}\n\n\*\*Chapter:\*\* \[(.+?)\]",text,re.M)
+        h1=raw.splitlines()[0].lstrip("# ").strip()
+        if key_title and key_title.group(1)!=h1:
+            errors.append(f"STALE CHAPTER TITLE IN KEY: {path.stem}: {key_title.group(1)!r} != {h1!r}")
         headings=[m for m in re.finditer(r"^## ([a-z0-9-]+)$",text,re.M) if m.group(1)==path.stem]
         if len(headings)!=1:
             errors.append(f"SOLUTION HEADING COUNT != 1: {path.stem}")

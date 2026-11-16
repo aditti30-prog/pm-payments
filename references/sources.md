@@ -56,7 +56,7 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for contribution standards.
 - **Adyen — Offline POS payments:** https://docs.adyen.com/point-of-sale/offline-payment — offline EMV and store-and-forward, including merchant exposure.
 - **Adyen — Stored credential payments:** https://docs.adyen.com/online-payments/tokenization/make-token-payments — shopper-initiated vs merchant-initiated distinctions.
 - **FSB — Cross-border payment targets:** https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/g20-targets-for-enhancing-cross-border-payments-2/ — targets, not a claim of achieved outcomes.
-- **BIS — FX settlement risk (June 2026):** https://www.bis.org/publications/qr-202606/uncovering-fx-settlement-risk-new-measures-2025-bis-triennial-survey — risk evidence.
+- **BIS — FX settlement risk (June 2026):** https://www.bis.org/publ/qtrpdf/r_qt2606c.htm — risk evidence.
 - **MAS — Combatting scams and SRF:** https://www.mas.gov.sg/regulation/combatting-scams — defined Singapore phishing-scam scope, not a universal reimbursement guarantee.
 - **ABS — PayNow:** https://www.abs.org.sg/e-payments/pay-now — Singapore alias/FAST mechanism.
 - **UK Open Banking — PIS guidelines (March 2026):** https://standards.openbanking.org.uk/customer-experience-guidelines/payment-initiation-services/latest/ — UK-specific payment initiation.

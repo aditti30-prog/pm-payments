@@ -18,7 +18,7 @@ The objective is not to memorize payment jargon. Readers should understand **who
 
 **New Payments PM:** Start with Part 0 to understand role boundaries and work practices, then follow Parts I–IV in order. **Experienced PM or engineer:** Jump to the relevant payment-system chapter and use Part 0 as a working reference. Each chapter aims to explain the underlying mechanism and connect it to a product decision. Some chapters still require deeper examples and independent specialist review; a worked-solutions companion now covers all chapter exercises. v0.4 adds metrics, operational failure response and compliance control ownership. v0.5 adds marketplace funds flow, card-present/offline POS, cross-border FX/treasury, subscriptions/dunning, scam protection and draft chapters on real-time payments, stablecoins and agentic commerce.
 
-**Editorial companions:** [Worked solutions for all 32 chapters](answers/chapter-exercises.md) · [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Primary-source audit (16 November 2026)](editorial/primary-source-audit-2026-11-16.md) · [Specialist review program](editorial/specialist-review-program.md). **Independent specialist reviews are still pending.**
+**Editorial companions:** [Worked solutions for all 32 chapters](answers/chapter-exercises.md) · [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Primary-source audit (16 November 2026)](editorial/primary-source-audit-2026-11-16.md) · [Specialist review program](editorial/specialist-review-program.md) · [Specialist review packet: highest-risk claims](editorial/specialist-review-packet.md). **Independent specialist reviews are still pending.**
 
 ### Part 0 — The Payments PM's job
 
@@ -26,8 +26,6 @@ The objective is not to memorize payment jargon. Readers should understand **who
 - [First 90 days: mapping systems, metrics, risk and partners](book/part-0/00a-first-90-days.md)
 - [Prioritization: obligations, financial integrity, reliability and growth](book/part-0/00b-prioritization-and-tradeoffs.md)
 - [PSP selection: partner scorecards, integrations and SLAs](book/part-0/00c-psp-selection-and-slas.md)
-
-Supporting tools: [decision record template](artifacts/payment-decision-record-template.md), [PSP evaluation template](artifacts/psp-evaluation-template.md), [compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md), [payment API checklist](artifacts/payment-api-requirements-checklist.md), [metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md), [incident review template](artifacts/payment-incident-review-template.md), and [merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md), [platform funds-flow specification](artifacts/platform-funds-flow-spec.md), [subscription recovery PRD](artifacts/subscription-recovery-prd.md), [cross-border payout checklist](artifacts/cross-border-payout-checklist.md), and [agentic checkout intent test](artifacts/agentic-checkout-intent-test.md).
 
 ### Part I — Understanding Payments
 
@@ -77,6 +75,25 @@ Supporting tools: [decision record template](artifacts/payment-decision-record-t
 See [ROADMAP.md](ROADMAP.md) for the editorial plan, known limitations and unfilled coverage areas.
 
 **Post-review quality patch (v0.5.1):** Singapore SRF and Protection from Scams Act scope, MAS stablecoin consultation dates and EU/US comparators, AP2 v0.2/FIDO governance, FATF Recommendation 16, treasury liquidity example and CSV-driven HarborCart metric checks. A [weekly external reference-link audit](.github/workflows/external-link-audit.yml) reports confirmed 404/410 failures separately from links that cannot be verified. Specialist review and exercise-answer coverage remain incomplete.
+
+## Templates and worked artifacts
+
+Each artifact is linked from the chapter it supports. They are teaching templates, not authority on any provider, scheme or regulator.
+
+| Artifact | Use it to | Chapter |
+|---|---|---|
+| [Decision record template](artifacts/payment-decision-record-template.md) | Record a payments trade-off, owner and rollback | Part 0: [First 90 days](book/part-0/00a-first-90-days.md), [Prioritization](book/part-0/00b-prioritization-and-tradeoffs.md) |
+| [PSP evaluation template](artifacts/psp-evaluation-template.md) | Score acquiring and PSP partners | Part 0: [PSP selection](book/part-0/00c-psp-selection-and-slas.md) |
+| [Payment recovery PRD](artifacts/sample-prd-payment-recovery.md) | Specify safe recovery from unknown outcomes | Part 0: [Ownership](book/part-0/00-payments-pm-ownership.md), [3](book/part-1/03-card-payment-lifecycle.md), [14](book/part-3/14-payments-pm-craft.md) |
+| [Platform funds-flow specification](artifacts/platform-funds-flow-spec.md) | Map who holds, owes and pays out money | [5A](book/part-2/05a-marketplaces-payfac-funds-flow.md) |
+| [Cross-border payout checklist](artifacts/cross-border-payout-checklist.md) | Review a corridor before launch | [9A](book/part-2/09a-cross-border-fx-and-treasury.md) |
+| [Payment API and state-machine checklist](artifacts/payment-api-requirements-checklist.md) | Turn state rules into testable requirements | [10](book/part-3/10-checkout-and-payment-state.md) |
+| [Subscription recovery PRD](artifacts/subscription-recovery-prd.md) | Specify retries, notices and truthful entitlements | [10A](book/part-3/10a-subscriptions-stored-credentials-and-dunning.md) |
+| [Compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md) | Assign control owners across product, risk and legal | [13A](book/part-3/13a-compliance-and-control-ownership.md) |
+| [Merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md) | Specify onboarding states and gates | [13A](book/part-3/13a-compliance-and-control-ownership.md) |
+| [Metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md) | Define metrics, denominators and guardrails | [16A](book/part-4/16a-payment-metrics-and-observability.md) |
+| [Incident review template](artifacts/payment-incident-review-template.md) | Run a payment incident review | [17](book/part-4/17-reliability-and-payment-operations.md) |
+| [Agentic checkout intent test](artifacts/agentic-checkout-intent-test.md) | Test delegated-purchase constraints | [20](book/part-5/20-agentic-commerce-delegated-payments.md) |
 
 ## Read from an actual product decision
 
