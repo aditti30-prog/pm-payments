@@ -18,7 +18,7 @@ Leadership sees conflicting “payment success” numbers in checkout analytics 
 | `auth_attempt_approval_v1` | Eligible approved auth attempts / submitted eligible auth attempts; exclude pre-PSP invalid request and test activity, report excluded volumes separately | Submission UTC | PSP analytics | Authorization diagnostics |
 | `unknown_15m_v1` | Unknown payment operations still unresolved after 15m / operations entering unknown state | First unknown event timestamp | SRE/payments ops | Pending-state escalation |
 | `payment_cost_per_paid_order_v1` | Cohort-attributable processing fees / distinct confirmed paid orders | Cohort with finance allocation | Finance | Routing and provider economics |
-| `recon_unexplained_value_v1` | Signed absolute unexplained variance after cutoff by legal entity and currency | Settlement/payout value date | Finance | Exception management |
+| `recon_unexplained_value_v1` | Absolute unexplained variance after cutoff by legal entity and currency; keep over/under direction as a separate field so offsetting breaks do not net to zero | Settlement/payout value date | Finance | Exception management |
 | `fraud_loss_bps_v1` | Confirmed fraud loss amount / captured sales amount on aligned mature cohort × 10,000 | Mature transaction cohort | Fraud/risk | Risk-adjusted product decisions |
 
 **Non-negotiable dimensional filters:** market, legal entity, payment rail/method, channel, PSP/acquirer route, card-brand and issuing-country cohorts where permitted, token type, 3DS status, merchant type, currency, product version, control/treatment assignment, and timestamps. Aggregate securely; do not expose PAN/CVV or secrets.
