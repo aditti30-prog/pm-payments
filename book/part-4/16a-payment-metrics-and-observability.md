@@ -1,6 +1,6 @@
 # 16A. Payment metrics and observability: measuring the right thing
 
-**Part IV — Operating and Scaling Payments** · **Reading time:** ~30 minutes · **Prerequisites:** [Payment lifecycle](../part-1/03-card-payment-lifecycle.md), [authorization optimization](../part-3/12-authorization-optimization.md), [three-party reconciliation](16-three-way-reconciliation.md)  
+**Part IV — Operating and Scaling Payments** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Payment lifecycle](../part-1/03-card-payment-lifecycle.md), [authorization optimization](../part-3/12-authorization-optimization.md), [three-party reconciliation](16-three-way-reconciliation.md)  
 **Editorial status:** Working draft, 16 November 2026. Every figure below is **synthetic teaching data**, not a benchmark or provider performance claim.
 
 > **Guiding question:** If a Payments PM says “our success rate increased,” can they prove exactly which customer outcome improved without hiding higher fraud, duplicate charges, more retries or a growing settlement gap?
