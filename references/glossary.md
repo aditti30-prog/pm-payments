@@ -73,13 +73,13 @@ Definitions are intentionally concise and provider-neutral where possible. Speci
 
 ## Related reading
 
-- [Chapter 1: What is a payment?](../book/part-1/01-what-is-a-payment.md)
-- [Chapter 3: Card payment lifecycle](../book/part-1/03-card-payment-lifecycle.md)
-- [Chapter 7A: FPAN, DPAN and network tokens](../book/part-2/07a-network-tokenization-fpan-dpan.md)
-- [Chapter 11: 3-D Secure](../book/part-3/11-3d-secure.md)
-- [Chapter 12: Authorization optimization](../book/part-3/12-authorization-optimization.md)
-- [Chapter 15: Chargebacks](../book/part-4/15-chargebacks-and-disputes.md)
-- [Chapter 16: Three-party reconciliation](../book/part-4/16-three-way-reconciliation.md)
+- [Chapter 1: What is a payment?](../book/01-how-payments-work/01-understanding-a-payment.md)
+- [Chapter 3: Card payment lifecycle](../book/01-how-payments-work/03-how-card-payments-work.md)
+- [Chapter 7A: FPAN, DPAN and network tokens](../book/02-payment-products-and-infrastructure/07a-network-tokens-and-card-credentials.md)
+- [Chapter 11: 3-D Secure](../book/03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md)
+- [Chapter 12: Authorization optimization](../book/03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md)
+- [Chapter 15: Chargebacks](../book/04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md)
+- [Chapter 16: Three-party reconciliation](../book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md)
 
 ## Modern platforms, treasury and AI agents (v0.5)
 
@@ -100,4 +100,4 @@ Definitions are intentionally concise and provider-neutral where possible. Speci
 | **UCP** | Universal Commerce Protocol; a versioned commerce standard with capability descriptions, checkout and extensibility |
 | **Scoped payment credential** | Token or reference limited to allowed merchant/amount/time or other controls as supported; not unlimited PAN authority |
 
-See [Chapter 20](../book/part-5/20-agentic-commerce-delegated-payments.md) for the differences between agent identity, customer intent, credential issuance and payment authorization.
+See [Chapter 20](../book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md) for the differences between agent identity, customer intent, credential issuance and payment authorization.
