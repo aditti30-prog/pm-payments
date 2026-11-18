@@ -1,6 +1,6 @@
 # 12. Improving payment authorization rates
 
-**Estimated study time:** ~20 minutes · **Prerequisites:** [Chapter 3](../part-1/03-card-payment-lifecycle.md)
+**Estimated study time:** ~20 minutes · **Prerequisites:** [Chapter 3](../01-how-payments-work/03-how-card-payments-work.md)
 
 ## Learning objectives
 
@@ -202,6 +202,6 @@ A strong answer starts with denominator, eligibility, segment, provider status s
 
 **Applied case:** [Ambiguous authorization and unsafe cross-PSP failover](../../cases/02-ambiguous-authorization-routing.md). Compare the attempt-based and paid-order denominators before proposing any retry intervention.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#12-authorization-optimization) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#12-improving-payment-authorization-rates) (companion answer key; review your reasoning before opening).
 
-**Next:** [13. Payment fraud, risk and controls](13-fraud-risk-and-payment-controls.md). Practice with the [worked diagnostic case](../../cases/01-authorization-rate-drop.md)
+**Next:** [13. Payment fraud, risk and controls](13-payment-fraud-and-risk-controls.md). Practice with the [worked diagnostic case](../../cases/01-authorization-rate-drop.md)

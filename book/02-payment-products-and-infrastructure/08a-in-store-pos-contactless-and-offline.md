@@ -1,6 +1,6 @@
 # 8A. Card-present, POS integrations and offline payment risk
 
-**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~20 minutes · **Prerequisites:** [Wallets and QR](08-wallets-qr-apms.md), [payment lifecycle](../part-1/03-card-payment-lifecycle.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~20 minutes · **Prerequisites:** [Wallets and QR](08-wallets-qr-and-alternative-payment-methods.md), [payment lifecycle](../01-how-payments-work/03-how-card-payments-work.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** A shopper walks out with goods while the terminal is offline. Has the retailer been paid?
 
@@ -86,9 +86,9 @@ Proposed policy ingredients: eligible card schemes; per-tender and per-terminal 
 **Question:** A terminal displays an offline receipt but the POS has no PSP reference. Should the PM mark this tender `SETTLED`?  
 **Answer:** No. Retain the terminal/tender reference and a provisional state, then wait for the documented forwarding outcome, issuer response and settlement evidence. Reconcile later with the provider and correct the customer/merchant outcome if the offline attempt is rejected.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#08a-card-present-pos-and-offline) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#08a-in-store-pos-contactless-and-offline) (companion answer key; review your reasoning before opening).
 
-**Next:** [9. Bank transfers, instant payments and BNPL](09-transfers-real-time-bnpl.md).
+**Next:** [9. Bank transfers, instant payments and BNPL](09-bank-transfers-real-time-payments-and-bnpl.md).
 
 ## Primary references
 

@@ -1,6 +1,6 @@
 # 10A. Subscriptions, stored credentials and dunning
 
-**Part III — Building Payment Products** · **Estimated study time:** ~21 minutes · **Prerequisites:** [Checkout state](10-checkout-and-payment-state.md), [network tokens](../part-2/07a-network-tokenization-fpan-dpan.md), [3DS](11-3d-secure.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part III — Building Payment Products** · **Estimated study time:** ~21 minutes · **Prerequisites:** [Checkout state](10-checkout-and-payment-status-design.md), [network tokens](../02-payment-products-and-infrastructure/07a-network-tokens-and-card-credentials.md), [3DS](11-3d-secure-and-customer-authentication.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** A subscription is overdue. Should you retry the card, pause the service, ask for authentication, or cancel the contract?
 
@@ -70,9 +70,9 @@ Do not compare a 30-day matured recovery cohort against yesterday's due invoices
 **Question:** A processor times out after charging a recurring S$25 invoice. The scheduler runs again. Should it create a new authorization?  
 **Answer:** Not based solely on the timeout. Resolve the first operation via permitted status queries and callbacks using a durable invoice/attempt reference, then determine whether a fresh attempt is allowed. An invoice being unpaid in your ledger does not prove the payment never succeeded at the processor.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#10a-subscriptions-stored-credentials-and-dunning) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#10a-subscriptions-recurring-payments-and-dunning) (companion answer key; review your reasoning before opening).
 
-**Next:** [11. EMV 3-D Secure](11-3d-secure.md).
+**Next:** [11. EMV 3-D Secure](11-3d-secure-and-customer-authentication.md).
 
 ## Primary references
 

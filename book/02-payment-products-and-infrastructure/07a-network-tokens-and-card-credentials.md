@@ -1,6 +1,6 @@
 # 7A. Network tokenization, FPAN, DPAN and card-on-file credentials
 
-**Part II — Payment Products & Infrastructure** · Read after [Chapter 7: Issuing and tokenization](07-issuing-tokenization.md)
+**Part II — Payment Products & Infrastructure** · Read after [Chapter 7: Issuing and tokenization](07-card-issuing-and-tokenization.md)
 
 > **Central idea:** A card account, the card's funding PAN, an EMV network payment token, a device token, and a PSP vault token are related but different objects. Confusing them produces bad designs for recurring payments, card replacement, wallet troubleshooting and fraud controls.
 
@@ -117,11 +117,11 @@ Separate (a) eligible card share; (b) token provisioning attempts / success; (c)
 
 **Answer prompts:** Different objects need different status policies; a DPAN is a token; vault tokens may not travel; funding status, domain/cryptogram checks, 3DS/authentication and issuer authorization are independent possible blockers.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#07a-network-tokenization-fpan-dpan) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#07a-network-tokens-and-card-credentials) (companion answer key; review your reasoning before opening).
 
 > **Version anchor (16 November 2026):** [EMVCo](https://www.emvco.com/emv-technologies/payment-tokenisation/) lists the Payment Tokenisation Technical Framework **v2.4, published 9 July 2026**. A published technical framework does not mean every issuer, network TSP, PSP or merchant supports every token lifecycle function. Verify domain and implementation details.
 
-**Next:** [8. Wallets, QR and alternative methods](08-wallets-qr-apms.md).
+**Next:** [8. Wallets, QR and alternative methods](08-wallets-qr-and-alternative-payment-methods.md).
 
 ## Further reading
 

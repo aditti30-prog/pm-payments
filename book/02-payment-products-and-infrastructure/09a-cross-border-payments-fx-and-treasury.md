@@ -1,6 +1,6 @@
 # 9A. Cross-border payments, FX, treasury and payouts
 
-**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~23 minutes · **Prerequisites:** [Bank transfers](09-transfers-real-time-bnpl.md), [payment economics](../part-1/04-payment-economics.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~23 minutes · **Prerequisites:** [Bank transfers](09-bank-transfers-real-time-payments-and-bnpl.md), [payment economics](../01-how-payments-work/04-payment-fees-interchange-and-mdr.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** The provider says a cross-border payout is completed, but the recipient has not received their expected amount. Which question do you ask first?
 
@@ -87,9 +87,9 @@ Use the [cross-border payout checklist](../../artifacts/cross-border-payout-chec
 **Question:** The payout provider returns `processed` on Monday; the recipient says nothing arrived on Wednesday. Which records do you need before promising a refund?  
 **Answer:** Contractual meaning of `processed`, local bank/partner references, settlement/FX and beneficiary confirmation or reject, cutoff calendar and return policy. Investigate the destination leg, not merely the API request. Avoid a duplicate send until the first attempt is reconciled.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#09a-cross-border-fx-and-treasury) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#09a-cross-border-payments-fx-and-treasury) (companion answer key; review your reasoning before opening).
 
-**Next:** [10. Checkout and payment state](../part-3/10-checkout-and-payment-state.md).
+**Next:** [10. Checkout and payment state](../03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md).
 
 ## Primary references
 
