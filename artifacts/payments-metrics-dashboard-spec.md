@@ -1,7 +1,7 @@
 # Artifact — Payments Metrics & Observability Dashboard Specification
 
 **Status:** Adaptable teaching artifact · **Owner:** Payments PM (fictional HarborCart) · **Reviewers:** Data/analytics, payments engineering, fraud/risk, finance/reconciliation, provider operations  
-**Last reviewed:** 16 November 2026 · Companion: [Chapter 16A](../book/part-4/16a-payment-metrics-and-observability.md)
+**Last reviewed:** 16 November 2026 · Companion: [Chapter 16A](../book/04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md)
 
 ## Problem and user
 

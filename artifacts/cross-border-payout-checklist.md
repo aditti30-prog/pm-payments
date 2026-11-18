@@ -29,4 +29,4 @@
 ## Launch metrics
 Track destination-bank-confirmed credit within stated ETA, total realized cost and fee transparency, return rate by reason, unresolved funds by age, FX losses and spread, complaints, and controlled financial exceptions per 1,000 payout attempts.
 
-**Reference:** [Chapter 9A](../book/part-2/09a-cross-border-fx-and-treasury.md); [FSB G20 targets](https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/g20-targets-for-enhancing-cross-border-payments-2/).
+**Reference:** [Chapter 9A](../book/02-payment-products-and-infrastructure/09a-cross-border-payments-fx-and-treasury.md); [FSB G20 targets](https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/g20-targets-for-enhancing-cross-border-payments-2/).

@@ -4,9 +4,9 @@
 
 The chapter names below are stable anchors. Return to the corresponding chapter to read the questions; use these solutions to compare reasoning, not memorize an answer. Do not treat a quoted rule or service-level estimate as timeless; consult the [dated source register](../editorial/primary-source-audit-2026-11-16.md) and the responsible provider/specialist.
 
-## 00-payments-pm-ownership
+## 00-what-a-payments-pm-owns
 
-**Chapter:** [Part 0 · The job — What a Payments Product Manager owns](../book/part-0/00-payments-pm-ownership.md)
+**Chapter:** [Part 0 · The job — What a Payments Product Manager owns](../book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md)
 
 1. **Issuer approval is not a PM-controlled switch.** Define the cohort (eligible card authorization attempts, issuer region, payment type and time window), establish baseline and counterfactual, and examine the controllable inputs: credential freshness, request data, 3DS integration, routing where permitted and customer recovery. A target of 98% must be a *testable hypothesis*, not a guarantee. Monitor unique-order success, fraudulent approvals, cost per paid order and disputes, not the attempt rate alone.
 2. **Instant payouts create a funding and loss decision.** First map the acquirer/PSP settlement clock, the bank-payout clock and the provider balance; identify whether the proposed speed requires prefunding or credit. Then define reserve/hold decisions, merchant underwriting and negative-balance recovery, beneficiary verification, bank cutoffs, reconciliation IDs and liquidity stress limits. The PM can propose a service tier; treasury, credit/risk, compliance and the provider must approve controls.
@@ -14,33 +14,33 @@ The chapter names below are stable anchors. Return to the corresponding chapter 
 
 ---
 
-## 00a-first-90-days
+## 00a-your-first-90-days
 
-**Chapter:** [Part 0 · First 90 days as a Payments PM](../book/part-0/00a-first-90-days.md)
+**Chapter:** [Part 0 · First 90 days as a Payments PM](../book/00-start-here-payments-pm-role/00a-your-first-90-days.md)
 
 A 2,000-versus-1,400 mismatch does **not** establish bad data: checkout *failures* and PSP *declines* may have different populations. A defensible three-stage investigation is: (1) define the start/end events and denominators for `checkout_failed`, `payment_attempted`, `PSP_declined`, `3DS_abandoned` and `outcome_unknown`; (2) join on order, payment-intent and attempt IDs, then reconcile pre-submission validation, authentication abandonment, rejected authorization, timeouts and order-creation failures; (3) sample individual sessions and verify PSP callbacks, final state, duplicates and event time windows. Deliver a funnel table showing where the remaining 600 cases sit, plus an *unresolved* bucket rather than arbitrarily labeling them declines. A useful first-90-days outcome is an agreed metric dictionary with finance and provider operations.
 
 ---
 
-## 00b-prioritization-and-tradeoffs
+## 00b-prioritization-and-product-tradeoffs
 
-**Chapter:** [Part 0 · Prioritizing payment work when everything seems urgent](../book/part-0/00b-prioritization-and-tradeoffs.md)
+**Chapter:** [Part 0 · Prioritizing payment work when everything seems urgent](../book/00-start-here-payments-pm-role/00b-prioritization-and-product-tradeoffs.md)
 
 **Do not remove authentication solely to recover checkout conversion.** First identify applicable SCA, network and contractual requirements and which authentication choices the merchant may actually influence. Ask risk to quantify current fraud losses and false-positive harms; examine challenge eligibility, abandonment by ACS/issuer, device rendering defects and permitted exemption paths. Escalate any change to approved policy to the accountable risk/compliance owner. In the chapter's 12-engineer-week portfolio, an unresolved high-severity duplicate-capture issue may consume 6 weeks as a non-discretionary fix. Remaining capacity can fund *one* of A (5), B (4) or C (3), not all. Compare their validated, non-overlapping customer benefit and risk-adjusted economics. Document why deferred work is not violating an obligation.
 
 ---
 
-## 00c-psp-selection-and-slas
+## 00c-selecting-payment-service-providers
 
-**Chapter:** [Part 0 · Selecting PSPs, managing partners and writing useful SLAs](../book/part-0/00c-psp-selection-and-slas.md)
+**Chapter:** [Part 0 · Selecting PSPs, managing partners and writing useful SLAs](../book/00-start-here-payments-pm-role/00c-selecting-payment-service-providers.md)
 
 **Treat payment-state certainty and finance close as entry gates, not merely scored preferences.** A 15 bps fee saving equals S$0.15 per S$100 settled, before other differences. If status queries are unreliable, a timeout can leave an order unknown; switching providers or blindly retrying may duplicate operations. Reports two days late can breach a daily close requirement. Require an integration proof for timeout → callback/status resolution, refund linkage, provider references and settlement files; involve finance in acceptance criteria. If A fails mandatory gates, pick B or negotiate remediation despite A's lower quote. Run the comparison on cost per confirmed paid order and reconciliation effort, not MDR alone. Specify SLA metrics, exclusions, remedies and exit/data portability before signing.
 
 ---
 
-## 01-what-is-a-payment
+## 01-understanding-a-payment
 
-**Chapter:** [1. What is a payment?](../book/part-1/01-what-is-a-payment.md)
+**Chapter:** [1. What is a payment?](../book/01-how-payments-work/01-understanding-a-payment.md)
 
 1. **No payout follows from an authorization alone.** It is an issuer approval or hold in a common card flow; capture, clearing/settlement, merchant ledger postings and PSP/bank payout remain separate. Verify whether the hold will be reversed or expire under the applicable rules.
 2. HTTP 200 says the *API request* succeeded, not that the money did. Show **Payment pending—checking status**, preserve the same payment operation ID, poll/query a documented status endpoint or await signed callbacks, and avoid a new charge until the first attempt is resolved.
@@ -49,9 +49,9 @@ A 2,000-versus-1,400 mismatch does **not** establish bad data: checkout *failure
 
 ---
 
-## 02-ecosystem
+## 02-players-in-the-payments-ecosystem
 
-**Chapter:** [2. The payments ecosystem: who does what, who takes risk?](../book/part-1/02-ecosystem.md)
+**Chapter:** [2. The payments ecosystem: who does what, who takes risk?](../book/01-how-payments-work/02-players-in-the-payments-ecosystem.md)
 
 1. **Yes.** A full-stack PSP may supply both gateway integration and acquiring capabilities. But distinguish legal acquirer, technical gateway, settlement-report producer, merchant contract and liability; consolidating services reduces integrations but increases provider concentration and potential credential lock-in.
 2. An issuer may reject risky spend to protect cardholders and reduce losses; a merchant wants high legitimate conversion. An intervention that boosts merchant approvals may alter issuer fraud exposure and scheme thresholds. Align on fraud-adjusted outcomes and approved controls, not a shared approval target without context.
@@ -60,9 +60,9 @@ A 2,000-versus-1,400 mismatch does **not** establish bad data: checkout *failure
 
 ---
 
-## 03-card-payment-lifecycle
+## 03-how-card-payments-work
 
-**Chapter:** [3. How a card payment works, end to end](../book/part-1/03-card-payment-lifecycle.md)
+**Chapter:** [3. How a card payment works, end to end](../book/01-how-payments-work/03-how-card-payments-work.md)
 
 1. S$50 **authorized but uncaptured** is not settled merchant money. Customer may see a pending hold; the order must not be labeled *paid* unless the business explicitly defines a reserved/guaranteed-to-capture state. Finance tracks auth exposure and the missing capture, not settled revenue, and investigates capture errors before retry.
 2. Verify callback signatures, deduplicate on stable provider event ID, apply state transitions atomically with the internal ledger/outbox and make fulfillment idempotent by order. Duplicate delivery is expected; exactly-once network delivery is usually not promised.
@@ -72,9 +72,9 @@ A 2,000-versus-1,400 mismatch does **not** establish bad data: checkout *failure
 
 ---
 
-## 04-payment-economics
+## 04-payment-fees-interchange-and-mdr
 
-**Chapter:** [4. Payment economics: who earns, who pays, who bears risk?](../book/part-1/04-payment-economics.md)
+**Chapter:** [4. Payment economics: who earns, who pays, who bears risk?](../book/01-how-payments-work/04-payment-fees-interchange-and-mdr.md)
 
 1. MDR is a merchant-facing price, not retained PSP margin. Interchange paid to issuers, network charges, acquiring/processing costs, FX, fraud, servicing and other variable costs may all consume it. Pricing contracts may contain fixed fees or interchange-plus structures.
 2. 1,000 × S$20 = **S$20,000 volume**. Percentage fee: 2% × 20,000 = **S$400**. Fixed component: 1,000 × S$0.15 = **S$150**. Total **S$550**, equivalent to **2.75%** of S$20,000 and **S$0.55 per transaction**. Tax, refunds, other fees and chargeback costs are excluded.
@@ -83,9 +83,9 @@ A 2,000-versus-1,400 mismatch does **not** establish bad data: checkout *failure
 
 ---
 
-## 05-merchant-acquiring
+## 05-merchant-acquiring-and-onboarding
 
-**Chapter:** [5. Merchant acquiring and onboarding](../book/part-2/05-merchant-acquiring.md)
+**Chapter:** [5. Merchant acquiring and onboarding](../book/02-payment-products-and-infrastructure/05-merchant-acquiring-and-onboarding.md)
 
 **Café / QR:** identity and business verification appropriate to the product; beneficial-owner screening where required; settlement account verification; QR alias/provider configuration; first-test transaction; reconciliation/payout confirmation; fraud, refund and suspicious-activity monitoring. Where a QR code merely identifies a merchant, check the underlying provider/rail and receipt source. Activation must not be equated to completed due diligence.
 
@@ -93,33 +93,33 @@ A 2,000-versus-1,400 mismatch does **not** establish bad data: checkout *failure
 
 ---
 
-## 05a-marketplaces-payfac-funds-flow
+## 05a-marketplaces-payfacs-and-funds-flow
 
-**Chapter:** [5A. Marketplaces, payment facilitators and platform funds flow](../book/part-2/05a-marketplaces-payfac-funds-flow.md)
+**Chapter:** [5A. Marketplaces, payment facilitators and platform funds flow](../book/02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md)
 
 The S$120 provider-ledger movement and S$80 bank credits belong to different ledgers and possibly different dates. Create seller-level receivables: A S$80, B S$40. Join platform transfer ID, provider balance movement ID, seller payout ID, bank transfer reference, merchant account/entity and cutoff timestamp. For B, look for pending bank processing, reserve hold, rejected beneficiary, FX/currency timing or misallocation; trace the original status before scheduling any retry. A second S$40 transfer on the assumption of loss risks duplicate payout. Escalate exceptions by aged status, amount at risk and owner, and maintain the gross-to-net bridge including platform commissions and fees.
 
 ---
 
-## 06-gateways-orchestration
+## 06-payment-gateways-routing-and-orchestration
 
-**Chapter:** [6. Payment gateways, processors and orchestration](../book/part-2/06-gateways-orchestration.md)
+**Chapter:** [6. Payment gateways, processors and orchestration](../book/02-payment-products-and-infrastructure/06-payment-gateways-routing-and-orchestration.md)
 
 **Strategy A** optimizes quoted processing fee on each routed attempt. **Strategy B** estimates *expected contribution* after successful fulfillment, fees, support and fraud. B needs comparable eligible cohorts, route success and eventual captured/paid-order outcomes, PSP/issuer/region/card mix, 3DS completion, costs including fixed and FX charges, latency, refunds, matured losses and operational failures. It also needs causal testing: a route may look worse because it receives higher-risk traffic. Example: on a S$100 order with S$8 merchandise contribution, A's S$1.50 fee and 85% confirmed-order success gives `0.85 × 8 − 1.50 = S$5.30` before other costs; B's S$1.80 and 93% success gives `0.93 × 8 − 1.80 = S$5.64` if costs are charged at this simplified per-order level. Explicitly define when fees accrue and verify the causal assumptions; these illustrative numbers do not rank actual providers. Unknown outcomes must be resolved before cross-PSP retries.
 
 ---
 
-## 07-issuing-tokenization
+## 07-card-issuing-and-tokenization
 
-**Chapter:** [7. Card issuing, credentials and tokenization](../book/part-2/07-issuing-tokenization.md)
+**Chapter:** [7. Card issuing, credentials and tokenization](../book/02-payment-products-and-infrastructure/07-card-issuing-and-tokenization.md)
 
 A virtual employee-expense card can cap **per-transaction amount** and **monthly spend by merchant category**, subject to processor/issuer support. Data model: corporate funding account → employee card account → card credential (funding PAN) → one or more provisioned device/merchant tokens and auth events. Store identifiers in a PCI-appropriate system; expose only safe references. `card_suspended` should trigger issuer-side authorization policy and, as supported/appropriate, token-status actions; do not assume suspending one device token cancels all underlying card credentials. Specify behavior for pending auths, clearing after suspension, reversals and dispute servicing. Guardrails include false declines, unauthorized spend, control override auditability, reconciliation of authorizations to clearing, and employee-support response time. Employer permissions and local rules must be checked.
 
 ---
 
-## 07a-network-tokenization-fpan-dpan
+## 07a-network-tokens-and-card-credentials
 
-**Chapter:** [7A. Network tokenization, FPAN, DPAN and card-on-file credentials](../book/part-2/07a-network-tokenization-fpan-dpan.md)
+**Chapter:** [7A. Network tokenization, FPAN, DPAN and card-on-file credentials](../book/02-payment-products-and-infrastructure/07a-network-tokens-and-card-credentials.md)
 
 1. Model `funding_account` → `card_credential(FPAN reference, status)` → `network_token(token reference, domain, device/merchant, lifecycle status)` and a separate PSP vault-token reference where used. Card, phone token, watch token and merchant token can be suspended/updated independently, subject to issuer/TSP controls. The **DPAN** is a device-specific payment token in common wallet usage, not a second underlying funding card.
 2. On lost phone, verify owner authentication; suspend/delete the affected *phone token* via issuer/TSP/wallet lifecycle controls. Decide whether the funding card or watch token also needs blocking based on compromise evidence, policy and customer choice—not automatically. Reprovision via permitted authentication.
@@ -129,9 +129,9 @@ A virtual employee-expense card can cap **per-transaction amount** and **monthly
 
 ---
 
-## 08-wallets-qr-apms
+## 08-wallets-qr-and-alternative-payment-methods
 
-**Chapter:** [8. Digital wallets, QR and alternative payment methods](../book/part-2/08-wallets-qr-apms.md)
+**Chapter:** [8. Digital wallets, QR and alternative payment methods](../book/02-payment-products-and-infrastructure/08-wallets-qr-and-alternative-payment-methods.md)
 
 | Dimension | Shopper-presented loyalty QR | Merchant-presented PayNow QR |
 |---|---|---|
@@ -146,17 +146,17 @@ Never infer financial payment from a loyalty QR scan or from the customer's tran
 
 ---
 
-## 08a-card-present-pos-and-offline
+## 08a-in-store-pos-contactless-and-offline
 
-**Chapter:** [8A. Card-present, POS integrations and offline payment risk](../book/part-2/08a-card-present-pos-and-offline.md)
+**Chapter:** [8A. Card-present, POS integrations and offline payment risk](../book/02-payment-products-and-infrastructure/08a-in-store-pos-contactless-and-offline.md)
 
 An offline receipt does **not** justify `SETTLED`. Record terminal transaction ID, batch/sequence, merchant/POS order and local provisional tender status. Under allowed offline rules, forwarding may happen later and can be declined; risk, authorization limit and customer messaging require explicit policy. If POS has no PSP reference, match later uploads and clearing by terminal IDs and batch rather than amount alone. Maintain an exception queue and finance cutoffs; ensure that re-presenting the same basket won't inadvertently produce two settled card transactions.
 
 ---
 
-## 09-transfers-real-time-bnpl
+## 09-bank-transfers-real-time-payments-and-bnpl
 
-**Chapter:** [9. Account transfers, real-time rails and buy now, pay later](../book/part-2/09-transfers-real-time-bnpl.md)
+**Chapter:** [9. Account transfers, real-time rails and buy now, pay later](../book/02-payment-products-and-infrastructure/09-bank-transfers-real-time-payments-and-bnpl.md)
 
 | Question | Card | FAST-style account transfer | BNPL |
 |---|---|---|---|
@@ -171,17 +171,17 @@ Verify exact finality, return eligibility, customer protection, merchant payout 
 
 ---
 
-## 09a-cross-border-fx-and-treasury
+## 09a-cross-border-payments-fx-and-treasury
 
-**Chapter:** [9A. Cross-border payments, FX, treasury and payouts](../book/part-2/09a-cross-border-fx-and-treasury.md)
+**Chapter:** [9A. Cross-border payments, FX, treasury and payouts](../book/02-payment-products-and-infrastructure/09a-cross-border-payments-fx-and-treasury.md)
 
 `processed` might mean accepted into a provider queue rather than delivered to the recipient. Map the origin instruction, FX execution/quote ID, prefunded balance or funding movement, corresponding-bank/intermediary references, destination clearing event, beneficiary bank credit/rejection, and possible return. Compare country holidays, cutoffs, sanctions/beneficiary checks, local payout rails and contract's delivery definition. Keep the attempt in `payout_pending_investigation` until authoritative delivery/return evidence exists; do not resend merely because the beneficiary sees no credit on Wednesday. Product success metrics should distinguish time to provider acceptance, time to beneficiary credit, returned payouts and aged exceptions.
 
 ---
 
-## 10-checkout-and-payment-state
+## 10-checkout-and-payment-status-design
 
-**Chapter:** [10. Checkout design: intent, payment state and customer experience](../book/part-3/10-checkout-and-payment-state.md)
+**Chapter:** [10. Checkout design: intent, payment state and customer experience](../book/03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md)
 
 The problem is **underdetermined until the removed item's price, coupon rule and loyalty-allocation policy are known**. Suppose the dropped item had S$12 pre-discount value and the S$10 coupon remains fully valid. Original payable = 60 − 10 = **S$50**; original card = **S$45** plus points = **S$5**. New pre-tender payable = 48 − 10 = **S$38**. One permitted allocation is 5 points + S$33 card. If card S$45 was only authorized, attempt a supported *partial capture* for S$33 and release/let expire unused S$12; if card S$45 was captured already, process S$12 linked refund (or adjust per provider rules). If coupon eligibility changed, recompute all tenders from a versioned pricing rule; restore points only for the portion no longer used, idempotently.
 
@@ -189,17 +189,17 @@ The problem is **underdetermined until the removed item's price, coupon rule and
 
 ---
 
-## 10a-subscriptions-stored-credentials-and-dunning
+## 10a-subscriptions-recurring-payments-and-dunning
 
-**Chapter:** [10A. Subscriptions, stored credentials and dunning](../book/part-3/10a-subscriptions-stored-credentials-and-dunning.md)
+**Chapter:** [10A. Subscriptions, stored credentials and dunning](../book/03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md)
 
 No. A processor timeout after S$25 billing leaves the outcome **unknown**, not an unpaid invoice proof. Query by stable invoice/payment-operation IDs and ingest verified webhook events; deduplicate scheduler triggers and respect provider idempotency semantics. If first payment later settles, mark the invoice paid once and grant entitlement once. If it definitively fails, evaluate supported retry eligibility, retry windows and stored-credential flags, communicate accurately and stop duplicate billing. Document whether entitlement grace periods continue while status is pending. Chargeback/refund callbacks need separate financial state, not an invoice rewrite.
 
 ---
 
-## 11-3d-secure
+## 11-3d-secure-and-customer-authentication
 
-**Chapter:** [11. EMV 3-D Secure: authentication, friction and liability](../book/part-3/11-3d-secure.md)
+**Chapter:** [11. EMV 3-D Secure: authentication, friction and liability](../book/03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md)
 
 1. **No.** 3DS authentication succeeded; a separate issuer authorization can still decline due to account, available funds, card controls or issuer risk.
 2. **No.** Frictionless means 3DS data exchange/authentication occurred without a challenge, not that 3DS was skipped.
@@ -209,9 +209,9 @@ No. A processor timeout after S$25 billing leaves the outcome **unknown**, not a
 
 ---
 
-## 12-authorization-optimization
+## 12-improving-payment-authorization-rates
 
-**Chapter:** [12. Improving payment authorization rates](../book/part-3/12-authorization-optimization.md)
+**Chapter:** [12. Improving payment authorization rates](../book/03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md)
 
 1. Example: 100 orders produce 100 first attempts, 80 approved; 20 failures generate 20 retries and 10 further approvals for distinct orders. Attempt approval = `(80 + 10)/(100 + 20) = 75%`, *below* the 80% first-attempt rate, while unique paid-order success improves from 80% to 90% if all approvals capture and orders complete. The examples use different denominators; don't add approvals that duplicate the same order.
 2. Confounders: issuer/BIN and country mix; currency/MCC or risk mix; routing by device/card type; 3DS configuration; time-of-day or a concurrent integration release. Use a randomized eligible-cohort split if safe/contractually permitted, or carefully matched time windows, with a stable outcome definition and fraud/cost guardrails.
@@ -221,17 +221,17 @@ No. A processor timeout after S$25 billing leaves the outcome **unknown**, not a
 
 ---
 
-## 13-fraud-risk-and-payment-controls
+## 13-payment-fraud-and-risk-controls
 
-**Chapter:** [13. Payment fraud, risk decisions and controls](../book/part-3/13-fraud-risk-and-payment-controls.md)
+**Chapter:** [13. Payment fraud, risk decisions and controls](../book/03-checkout-authorization-and-fraud/13-payment-fraud-and-risk-controls.md)
 
 **First-time, high-value cross-border card payment:** Do not apply a universal “block” policy based on amount or country. Start with an approved risk policy: device/account history, merchant type, velocity, customer verification, expected fulfillment and fraud signals. Depending on the product and jurisdiction, permit an eligible 3DS authentication attempt, a carefully bounded manual review, a fulfillment hold or decline under documented risk thresholds. **Risk** owns fraud policy and limits; **compliance/legal** assess applicable obligations and data/retention; **engineering** makes the decision auditable and idempotent; the **PM** owns transparent user and support journeys within approved controls. Two UX guardrails: (1) don't call an unknown/authentication-pending result a definitive decline; (2) give legitimate users a safe appeal/recovery channel without revealing exploitable rule details. Measure false-positive harm through policy-rejected-but-subsequently-validated good cases, paid-order conversion by like-for-like cohorts, manual-review latency, customer complaints and eventually matured fraud/chargebacks. Use holdout or shadow testing only with risk approval. A “good” rule should reduce *loss-adjusted customer harm*, not just fraud labels or approval noise.
 
 ---
 
-## 13a-compliance-and-control-ownership
+## 13a-compliance-pci-kyc-aml-and-ownership
 
-**Chapter:** [13A. Compliance and control ownership for Payments PMs](../book/part-3/13a-compliance-and-control-ownership.md)
+**Chapter:** [13A. Compliance and control ownership for Payments PMs](../book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md)
 
 **First change—the checkout architecture:** a PSP-hosted redirect and embedded provider iframe can have materially different PCI DSS eligibility and script obligations. Draw browser DOM, origins, iframe, postMessage and third-party scripts; identify whether merchant-controlled scripts can influence the payment page. PCI SSC FAQ 1588 clarifies a specific v4.0.1 SAQ A embedded-page script criterion; it does **not** grant universal SAQ A eligibility. Confirm the eligible SAQ and evidence with the acquirer/payment brand or assessor. Include provider AoC review, vulnerability scans where applicable, content-security protections and incident-response ownership.
 
@@ -239,9 +239,9 @@ No. A processor timeout after S$25 billing leaves the outcome **unknown**, not a
 
 ---
 
-## 13b-scams-and-regulatory-map
+## 13b-scams-and-customer-protection
 
-**Chapter:** [13B. Scam protection and regulatory scoping: Singapore examples](../book/part-3/13b-scams-and-regulatory-map.md)
+**Chapter:** [13B. Scam protection and regulatory scoping: Singapore examples](../book/03-checkout-authorization-and-fraud/13b-scams-and-customer-protection.md)
 
 **Generally no.** Singapore's Shared Responsibility Framework (effective 16 December 2024) covers a *defined phishing-credential* sequence in which the account user did **not** intend the transaction. A customer who knowingly sends money after being deceived by a fake investment adviser or a romance scammer usually falls **outside** it, and SRF loss-sharing also excludes Singapore-issued credit, charge and debit card transactions. Verify the facts (who initiated the transfer, whether credentials were phished, which instrument, who is in scope) against the current MAS/IMDA Guidelines; compliance/legal decide scope.
 
@@ -249,9 +249,9 @@ For the voluntary-transfer case, act on what the product can control: immediate 
 
 ---
 
-## 14-payments-pm-craft
+## 14-how-to-manage-payment-products
 
-**Chapter:** [14. Payments PM craft: discovery, requirements, delivery and learning](../book/part-3/14-payments-pm-craft.md)
+**Chapter:** [14. Payments PM craft: discovery, requirements, delivery and learning](../book/03-checkout-authorization-and-fraud/14-how-to-manage-payment-products.md)
 
 1. A 2-point issuer/PSP attempt approval lift might be driven by different traffic or extra attempts, while order success remains flat. Or captures, 3DS or post-payment order creation can offset approvals. Compare matched eligible order cohorts through paid order and fulfilled order with costs and fraud guardrails.
 2. “Retry on error” lacks a failure taxonomy, retryability and authority. Specify definitive declines vs unknown outcomes; API idempotency scope and TTL; allowed maximum attempts; routing constraints; event dedup; customer messaging; reconciliation and alert thresholds; scheme/PSP and risk permissions.
@@ -259,9 +259,9 @@ For the voluntary-transfer case, act on what the product can control: immediate 
 
 ---
 
-## 15-chargebacks-and-disputes
+## 15-chargebacks-and-dispute-management
 
-**Chapter:** [15. Chargebacks and card disputes: lifecycle, evidence and product controls](../book/part-4/15-chargebacks-and-disputes.md)
+**Chapter:** [15. Chargebacks and card disputes: lifecycle, evidence and product controls](../book/04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md)
 
 1. Finance must ensure refund and chargeback debits do not produce unrecognized **double customer credit** or double merchant loss. Join the original capture, refund ID/status, dispute ID/reason, network/PSP adjustment and later reversals. Where permitted, submit refund evidence before applicable deadlines; never assume the network auto-recognizes a refund.
 2. **No.** `information_supplied` normally indicates evidence submitted, not final issuer/network adjudication; maintain open case state and deadline clock.
@@ -271,9 +271,9 @@ For the voluntary-transfer case, act on what the product can control: immediate 
 
 ---
 
-## 16-three-way-reconciliation
+## 16-payment-reconciliation-and-payouts
 
-**Chapter:** [16. Three-party payment reconciliation: merchant, provider and bank](../book/part-4/16-three-way-reconciliation.md)
+**Chapter:** [16. Three-party payment reconciliation: merchant, provider and bank](../book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md)
 
 1. Difference **S$260** can bridge, for instance, S$100 processing fees + S$80 refunds + S$50 chargeback debit + S$30 reserve withholding = S$260. This is *one hypothetical* bridge, not a presumed cause. Verify sign, currency, period, and file IDs; the actual components may differ.
 2. Use unique capture/settlement entry reference and provider transaction ID scoped to legal entity/account, plus payout batch ID. Amount/date alone are ambiguous.
@@ -283,9 +283,9 @@ For the voluntary-transfer case, act on what the product can control: immediate 
 
 ---
 
-## 16a-payment-metrics-and-observability
+## 16a-payment-performance-metrics-and-dashboards
 
-**Chapter:** [16A. Payment metrics and observability: measuring the right thing](../book/part-4/16a-payment-metrics-and-observability.md)
+**Chapter:** [16A. Payment metrics and observability: measuring the right thing](../book/04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md)
 
 A. Attempt approval is `74,000/82,000 = 90.24%`; paid-order success is `72,000/80,000 = 90%`. **Recovered-by-retry cannot be inferred**: you need first-vs-subsequent attempt sequences joined by unique orders, and authoritative capture/order outcomes. A customer may retry and still fail, and one order may create multiple authorization approvals.
 
@@ -295,9 +295,9 @@ C. `HTTP 200` is **transport/application success**, not issuer authorization. No
 
 ---
 
-## 17-reliability-and-payment-operations
+## 17-payment-outages-incidents-and-operations
 
-**Chapter:** [17. Payment operations, incident response and financial integrity](../book/part-4/17-reliability-and-payment-operations.md)
+**Chapter:** [17. Payment operations, incident response and financial integrity](../book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md)
 A. A healthy second PSP is not a license to replay a timed-out money-moving operation. First preserve order/payment identity, query PSP A and correlate signed events; show pending. Even if routing to B is allowed under documented safeguards, cross-PSP idempotency is not automatic. Investigate later A captures and reconcile any duplicate risk.
 
 B. A customer's two bank lines can be two holds, a hold plus a settled debit, or two settled captures. Compare customer-facing bank timestamps with merchant order, PSP auths, capture IDs, reversals/refunds, clearing and settlement. Communicate evidence and expected hold-release handling without inventing provider timelines.
@@ -306,25 +306,25 @@ C. Reopen an exception for S$200 under the correct cutoff and entity; validate n
 
 ---
 
-## 18-real-time-open-banking-payment-initiation
+## 18-instant-payments-open-banking-and-account-to-account
 
-**Chapter:** [18. Real-time payments, open banking and payment initiation](../book/part-5/18-real-time-open-banking-payment-initiation.md)
+**Chapter:** [18. Real-time payments, open banking and payment initiation](../book/05-new-and-emerging-payments/18-instant-payments-open-banking-and-account-to-account.md)
 
 Do not release a high-value order based on a screenshot alone. Confirm the authoritative merchant-side credit/rail notification and correlate the bank reference to the order, amount, payee and currency. If webhook is delayed, use documented status lookup or bank reconciliation; keep the order pending with a clear timeout and exception owner. A high-value seller-release policy may require an extra anti-scam check even after credit, depending on the rail, merchant model and risk appetite. Separate **payer initiated**, **bank accepted**, **merchant received**, and **seller payout eligible** states. Document refunds through the relevant new transfer/credit process rather than presuming card-style reversal rights.
 
 ---
 
-## 19-stablecoins-programmable-money
+## 19-stablecoins-and-programmable-payments
 
-**Chapter:** [19. Stablecoins, settlement and programmable money](../book/part-5/19-stablecoins-programmable-money.md)
+**Chapter:** [19. Stablecoins, settlement and programmable money](../book/05-new-and-emerging-payments/19-stablecoins-and-programmable-payments.md)
 
 An indexing outage is **not** evidence the token transfer failed. Check correct chain and network, transaction hash, destination address, token contract, receipt/log events, confirmation/finality policy and provider custody ledger; verify there was no reorg or unsupported token mismatch. Reconcile the transfer to invoice amount, fees, exchange rate and customer identity as permitted. If value reached the merchant but checkout missed it, repair the invoice/order state rather than asking a second transfer. If value is irrecoverably on the wrong network/address, a normal refund may not be possible; define exception and support policy separately. Consider redemption, sanctions and custody obligations before labeling a transfer *settled* at the business layer.
 
 ---
 
-## 20-agentic-commerce-delegated-payments
+## 20-agentic-commerce-and-ai-payments
 
-**Chapter:** [20. Agentic commerce, delegated credentials and customer consent](../book/part-5/20-agentic-commerce-delegated-payments.md)
+**Chapter:** [20. Agentic commerce, delegated credentials and customer consent](../book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md)
 
 A. **Not necessarily authorized.** A price ceiling does not permit product substitution. Validate merchant ID, SKU/category, substitution permission, delivery address, quantity, expiry and total against the original delegated intent; if an invariant changes, request a new consent artifact. Reject even cheaper unrelated goods when the user did not authorize substitution.
 

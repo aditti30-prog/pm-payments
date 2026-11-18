@@ -10,21 +10,21 @@ A free, open-source, practical handbook for product managers, engineers and fint
 
 | Explore | What you will learn |
 | --- | --- |
-| [What a Payments PM actually does](book/part-0/README.md) | Learn the responsibilities, decisions, partners and first steps of a Payments Product Manager. |
-| [Payment fundamentals and economics](book/part-1/README.md) | Build the mental model: payment participants, messages, money movements and business economics. |
-| [Acquiring, gateways, issuing and payment methods](book/part-2/README.md) | Learn the main products a payments team builds or integrates, and how those products fit together. |
-| [Checkout, fraud, authentication and PM craft](book/part-3/README.md) | Turn payment-system knowledge into safer checkout flows, better conversion and measurable product decisions. |
-| [Disputes, reconciliation and operations](book/part-4/README.md) | Understand what happens after checkout—and how to prove that money and records agree. |
-| [New payment rails and agentic commerce](book/part-5/README.md) | Explore evolving payment methods and new product/accountability questions. These chapters are working drafts. |
+| [What a Payments PM actually does](book/00-start-here-payments-pm-role/README.md) | Learn the responsibilities, decisions, partners and first steps of a Payments Product Manager. |
+| [Payment fundamentals and economics](book/01-how-payments-work/README.md) | Build the mental model: payment participants, messages, money movements and business economics. |
+| [Acquiring, gateways, issuing and payment methods](book/02-payment-products-and-infrastructure/README.md) | Learn the main products a payments team builds or integrates, and how those products fit together. |
+| [Checkout, fraud, authentication and PM craft](book/03-checkout-authorization-and-fraud/README.md) | Turn payment-system knowledge into safer checkout flows, better conversion and measurable product decisions. |
+| [Disputes, reconciliation and operations](book/04-disputes-reconciliation-and-operations/README.md) | Understand what happens after checkout—and how to prove that money and records agree. |
+| [New payment rails and agentic commerce](book/05-new-and-emerging-payments/README.md) | Explore evolving payment methods and new product/accountability questions. These chapters are working drafts. |
 
 Every section has its own readable chapter guide. You can **[see the complete table of contents](book/README.md)** without browsing technical filenames.
 
 ## Where should you start?
 
-- **New to payments?** Start with [How money moves](book/part-1/README.md) to understand the lifecycle, actors and economics. Then explore [core products](book/part-2/README.md).
-- **Already a product manager?** Read [what a Payments PM owns](book/part-0/00-payments-pm-ownership.md), then work through [checkout, authorization and fraud](book/part-3/README.md).
-- **Building or operating a payment platform?** Go to [disputes, reconciliation and reliability](book/part-4/README.md) and use the linked PRDs and checklists.
-- **Working on AI-led checkout or new payment rails?** Explore [emerging payments](book/part-5/README.md) and the [agentic checkout intent test](artifacts/agentic-checkout-intent-test.md).
+- **New to payments?** Start with [How money moves](book/01-how-payments-work/README.md) to understand the lifecycle, actors and economics. Then explore [core products](book/02-payment-products-and-infrastructure/README.md).
+- **Already a product manager?** Read [what a Payments PM owns](book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md), then work through [checkout, authorization and fraud](book/03-checkout-authorization-and-fraud/README.md).
+- **Building or operating a payment platform?** Go to [disputes, reconciliation and reliability](book/04-disputes-reconciliation-and-operations/README.md) and use the linked PRDs and checklists.
+- **Working on AI-led checkout or new payment rails?** Explore [emerging payments](book/05-new-and-emerging-payments/README.md) and the [agentic checkout intent test](artifacts/agentic-checkout-intent-test.md).
 
 ## Learn by solving a payment problem
 
@@ -48,24 +48,24 @@ Each artifact is linked from the chapter it supports. They are teaching template
 
 | Artifact | Use it to | Chapter |
 |---|---|---|
-| [Decision record template](artifacts/payment-decision-record-template.md) | Record a payments trade-off, owner and rollback | Part 0: [First 90 days](book/part-0/00a-first-90-days.md), [Prioritization](book/part-0/00b-prioritization-and-tradeoffs.md) |
-| [PSP evaluation template](artifacts/psp-evaluation-template.md) | Score acquiring and PSP partners | Part 0: [PSP selection](book/part-0/00c-psp-selection-and-slas.md) |
-| [Payment recovery PRD](artifacts/sample-prd-payment-recovery.md) | Specify safe recovery from unknown outcomes | Part 0: [Ownership](book/part-0/00-payments-pm-ownership.md), [3](book/part-1/03-card-payment-lifecycle.md), [14](book/part-3/14-payments-pm-craft.md) |
-| [Platform funds-flow specification](artifacts/platform-funds-flow-spec.md) | Map who holds, owes and pays out money | [5A](book/part-2/05a-marketplaces-payfac-funds-flow.md) |
-| [Cross-border payout checklist](artifacts/cross-border-payout-checklist.md) | Review a corridor before launch | [9A](book/part-2/09a-cross-border-fx-and-treasury.md) |
-| [Payment API and state-machine checklist](artifacts/payment-api-requirements-checklist.md) | Turn state rules into testable requirements | [10](book/part-3/10-checkout-and-payment-state.md) |
-| [Subscription recovery PRD](artifacts/subscription-recovery-prd.md) | Specify retries, notices and truthful entitlements | [10A](book/part-3/10a-subscriptions-stored-credentials-and-dunning.md) |
-| [Compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md) | Assign control owners across product, risk and legal | [13A](book/part-3/13a-compliance-and-control-ownership.md) |
-| [Merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md) | Specify onboarding states and gates | [13A](book/part-3/13a-compliance-and-control-ownership.md) |
-| [Metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md) | Define metrics, denominators and guardrails | [16A](book/part-4/16a-payment-metrics-and-observability.md) |
-| [Incident review template](artifacts/payment-incident-review-template.md) | Run a payment incident review | [17](book/part-4/17-reliability-and-payment-operations.md) |
-| [Agentic checkout intent test](artifacts/agentic-checkout-intent-test.md) | Test delegated-purchase constraints | [20](book/part-5/20-agentic-commerce-delegated-payments.md) |
+| [Decision record template](artifacts/payment-decision-record-template.md) | Record a payments trade-off, owner and rollback | Part 0: [First 90 days](book/00-start-here-payments-pm-role/00a-your-first-90-days.md), [Prioritization](book/00-start-here-payments-pm-role/00b-prioritization-and-product-tradeoffs.md) |
+| [PSP evaluation template](artifacts/psp-evaluation-template.md) | Score acquiring and PSP partners | Part 0: [PSP selection](book/00-start-here-payments-pm-role/00c-selecting-payment-service-providers.md) |
+| [Payment recovery PRD](artifacts/sample-prd-payment-recovery.md) | Specify safe recovery from unknown outcomes | Part 0: [Ownership](book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md), [3](book/01-how-payments-work/03-how-card-payments-work.md), [14](book/03-checkout-authorization-and-fraud/14-how-to-manage-payment-products.md) |
+| [Platform funds-flow specification](artifacts/platform-funds-flow-spec.md) | Map who holds, owes and pays out money | [5A](book/02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md) |
+| [Cross-border payout checklist](artifacts/cross-border-payout-checklist.md) | Review a corridor before launch | [9A](book/02-payment-products-and-infrastructure/09a-cross-border-payments-fx-and-treasury.md) |
+| [Payment API and state-machine checklist](artifacts/payment-api-requirements-checklist.md) | Turn state rules into testable requirements | [10](book/03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md) |
+| [Subscription recovery PRD](artifacts/subscription-recovery-prd.md) | Specify retries, notices and truthful entitlements | [10A](book/03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md) |
+| [Compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md) | Assign control owners across product, risk and legal | [13A](book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) |
+| [Merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md) | Specify onboarding states and gates | [13A](book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) |
+| [Metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md) | Define metrics, denominators and guardrails | [16A](book/04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md) |
+| [Incident review template](artifacts/payment-incident-review-template.md) | Run a payment incident review | [17](book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md) |
+| [Agentic checkout intent test](artifacts/agentic-checkout-intent-test.md) | Test delegated-purchase constraints | [20](book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md) |
 
 ## Read from an actual product decision
 
-**An AI agent changes a shopping cart after consent.** Read [Chapter 20](book/part-5/20-agentic-commerce-delegated-payments.md) and the [intent-preservation test](artifacts/agentic-checkout-intent-test.md) to distinguish permission, checkout, credential and payment execution.
+**An AI agent changes a shopping cart after consent.** Read [Chapter 20](book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md) and the [intent-preservation test](artifacts/agentic-checkout-intent-test.md) to distinguish permission, checkout, credential and payment execution.
 
-**A platform owes several sellers while payouts fail.** Read [Chapter 5A](book/part-2/05a-marketplaces-payfac-funds-flow.md) and the [funds-flow spec](artifacts/platform-funds-flow-spec.md) before introducing split payments.
+**A platform owes several sellers while payouts fail.** Read [Chapter 5A](book/02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md) and the [funds-flow spec](artifacts/platform-funds-flow-spec.md) before introducing split payments.
 
 ## Operational failure labs — follow the IDs and the money
 
