@@ -1,6 +1,6 @@
 # Artifact — Payment Incident Review (PIR)
 
-**Status:** Adaptable template and filled fictional example · Companion: [Chapter 17](../book/part-4/17-reliability-and-payment-operations.md)
+**Status:** Adaptable template and filled fictional example · Companion: [Chapter 17](../book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md)
 
 ## A. Blank template
 

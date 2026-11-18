@@ -48,4 +48,4 @@ Record invoice due cohort/date, `attempt_no`, reason-class, provider result, fin
 
 Shadow-mode cohort classification → test-only end-to-end retries and reconciliation → risk/legal-approved limited traffic → measure matured collection, invoice integrity and support contacts → rollback on fraud or duplicate-charge breaches.
 
-**Reference:** [Chapter 10A](../book/part-3/10a-subscriptions-stored-credentials-and-dunning.md). [Adyen stored credentials](https://docs.adyen.com/online-payments/tokenization/make-token-payments).
+**Reference:** [Chapter 10A](../book/03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md). [Adyen stored credentials](https://docs.adyen.com/online-payments/tokenization/make-token-payments).

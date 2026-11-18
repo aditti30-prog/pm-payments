@@ -131,4 +131,4 @@ This does **not** assume all providers implement the same status lookup, idempot
 - [Stripe — Idempotent requests](https://docs.stripe.com/api/idempotent_requests)
 - [Adyen — Payments lifecycle](https://docs.adyen.com/account/payments-lifecycle)
 
-**Related reading:** [Chapter 3](../book/part-1/03-card-payment-lifecycle.md) and [Chapter 12](../book/part-3/12-authorization-optimization.md).
+**Related reading:** [Chapter 3](../book/01-how-payments-work/03-how-card-payments-work.md) and [Chapter 12](../book/03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md).

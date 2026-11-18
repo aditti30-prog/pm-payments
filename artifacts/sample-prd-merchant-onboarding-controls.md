@@ -1,7 +1,7 @@
 # Example PRD — Merchant onboarding with compliance and underwriting gates
 
 **Status:** Fictional teaching PRD · **Owner:** Acquiring/PayFac PM · **Market:** Singapore example only · **Last edited:** 16 November 2026  
-**Prerequisites:** [Merchant acquiring](../book/part-2/05-merchant-acquiring.md), [compliance and control ownership](../book/part-3/13a-compliance-and-control-ownership.md)
+**Prerequisites:** [Merchant acquiring](../book/02-payment-products-and-infrastructure/05-merchant-acquiring-and-onboarding.md), [compliance and control ownership](../book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md)
 
 > **Disclaimer:** Fictional product behavior, not a recommended compliance procedure. The licensed entity, legal and compliance teams must define applicable KYC/KYB/AML checks and data retention. A PayFac structure does not automatically remove PCI, AML or acquiring responsibilities.
 

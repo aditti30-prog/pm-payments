@@ -79,4 +79,4 @@ flowchart TD
 
 **Required specialist checks:** actual provider retry windows and status-query behavior, reversal rules, token portability, 3DS result handling, acquirer liability, and duplicate-event guarantees.
 
-**Related chapters:** [Gateways](../book/part-2/06-gateways-orchestration.md) · [3DS](../book/part-3/11-3d-secure.md) · [Authorization](../book/part-3/12-authorization-optimization.md) · [Incidents](../book/part-4/17-reliability-and-payment-operations.md).
+**Related chapters:** [Gateways](../book/02-payment-products-and-infrastructure/06-payment-gateways-routing-and-orchestration.md) · [3DS](../book/03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md) · [Authorization](../book/03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md) · [Incidents](../book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md).

@@ -1,6 +1,6 @@
 # Artifact — Compliance & Control Ownership Matrix
 
-**Status:** Educational template · Companion: [Chapter 13A](../book/part-3/13a-compliance-and-control-ownership.md)
+**Status:** Educational template · Companion: [Chapter 13A](../book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md)
 
 Fill one row per **specific product change and jurisdiction**. This is not legal advice, certification, a scheme attestation or a substitute for legal/security sign-off.
 

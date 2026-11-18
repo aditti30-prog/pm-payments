@@ -17,38 +17,38 @@ NUMBERED_LINK = re.compile(r"^Chapter\s+(\d+[A-Za-z]?)\b", re.I)
 
 # Explicit chapter order is intentional. New chapters must update the canonical reading path.
 CHAPTERS = [
-    "book/part-0/00-payments-pm-ownership.md",
-    "book/part-0/00a-first-90-days.md",
-    "book/part-0/00b-prioritization-and-tradeoffs.md",
-    "book/part-0/00c-psp-selection-and-slas.md",
-    "book/part-1/01-what-is-a-payment.md",
-    "book/part-1/02-ecosystem.md",
-    "book/part-1/03-card-payment-lifecycle.md",
-    "book/part-1/04-payment-economics.md",
-    "book/part-2/05-merchant-acquiring.md",
-    "book/part-2/05a-marketplaces-payfac-funds-flow.md",
-    "book/part-2/06-gateways-orchestration.md",
-    "book/part-2/07-issuing-tokenization.md",
-    "book/part-2/07a-network-tokenization-fpan-dpan.md",
-    "book/part-2/08-wallets-qr-apms.md",
-    "book/part-2/08a-card-present-pos-and-offline.md",
-    "book/part-2/09-transfers-real-time-bnpl.md",
-    "book/part-2/09a-cross-border-fx-and-treasury.md",
-    "book/part-3/10-checkout-and-payment-state.md",
-    "book/part-3/10a-subscriptions-stored-credentials-and-dunning.md",
-    "book/part-3/11-3d-secure.md",
-    "book/part-3/12-authorization-optimization.md",
-    "book/part-3/13-fraud-risk-and-payment-controls.md",
-    "book/part-3/13a-compliance-and-control-ownership.md",
-    "book/part-3/13b-scams-and-regulatory-map.md",
-    "book/part-3/14-payments-pm-craft.md",
-    "book/part-4/15-chargebacks-and-disputes.md",
-    "book/part-4/16-three-way-reconciliation.md",
-    "book/part-4/16a-payment-metrics-and-observability.md",
-    "book/part-4/17-reliability-and-payment-operations.md",
-    "book/part-5/18-real-time-open-banking-payment-initiation.md",
-    "book/part-5/19-stablecoins-programmable-money.md",
-    "book/part-5/20-agentic-commerce-delegated-payments.md",
+    "book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md",
+    "book/00-start-here-payments-pm-role/00a-your-first-90-days.md",
+    "book/00-start-here-payments-pm-role/00b-prioritization-and-product-tradeoffs.md",
+    "book/00-start-here-payments-pm-role/00c-selecting-payment-service-providers.md",
+    "book/01-how-payments-work/01-understanding-a-payment.md",
+    "book/01-how-payments-work/02-players-in-the-payments-ecosystem.md",
+    "book/01-how-payments-work/03-how-card-payments-work.md",
+    "book/01-how-payments-work/04-payment-fees-interchange-and-mdr.md",
+    "book/02-payment-products-and-infrastructure/05-merchant-acquiring-and-onboarding.md",
+    "book/02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md",
+    "book/02-payment-products-and-infrastructure/06-payment-gateways-routing-and-orchestration.md",
+    "book/02-payment-products-and-infrastructure/07-card-issuing-and-tokenization.md",
+    "book/02-payment-products-and-infrastructure/07a-network-tokens-and-card-credentials.md",
+    "book/02-payment-products-and-infrastructure/08-wallets-qr-and-alternative-payment-methods.md",
+    "book/02-payment-products-and-infrastructure/08a-in-store-pos-contactless-and-offline.md",
+    "book/02-payment-products-and-infrastructure/09-bank-transfers-real-time-payments-and-bnpl.md",
+    "book/02-payment-products-and-infrastructure/09a-cross-border-payments-fx-and-treasury.md",
+    "book/03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md",
+    "book/03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md",
+    "book/03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md",
+    "book/03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md",
+    "book/03-checkout-authorization-and-fraud/13-payment-fraud-and-risk-controls.md",
+    "book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md",
+    "book/03-checkout-authorization-and-fraud/13b-scams-and-customer-protection.md",
+    "book/03-checkout-authorization-and-fraud/14-how-to-manage-payment-products.md",
+    "book/04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md",
+    "book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md",
+    "book/04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md",
+    "book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md",
+    "book/05-new-and-emerging-payments/18-instant-payments-open-banking-and-account-to-account.md",
+    "book/05-new-and-emerging-payments/19-stablecoins-and-programmable-payments.md",
+    "book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md",
 ]
 
 def slug(text: str) -> str:
@@ -96,7 +96,7 @@ def check() -> tuple[list[str], int]:
 
     # Chapter file inventory and heading labels must match filename sequence.
     expected = {ROOT / name for name in CHAPTERS}
-    actual = {p for p in (ROOT / "book").rglob("*.md")}
+    actual = {p for p in (ROOT / "book").rglob("*.md") if p.name != "README.md"}
     for file in sorted(expected - actual):
         errors.append(f"MISSING CHAPTER: {file.relative_to(ROOT)}")
     for file in sorted(actual - expected):
@@ -109,7 +109,7 @@ def check() -> tuple[list[str], int]:
         content = texts[file]
         first = content.splitlines()[0] if content else ""
         number = chapter_id(file)
-        if file.parent.name == "part-0":
+        if file.parent.name == "00-start-here-payments-pm-role":
             if not first.startswith("# Part 0"):
                 errors.append(f"WRONG CHAPTER HEADER: {rel} -> {first}")
         elif not re.match(rf"^# {re.escape(number)}\.\s", first):
@@ -130,15 +130,15 @@ def check() -> tuple[list[str], int]:
         if dest != expected_next:
             errors.append(f"WRONG NEXT: {rel} -> {link}; expected {expected_next.relative_to(ROOT)}")
         next_number = chapter_id(expected_next)
-        if next_number and expected_next.parent.name != "part-0":
+        if next_number and expected_next.parent.name != "00-start-here-payments-pm-role":
             if not re.match(rf"^{re.escape(next_number)}(?:\b|\.)", label):
                 errors.append(f"WRONG NEXT LABEL: {rel} uses '{label}'; expected chapter {next_number}")
 
     # README must expose every written chapter from the canonical path.
-    readme = texts.get(ROOT / "README.md", "")
+    readme = texts.get(ROOT / "book" / "README.md", "")
     for rel in CHAPTERS:
-        if rel not in readme:
-            errors.append(f"MISSING FROM README: {rel}")
+        if rel.removeprefix("book/") not in readme:
+            errors.append(f"MISSING FROM BOOK INDEX: {rel}")
     return errors, local_links
 
 if __name__ == "__main__":

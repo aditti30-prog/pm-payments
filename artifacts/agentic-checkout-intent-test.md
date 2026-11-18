@@ -59,4 +59,4 @@ Store: authorized customer principal reference, consent timestamp and trusted su
 - Customer can see what was approved and access merchant order/refund/support information.
 - Risk, compliance, merchant operations and finance explicitly sign off on the launch scope.
 
-**Related:** [Chapter 20](../book/part-5/20-agentic-commerce-delegated-payments.md) · [Checkout state](../book/part-3/10-checkout-and-payment-state.md) · [AP2 v0.2 reference](https://github.com/google-agentic-commerce/AP2/blob/main/docs/ap2/specification.md).
+**Related:** [Chapter 20](../book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md) · [Checkout state](../book/03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md) · [AP2 v0.2 reference](https://github.com/google-agentic-commerce/AP2/blob/main/docs/ap2/specification.md).

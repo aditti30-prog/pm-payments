@@ -1,6 +1,6 @@
 # Artifact — Payment API and State-Machine Requirements Checklist
 
-**Status:** Adaptable specification checklist · Cross references: [Chapter 10](../book/part-3/10-checkout-and-payment-state.md), [Chapter 16](../book/part-4/16-three-way-reconciliation.md), [Chapter 17](../book/part-4/17-reliability-and-payment-operations.md)
+**Status:** Adaptable specification checklist · Cross references: [Chapter 10](../book/03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md), [Chapter 16](../book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md), [Chapter 17](../book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md)
 
 A PM need not design the transport protocol, but must make *business invariants and financial consequences testable*. Engineering and provider specialists finalize API contracts.
 
