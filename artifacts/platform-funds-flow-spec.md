@@ -36,4 +36,4 @@ A partial refund can reverse seller payable, commission and/or fees according to
 
 Follow seller time to first paid order, payout-on-time rate, payout rejection/return by bank, seller-negative-balance exposure, disputed sales, fee variance and unexplained money. **PM decision:** Should a high-risk new seller be paid daily? Require underwriting/risk thresholds and customer/seller impact assessment; don't make it solely a UX preference.
 
-**See:** [Chapter 5A](../book/part-2/05a-marketplaces-payfac-funds-flow.md) and [three-party recon](../book/part-4/16-three-way-reconciliation.md). [Adyen split documentation](https://docs.adyen.com/platforms/online-payments/split-transactions).
+**See:** [Chapter 5A](../book/02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md) and [three-party recon](../book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md). [Adyen split documentation](https://docs.adyen.com/platforms/online-payments/split-transactions).
