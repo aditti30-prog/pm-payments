@@ -109,7 +109,7 @@ def check() -> tuple[list[str], int]:
         content = texts[file]
         first = content.splitlines()[0] if content else ""
         number = chapter_id(file)
-        if file.parent.name == "part-0":
+        if file.parent.name == "00-start-here-payments-pm-role":
             if not first.startswith("# Part 0"):
                 errors.append(f"WRONG CHAPTER HEADER: {rel} -> {first}")
         elif not re.match(rf"^# {re.escape(number)}\.\s", first):
@@ -130,14 +130,14 @@ def check() -> tuple[list[str], int]:
         if dest != expected_next:
             errors.append(f"WRONG NEXT: {rel} -> {link}; expected {expected_next.relative_to(ROOT)}")
         next_number = chapter_id(expected_next)
-        if next_number and expected_next.parent.name != "part-0":
+        if next_number and expected_next.parent.name != "00-start-here-payments-pm-role":
             if not re.match(rf"^{re.escape(next_number)}(?:\b|\.)", label):
                 errors.append(f"WRONG NEXT LABEL: {rel} uses '{label}'; expected chapter {next_number}")
 
     # README must expose every written chapter from the canonical path.
     readme = texts.get(ROOT / "book" / "README.md", "")
     for rel in CHAPTERS:
-        if rel not in readme:
+        if rel.removeprefix("book/") not in readme:
             errors.append(f"MISSING FROM BOOK INDEX: {rel}")
     return errors, local_links
 
