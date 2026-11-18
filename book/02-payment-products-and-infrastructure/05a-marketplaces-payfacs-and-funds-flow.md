@@ -1,6 +1,6 @@
 # 5A. Marketplaces, payment facilitators and platform funds flow
 
-**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~22 minutes · **Prerequisites:** [Merchant acquiring](05-merchant-acquiring.md), [payment economics](../part-1/04-payment-economics.md) · **Reviewed sources:** 16 November 2026 · **Status:** Working draft
+**Part II — Payment Products & Infrastructure** · **Estimated study time:** ~22 minutes · **Prerequisites:** [Merchant acquiring](05-merchant-acquiring-and-onboarding.md), [payment economics](../01-how-payments-work/04-payment-fees-interchange-and-mdr.md) · **Reviewed sources:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** When a customer pays a platform, whose money is it, who may hold it, and which party must refund or absorb a chargeback?
 
@@ -92,9 +92,9 @@ Use the [platform funds-flow specification](../../artifacts/platform-funds-flow-
 
 **Extended worked case:** [Seller A's reserve, a partial refund and Seller B's dispute](../../cases/03-marketplace-reserve-refund-dispute.md). Reconcile S$250 gross to S$244.80 net while keeping seller entitlements and held reserves separate from platform earnings.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#05a-marketplaces-payfac-funds-flow) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#05a-marketplaces-payfacs-and-funds-flow) (companion answer key; review your reasoning before opening).
 
-**Next:** [6. Gateways and payment orchestration](06-gateways-orchestration.md).
+**Next:** [6. Gateways and payment orchestration](06-payment-gateways-routing-and-orchestration.md).
 
 ## Primary references
 

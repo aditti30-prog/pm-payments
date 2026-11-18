@@ -1,6 +1,6 @@
 # Part 0 · First 90 days as a Payments PM
 
-**Estimated study time:** ~15 minutes · **Prerequisites:** [Payments PM ownership](00-payments-pm-ownership.md) · **Status:** Editorial draft, 16 November 2026
+**Estimated study time:** ~15 minutes · **Prerequisites:** [Payments PM ownership](00-what-a-payments-pm-owns.md) · **Status:** Editorial draft, 16 November 2026
 
 > Your first objective is not to ship a payment feature. It is to know where a transaction can go wrong, who notices, who is accountable, and which data can be trusted.
 
@@ -82,6 +82,6 @@ Pick an intervention where eligibility, rollout and rollback can be explicit: cl
 **Exercise:** You have 2,000 daily checkout failures, but the provider reports only 1,400 declines. Is the data inconsistent? Write a three-part investigation.  
 **Answer check:** Not necessarily. Map populations and denominators; reconcile failures before PSP submission, 3DS abandonment and unresolved/pending states; join by order and attempt IDs, rather than assuming all checkout failures are issuer declines.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00a-first-90-days) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00a-your-first-90-days) (companion answer key; review your reasoning before opening).
 
-**Next:** [Prioritization under competing obligations](00b-prioritization-and-tradeoffs.md).
+**Next:** [Prioritization under competing obligations](00b-prioritization-and-product-tradeoffs.md).

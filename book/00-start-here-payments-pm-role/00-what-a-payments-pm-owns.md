@@ -76,7 +76,7 @@ A fictional merchant observes that 1.3% of payment attempts end in a gateway tim
 5. **Guardrails:** Confirmed duplicate captures per 100k paid orders, unresolved-payment aging, fraud loss, customer complaints and unmatched reconciliation entries.
 6. **Release condition:** Product, engineering, support, finance and relevant risk/partner owners agree on test evidence, rollback and exception ownership.
 
-**PM artifact:** [Payment recovery PRD](../../artifacts/sample-prd-payment-recovery.md). **Deep learning:** [The card lifecycle](../part-1/03-card-payment-lifecycle.md) and [checkout state machines](../part-3/10-checkout-and-payment-state.md).
+**PM artifact:** [Payment recovery PRD](../../artifacts/sample-prd-payment-recovery.md). **Deep learning:** [The card lifecycle](../01-how-payments-work/03-how-card-payments-work.md) and [checkout state machines](../03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md).
 
 ## 0.6 Exercises with answer checks
 
@@ -87,6 +87,6 @@ A fictional merchant observes that 1.3% of payment attempts end in a gateway tim
 3. **A risk team's false-positive losses and a growth team's approval metrics conflict.** Who decides?  
    *Answer check:* Agree on risk appetite and decision rights in advance; evaluate legitimate-order conversion **and** fraud-adjusted contribution; escalate beyond the PM when approved control limits are implicated.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00-payments-pm-ownership) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00-what-a-payments-pm-owns) (companion answer key; review your reasoning before opening).
 
-**Next:** [First 90 days as a Payments PM](00a-first-90-days.md).
+**Next:** [First 90 days as a Payments PM](00a-your-first-90-days.md).

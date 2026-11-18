@@ -1,6 +1,6 @@
 # Part 0 · Selecting PSPs, managing partners and writing useful SLAs
 
-**Estimated study time:** ~17 minutes · **Prerequisites:** [Prioritization](00b-prioritization-and-tradeoffs.md) · **Status:** Editorial draft, 16 November 2026
+**Estimated study time:** ~17 minutes · **Prerequisites:** [Prioritization](00b-prioritization-and-product-tradeoffs.md) · **Status:** Editorial draft, 16 November 2026
 
 > A PSP is not merely a pricing line. It is an external dependency in the customer's experience, your transaction state machine and your finance controls.
 
@@ -80,6 +80,6 @@ The PM should be able to answer **“What could this partner stop us from doing?
 **Scenario:** Provider A offers 15 bps lower processing fees, but has no reliable status-query API and settlement reports arrive two days late. Your checkout experiences ambiguous outcomes and finance has a daily close requirement. What should determine the decision?  
 **Answer check:** Treat status certainty and finance reporting as hard requirements; quantify duplicate-charge exposure, reconciliation cost, and recovery limitations. Only compare headline price among eligible providers; insist on an integration pilot and finance sign-off.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00c-psp-selection-and-slas) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#00c-selecting-payment-service-providers) (companion answer key; review your reasoning before opening).
 
-**Next:** [1. What is a payment?](../part-1/01-what-is-a-payment.md).
+**Next:** [1. What is a payment?](../01-how-payments-work/01-understanding-a-payment.md).

@@ -43,7 +43,7 @@ flowchart TB
   E --> F[Merchant order + finance ledger]
 ```
 
-**Important constraint:** failover is not equivalent to "retry at another PSP." A first attempt may be approved while the merchant timed out; blindly creating a second charge through PSP B can duplicate the financial effect. Many card retries also face scheme/provider limitations. Only retry after an appropriately verified state and within applicable rules. See [Chapter 10](../part-3/10-checkout-and-payment-state.md).
+**Important constraint:** failover is not equivalent to "retry at another PSP." A first attempt may be approved while the merchant timed out; blindly creating a second charge through PSP B can duplicate the financial effect. Many card retries also face scheme/provider limitations. Only retry after an appropriately verified state and within applicable rules. See [Chapter 10](../03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md).
 
 ## 6.4 A good routing decision considers eligibility first
 
@@ -77,9 +77,9 @@ Track unique orders successfully paid (not just attempts approved), routing shar
 
 Compare two strategies: (A) route purely by lowest processing cost; (B) route by expected contribution from successfully fulfilled orders minus payment and operational costs. What additional data does B require?
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#06-gateways-orchestration) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#06-payment-gateways-routing-and-orchestration) (companion answer key; review your reasoning before opening).
 
-**Next:** [7. Issuing and tokenization](07-issuing-tokenization.md).
+**Next:** [7. Issuing and tokenization](07-card-issuing-and-tokenization.md).
 
 ## Further reading
 

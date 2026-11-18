@@ -35,7 +35,7 @@ Product work includes customer eligibility, KYC, card controls, velocity limits,
 
 Tokenization reduces exposure to raw credentials but does not eliminate fraud, PCI obligations or the need for consent. Lifecycle events matter: token provisioning, activation, suspension, deletion, account updates and device change.
 
-For provisioning flows, **FPAN versus DPAN**, cryptograms, merchant card-on-file tokens, payment account reference (PAR), and independent token lifecycles, continue with the dedicated [Chapter 7A: Network tokenization, FPAN and DPAN](07a-network-tokenization-fpan-dpan.md).
+For provisioning flows, **FPAN versus DPAN**, cryptograms, merchant card-on-file tokens, payment account reference (PAR), and independent token lifecycles, continue with the dedicated [Chapter 7A: Network tokenization, FPAN and DPAN](07a-network-tokens-and-card-credentials.md).
 
 ## 7.4 The PM's recurring-payment problem
 
@@ -53,9 +53,9 @@ Eligible applications → account opening → credential creation → activation
 
 Design a virtual card product for employee expenses. Specify two spend controls, account/card/token identifiers, what happens when a card is suspended, and the approval/fraud guardrails.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#07-issuing-tokenization) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#07-card-issuing-and-tokenization) (companion answer key; review your reasoning before opening).
 
-**Next:** [7A. Network tokenization, FPAN and DPAN](07a-network-tokenization-fpan-dpan.md).
+**Next:** [7A. Network tokenization, FPAN and DPAN](07a-network-tokens-and-card-credentials.md).
 
 ## Further reading
 

@@ -75,9 +75,9 @@ Ask a candidate provider: Are you the gateway, acquirer, processor, or some comb
 3. What would be misleading about describing SGQR as the payment rail?
 4. Draw separate sequence and funds-flow diagrams for a marketplace with two sellers.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#02-ecosystem) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#02-players-in-the-payments-ecosystem) (companion answer key; review your reasoning before opening).
 
-**Next:** [3. The card payment lifecycle](03-card-payment-lifecycle.md).
+**Next:** [3. The card payment lifecycle](03-how-card-payments-work.md).
 
 ## Further reading
 

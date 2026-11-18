@@ -1,6 +1,6 @@
 # 3. How a card payment works, end to end
 
-**Estimated study time:** ~20 minutes · **Prerequisites:** [Chapter 1](01-what-is-a-payment.md) and [Chapter 2](02-ecosystem.md)
+**Estimated study time:** ~20 minutes · **Prerequisites:** [Chapter 1](01-understanding-a-payment.md) and [Chapter 2](02-players-in-the-payments-ecosystem.md)
 
 ## Learning objectives
 
@@ -203,10 +203,10 @@ A strong answer says **"we need to verify the outcome"** when the state is uncer
 - [EMVCo — EMV 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/)
 - [PCI SSC — Document Library](https://www.pcisecuritystandards.org/document_library/)
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#03-card-payment-lifecycle) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#03-how-card-payments-work) (companion answer key; review your reasoning before opening).
 
-**Next:** [4. Payment economics](04-payment-economics.md). For an optional applied case, see [authorization optimization](../part-3/12-authorization-optimization.md)
+**Next:** [4. Payment economics](04-payment-fees-interchange-and-mdr.md). For an optional applied case, see [authorization optimization](../03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md)
 
 ## Continue into operational depth
 
-For the issuer authentication decision, continue with [3-D Secure](../part-3/11-3d-secure.md). For after-sale financial reversals, read [chargebacks](../part-4/15-chargebacks-and-disputes.md); for merchant/provider/bank matching, read [three-party reconciliation](../part-4/16-three-way-reconciliation.md).
+For the issuer authentication decision, continue with [3-D Secure](../03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md). For after-sale financial reversals, read [chargebacks](../04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md); for merchant/provider/bank matching, read [three-party reconciliation](../04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md).

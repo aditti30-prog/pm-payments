@@ -69,9 +69,9 @@ When evaluating "add another PSP," build a model with eligible volume by segment
 3. How can a payment product increase GMV while reducing contribution margin?
 4. What data would you request before setting payout delays for a newly onboarded merchant?
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#04-payment-economics) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#04-payment-fees-interchange-and-mdr) (companion answer key; review your reasoning before opening).
 
-**Next:** [5. Merchant acquiring](../part-2/05-merchant-acquiring.md).
+**Next:** [5. Merchant acquiring](../02-payment-products-and-infrastructure/05-merchant-acquiring-and-onboarding.md).
 
 ## Further reading
 
