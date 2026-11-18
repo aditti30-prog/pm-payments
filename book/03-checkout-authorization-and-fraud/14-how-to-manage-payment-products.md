@@ -1,6 +1,6 @@
 # 14. Payments PM craft: discovery, requirements, delivery and learning
 
-**Part III — Building Payment Products** · **Estimated study time:** ~17 minutes · **Prerequisites:** [The PM's decision rights](../part-0/00-payments-pm-ownership.md), [payment lifecycle](../part-1/03-card-payment-lifecycle.md), and [checkout state](10-checkout-and-payment-state.md).  
+**Part III — Building Payment Products** · **Estimated study time:** ~17 minutes · **Prerequisites:** [The PM's decision rights](../00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md), [payment lifecycle](../01-how-payments-work/03-how-card-payments-work.md), and [checkout state](10-checkout-and-payment-status-design.md).  
 **Editorial status:** Working draft, 16 November 2026.
 
 ## Learning outcomes
@@ -76,7 +76,7 @@ For a diagnostic example, use the [94% → 89% authorization case](../../cases/0
 
 Bring a one-page decision record to engineering, risk, finance and operations. Clearly label **what is decided**, **what is an unresolved hypothesis**, **who can approve the risk/control**, and **what telemetry could overturn the proposal**. The PM coordinates this process but should not claim that collaborating specialists automatically approve the design.
 
-For vendor/API work, see [PSP selection and SLAs](../part-0/00c-psp-selection-and-slas.md). For competing obligations, see [payment prioritization](../part-0/00b-prioritization-and-tradeoffs.md).
+For vendor/API work, see [PSP selection and SLAs](../00-start-here-payments-pm-role/00c-selecting-payment-service-providers.md). For competing obligations, see [payment prioritization](../00-start-here-payments-pm-role/00b-prioritization-and-product-tradeoffs.md).
 
 ## Exercises with answer checks
 
@@ -87,6 +87,6 @@ For vendor/API work, see [PSP selection and SLAs](../part-0/00c-psp-selection-an
 3. **Who should approve a reconciliation mapping change?**  
    *Answer check:* The ledger/finance accountable owner, with engineering implementation review and operations/PSP reconciliation confirmation; PM ensures customer/product requirements and controls are represented.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#14-payments-pm-craft) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#14-how-to-manage-payment-products) (companion answer key; review your reasoning before opening).
 
-**Next:** [15. Chargebacks and disputes](../part-4/15-chargebacks-and-disputes.md).
+**Next:** [15. Chargebacks and disputes](../04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md).

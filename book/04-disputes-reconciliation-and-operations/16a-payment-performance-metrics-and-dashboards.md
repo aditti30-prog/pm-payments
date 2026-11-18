@@ -1,6 +1,6 @@
 # 16A. Payment metrics and observability: measuring the right thing
 
-**Part IV — Operating and Scaling Payments** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Payment lifecycle](../part-1/03-card-payment-lifecycle.md), [authorization optimization](../part-3/12-authorization-optimization.md), [three-party reconciliation](16-three-way-reconciliation.md)  
+**Part IV — Operating and Scaling Payments** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Payment lifecycle](../01-how-payments-work/03-how-card-payments-work.md), [authorization optimization](../03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md), [three-party reconciliation](16-payment-reconciliation-and-payouts.md)  
 **Editorial status:** Working draft, 16 November 2026. Every figure below is **synthetic teaching data**, not a benchmark or provider performance claim.
 
 > **Guiding question:** If a Payments PM says “our success rate increased,” can they prove exactly which customer outcome improved without hiding higher fraud, duplicate charges, more retries or a growing settlement gap?
@@ -187,9 +187,9 @@ Use *intention-to-treat* where possible; don't condition the treatment cohort on
 **Exercise C:** A small PSP returns `HTTP 200` but marks the payment refused in its payload. Should the team classify it as approved?  
 **Answer:** No. A successful API response is not necessarily an approved payment. Inspect the provider's documented payment status/result, then normalize merchant and provider event mapping.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#16a-payment-metrics-and-observability) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#16a-payment-performance-metrics-and-dashboards) (companion answer key; review your reasoning before opening).
 
-**Next:** [17. Payment reliability and operations](17-reliability-and-payment-operations.md).
+**Next:** [17. Payment reliability and operations](17-payment-outages-incidents-and-operations.md).
 
 ## Further reading
 

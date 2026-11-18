@@ -79,7 +79,7 @@ An operational work queue should show the dispute reason, source payment and ord
 
 A good product metric is not just the “win rate.” Analyze **fraud dispute rate**, total disputed amount, recoveries, cost to defend, customer experience, cases aging toward deadlines and loss by product/issuer/market. Denominators matter: disputes raised this month can concern transactions from prior months. Use mature transaction cohorts and distinguish **received / defended / won** case populations.
 
-**3DS link:** qualifying authentication can shift liability for certain fraud disputes, but does not remove refund obligations or all other chargeback categories. Review [Chapter 11](../part-3/11-3d-secure.md) for the authentication and liability distinction.
+**3DS link:** qualifying authentication can shift liability for certain fraud disputes, but does not remove refund obligations or all other chargeback categories. Review [Chapter 11](../03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md) for the authentication and liability distinction.
 
 ### Dated network-program anchor — Visa VAMP (source checked 16 November 2026)
 
@@ -115,9 +115,9 @@ The PM's intervention is to improve event integrity: one shared order reference,
 
 **Applied finance case:** [A seller dispute after payout](../../cases/03-marketplace-reserve-refund-dispute.md) distinguishes a dispute notification, a financial debit, a platform fee and an *uncollected* seller receivable.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#15-chargebacks-and-disputes) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#15-chargebacks-and-dispute-management) (companion answer key; review your reasoning before opening).
 
-**Next:** [16. Three-party reconciliation](16-three-way-reconciliation.md).
+**Next:** [16. Three-party reconciliation](16-payment-reconciliation-and-payouts.md).
 
 ## Further reading
 

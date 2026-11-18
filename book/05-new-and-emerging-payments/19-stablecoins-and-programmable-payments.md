@@ -1,6 +1,6 @@
 # 19. Stablecoins, settlement and programmable money
 
-**Part V — Modern and Emerging Payments** · **Estimated study time:** ~26 minutes · **Prerequisites:** [Payment economics](../part-1/04-payment-economics.md), [cross-border/treasury](../part-2/09a-cross-border-fx-and-treasury.md), [compliance](../part-3/13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part V — Modern and Emerging Payments** · **Estimated study time:** ~26 minutes · **Prerequisites:** [Payment economics](../01-how-payments-work/04-payment-fees-interchange-and-mdr.md), [cross-border/treasury](../02-payment-products-and-infrastructure/09a-cross-border-payments-fx-and-treasury.md), [compliance](../03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** If a token moves in seconds, has the merchant received usable money—and what could still fail?
 
@@ -53,7 +53,7 @@ In many chains, a transfer to an incorrect address cannot simply be reversed by 
 
 For an illustrative scenario, assume the platform sells the 1,000 token units for USD 997 after execution spread and fees. The USD 3 difference must be assigned to a documented fee/spread/valuation treatment according to finance policy. Never infer the legally permitted gain/loss treatment from the arithmetic alone.
 
-**Connection to [Chapter 20: agentic commerce](20-agentic-commerce-delegated-payments.md):** AP2 can supply evidence of delegated purchase/payment authority; a stablecoin may be one settlement asset. The AP2 project publishes an **x402 payment example**, not a rule that all AP2 payments use stablecoins or x402. Chain finality, off-ramp liquidity, refunds, disputes and screening remain separate. [AP2 documentation](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
+**Connection to [Chapter 20: agentic commerce](20-agentic-commerce-and-ai-payments.md):** AP2 can supply evidence of delegated purchase/payment authority; a stablecoin may be one settlement asset. The AP2 project publishes an **x402 payment example**, not a rule that all AP2 payments use stablecoins or x402. Chain finality, off-ramp liquidity, refunds, disputes and screening remain separate. [AP2 documentation](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
 
 ## 19.5 Why programmable money is a PM problem
 
@@ -86,9 +86,9 @@ Monitor rate of token transfers that reach your finality policy, on-chain-to-usa
 **Question:** A buyer sends token value to a merchant wallet, but the app shows “payment failed” due to an indexer outage. Should the app request the buyer send again?  
 **Answer check:** No. The transfer may have occurred. Query authoritative chain/provider references and reconcile wallet receipts before enabling another payment. Preserve transaction hash, chain ID, destination, token contract and intended invoice; do not treat an app indexing failure as proof that no money moved.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#19-stablecoins-programmable-money) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#19-stablecoins-and-programmable-payments) (companion answer key; review your reasoning before opening).
 
-**Next:** [20. Agentic commerce and delegated payments](20-agentic-commerce-delegated-payments.md).
+**Next:** [20. Agentic commerce and delegated payments](20-agentic-commerce-and-ai-payments.md).
 
 ## Primary sources
 

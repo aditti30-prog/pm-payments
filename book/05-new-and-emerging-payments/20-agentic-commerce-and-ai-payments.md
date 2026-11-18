@@ -1,6 +1,6 @@
 # 20. Agentic commerce, delegated credentials and customer consent
 
-**Part V — Modern and Emerging Payments** · **Estimated study time:** ~35 minutes · **Prerequisites:** [Network tokens](../part-2/07a-network-tokenization-fpan-dpan.md), [3DS](../part-3/11-3d-secure.md), [checkout state](../part-3/10-checkout-and-payment-state.md), [compliance](../part-3/13a-compliance-and-control-ownership.md), [disputes](../part-4/15-chargebacks-and-disputes.md) · **Source review:** 16 November 2026 · **Status:** Working draft. Rapidly evolving standards; version-check before implementation.
+**Part V — Modern and Emerging Payments** · **Estimated study time:** ~35 minutes · **Prerequisites:** [Network tokens](../02-payment-products-and-infrastructure/07a-network-tokens-and-card-credentials.md), [3DS](../03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md), [checkout state](../03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md), [compliance](../03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md), [disputes](../04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md) · **Source review:** 16 November 2026 · **Status:** Working draft. Rapidly evolving standards; version-check before implementation.
 
 > **Guiding question:** The customer asks an AI agent to “buy my usual groceries under S$60.” Who decides what “usual” means, what exactly was authorized, and what happens if the agent buys the wrong items?
 
@@ -56,7 +56,7 @@ Distinguish product discovery, commerce orchestration, delegated user intent, cr
 
 First ask which AI channels and markets the merchant is actually targeting, what their commerce backend supports, who processes their payments, and whether the protocol/partner is accessible under current onboarding. The choice may be **multiple adapters** to a single canonical order/payment state machine. A cross-merchant checkout integration is not the same as an issuer/network token issuance program. Treat a provider feature request, protocol experiment and production commitment as different roadmap investments.
 
-**Settlement is a separate question:** AP2's published samples include both card payments and a **human-not-present x402 payment example**. This does not make x402 a mandatory settlement rail or imply that every AP2 transaction uses a stablecoin. A verifiable mandate is not itself an issuer approval, token transfer or merchant fiat payout. See [Chapter 19: stablecoins and settlement](19-stablecoins-programmable-money.md) and the [AP2 project overview](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
+**Settlement is a separate question:** AP2's published samples include both card payments and a **human-not-present x402 payment example**. This does not make x402 a mandatory settlement rail or imply that every AP2 transaction uses a stablecoin. A verifiable mandate is not itself an issuer approval, token transfer or merchant fiat payout. See [Chapter 19: stablecoins and settlement](19-stablecoins-and-programmable-payments.md) and the [AP2 project overview](https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md).
 
 ## 20.4 Two purchase modes require different authorization models
 
@@ -179,7 +179,7 @@ Risk strategy should separate **trusted agent identity**, **user permission evid
 **D.** What is the difference between ACP and AP2?  
 **Answer:** ACP describes commerce/checkout interoperability (with provider integrations supporting payment), while AP2 emphasizes cryptographic evidence of delegated checkout and payment authorization. They solve different layers and should not be conflated. Always state protocol revision and integration maturity.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#20-agentic-commerce-delegated-payments) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#20-agentic-commerce-and-ai-payments) (companion answer key; review your reasoning before opening).
 
 **Next:** End of the current textbook. Use the [roadmap](../../ROADMAP.md) for pending reviews and further chapters.
 

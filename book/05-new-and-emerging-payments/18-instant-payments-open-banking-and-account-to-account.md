@@ -1,6 +1,6 @@
 # 18. Real-time payments, open banking and payment initiation
 
-**Part V — Modern and Emerging Payments** · **Estimated study time:** ~24 minutes · **Prerequisites:** [Bank transfers](../part-2/09-transfers-real-time-bnpl.md), [cross-border FX and treasury](../part-2/09a-cross-border-fx-and-treasury.md), [compliance](../part-3/13a-compliance-and-control-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
+**Part V — Modern and Emerging Payments** · **Estimated study time:** ~24 minutes · **Prerequisites:** [Bank transfers](../02-payment-products-and-infrastructure/09-bank-transfers-real-time-payments-and-bnpl.md), [cross-border FX and treasury](../02-payment-products-and-infrastructure/09a-cross-border-payments-fx-and-treasury.md), [compliance](../03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) · **Source review:** 16 November 2026 · **Status:** Working draft
 
 > **Guiding question:** Can a retailer replace cards with instant account-to-account payments and keep the same conversion, refunds, dispute outcomes and customer service?
 
@@ -77,9 +77,9 @@ Customer requests a SGD 10 partial refund. A bank transfer used for purchase can
 **Exercise:** Shopper shows a “transfer successful” screenshot but your merchant bank webhook is delayed. Should a marketplace seller instantly ship a high-value order?  
 **Answer check:** Establish what evidence is authoritative for the rail and merchant. Use a clear pending state and permitted reconciliation/status retrieval rather than trusting an unverifiable screenshot. Risk and fulfillment thresholds may differ for low-value versus high-value orders; document the policy.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#18-real-time-open-banking-payment-initiation) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#18-instant-payments-open-banking-and-account-to-account) (companion answer key; review your reasoning before opening).
 
-**Next:** [19. Stablecoins and programmable money](19-stablecoins-programmable-money.md).
+**Next:** [19. Stablecoins and programmable money](19-stablecoins-and-programmable-payments.md).
 
 ## Primary sources
 

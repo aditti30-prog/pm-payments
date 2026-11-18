@@ -1,6 +1,6 @@
 # 17. Payment operations, incident response and financial integrity
 
-**Part IV — Operating and Scaling Payments** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Checkout and payment state](../part-3/10-checkout-and-payment-state.md), [3DS](../part-3/11-3d-secure.md), [authorization](../part-3/12-authorization-optimization.md), [disputes](15-chargebacks-and-disputes.md), [reconciliation](16-three-way-reconciliation.md), [metrics](16a-payment-metrics-and-observability.md)  
+**Part IV — Operating and Scaling Payments** · **Estimated study time:** ~30 minutes · **Prerequisites:** [Checkout and payment state](../03-checkout-authorization-and-fraud/10-checkout-and-payment-status-design.md), [3DS](../03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md), [authorization](../03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md), [disputes](15-chargebacks-and-dispute-management.md), [reconciliation](16-payment-reconciliation-and-payouts.md), [metrics](16a-payment-performance-metrics-and-dashboards.md)  
 **Editorial status:** Working draft, 16 November 2026. All incident examples and timings are illustrative. Actual procedures, loss limits and reporting obligations require organization-specific approval.
 
 > **Guiding question:** When a payment system breaks, can the team minimize customer harm **without inventing a payment outcome, moving money twice, or losing the audit trail**?
@@ -165,7 +165,7 @@ A high authorization rate can coexist with terrible financial integrity. A low m
 
 **Success is not “the endpoint is green.”** Required closeout: verified order/payment states for all affected operations or an owned outstanding queue, no duplicate settled charges, customer remediation, measurable post-deploy checks, and a tested change to prevent recurrence. Counts and times are invented only to illustrate the response sequence.
 
-A downloadable [incident-review template](../../artifacts/payment-incident-review-template.md) supports the follow-up. The [metrics chapter](16a-payment-metrics-and-observability.md) explains its denominators and cohort guards.
+A downloadable [incident-review template](../../artifacts/payment-incident-review-template.md) supports the follow-up. The [metrics chapter](16a-payment-performance-metrics-and-dashboards.md) explains its denominators and cohort guards.
 
 ## 17.10 Exercise with answer guidance
 
@@ -180,9 +180,9 @@ A downloadable [incident-review template](../../artifacts/payment-incident-revie
 
 **Operational case lab:** [PSP failover when the original authorization outcome is unknown](../../cases/02-ambiguous-authorization-routing.md). Run the incident playbook on O101–O104, including duplicate callbacks, two distinct provider approvals and pending-state customer messages.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#17-reliability-and-payment-operations) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#17-payment-outages-incidents-and-operations) (companion answer key; review your reasoning before opening).
 
-**Next:** [18. Real-time payments and open banking](../part-5/18-real-time-open-banking-payment-initiation.md).
+**Next:** [18. Real-time payments and open banking](../05-new-and-emerging-payments/18-instant-payments-open-banking-and-account-to-account.md).
 
 ## Further reading
 

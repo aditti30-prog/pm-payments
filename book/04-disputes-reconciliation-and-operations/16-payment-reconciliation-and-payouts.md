@@ -142,9 +142,9 @@ Finance owns financial policy and general-ledger treatment; treasury/bank operat
 
 **Extended worked case:** [Marketplace gross-to-net and later adjustments](../../cases/03-marketplace-reserve-refund-dispute.md) traces sale, platform commission, PSP fee, seller reserve and payouts before separate refund/dispute periods. Do not force them into a single transaction-date bank reconciliation.
 
-**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#16-three-way-reconciliation) (companion answer key; review your reasoning before opening).
+**Exercises:** [Worked solutions](../../answers/chapter-exercises.md#16-payment-reconciliation-and-payouts) (companion answer key; review your reasoning before opening).
 
-**Next:** [16A. Payment metrics and observability](16a-payment-metrics-and-observability.md).
+**Next:** [16A. Payment metrics and observability](16a-payment-performance-metrics-and-dashboards.md).
 
 ## Further reading
 
