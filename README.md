@@ -1,82 +1,46 @@
 # The Payments PM Handbook
 
-**An open-source textbook on how modern payments work — and how product managers design, operate, and improve them.**
+**Learn how payments work, how money moves, what can go wrong, and how product managers build reliable payment products.**
 
-> **Editorial status: v0.6.1 working manuscript (16 November 2026).** All five parts plus Part 0 now have chapter drafts and examples; technical and specialist review remain outstanding. This is an educational resource, not regulatory, legal, scheme-operational or financial advice. Country, brand and provider rules change; follow linked primary sources and current contracts before implementing.
+A free, open-source, practical handbook for product managers, engineers and fintech builders. It connects **payment mechanics** to **real product decisions**—from card authorization and merchant onboarding to fraud, payouts, reconciliation and AI-led commerce.
 
-The objective is not to memorize payment jargon. Readers should understand **who does what**, **where money and obligations move**, **what can fail**, **who bears risk**, and **which decisions a PM can influence**.
+**[Browse all 32 chapters](book/README.md)** · **[Try a real payments case](cases/01-authorization-rate-drop.md)** · **[Explore templates and PRDs](#templates-and-worked-artifacts)** · **[Worked chapter exercises](answers/chapter-exercises.md)**
 
-**Maintained by [@aditti30-prog](https://github.com/aditti30-prog).** Specialist peer review is welcome; chapters are editorial drafts, not certified standards guidance.
+## What is inside?
 
-## Who should read this?
+| Explore | What you will learn |
+| --- | --- |
+| [What a Payments PM actually does](book/part-0/README.md) | Learn the responsibilities, decisions, partners and first steps of a Payments Product Manager. |
+| [Payment fundamentals and economics](book/part-1/README.md) | Build the mental model: payment participants, messages, money movements and business economics. |
+| [Acquiring, gateways, issuing and payment methods](book/part-2/README.md) | Learn the main products a payments team builds or integrates, and how those products fit together. |
+| [Checkout, fraud, authentication and PM craft](book/part-3/README.md) | Turn payment-system knowledge into safer checkout flows, better conversion and measurable product decisions. |
+| [Disputes, reconciliation and operations](book/part-4/README.md) | Understand what happens after checkout—and how to prove that money and records agree. |
+| [New payment rails and agentic commerce](book/part-5/README.md) | Explore evolving payment methods and new product/accountability questions. These chapters are working drafts. |
 
-- Product managers transitioning from ecommerce, fintech or banking into payments.
-- Payments PMs who want to understand adjacent products (issuing, acquiring, tokenization, risk, reconciliation).
-- Engineers, designers, risk professionals and founders who need the product and business context around payment infrastructure.
+Every section has its own readable chapter guide. You can **[see the complete table of contents](book/README.md)** without browsing technical filenames.
 
-## How to use the book
+## Where should you start?
 
-**New Payments PM:** Start with Part 0 to understand role boundaries and work practices, then follow Parts I–IV in order. **Experienced PM or engineer:** Jump to the relevant payment-system chapter and use Part 0 as a working reference. Each chapter aims to explain the underlying mechanism and connect it to a product decision. Some chapters still require deeper examples and independent specialist review; a worked-solutions companion now covers all chapter exercises. v0.4 adds metrics, operational failure response and compliance control ownership. v0.5 adds marketplace funds flow, card-present/offline POS, cross-border FX/treasury, subscriptions/dunning, scam protection and draft chapters on real-time payments, stablecoins and agentic commerce.
+- **New to payments?** Start with [How money moves](book/part-1/README.md) to understand the lifecycle, actors and economics. Then explore [core products](book/part-2/README.md).
+- **Already a product manager?** Read [what a Payments PM owns](book/part-0/00-payments-pm-ownership.md), then work through [checkout, authorization and fraud](book/part-3/README.md).
+- **Building or operating a payment platform?** Go to [disputes, reconciliation and reliability](book/part-4/README.md) and use the linked PRDs and checklists.
+- **Working on AI-led checkout or new payment rails?** Explore [emerging payments](book/part-5/README.md) and the [agentic checkout intent test](artifacts/agentic-checkout-intent-test.md).
 
-**Timing convention:** Where a chapter specifies *estimated study time*, this includes working through diagrams, questions and exercises. It is not a measured reading-speed benchmark. Chapters without estimates remain uncalibrated.
+## Learn by solving a payment problem
 
-**Editorial companions:** [Worked solutions for all 32 chapters](answers/chapter-exercises.md) · [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Primary-source audit (16 November 2026)](editorial/primary-source-audit-2026-11-16.md) · [Specialist review program](editorial/specialist-review-program.md) · [Specialist review packet: highest-risk claims](editorial/specialist-review-packet.md). **Independent specialist reviews are still pending.**
+**An authorization rate falls from 94% to 89%.** Where do you look first, which cohorts do you investigate, and how do you raise approvals without creating fraud or duplicate charges? Work through the [authorization decline case](cases/01-authorization-rate-drop.md).
 
-### Part 0 — The Payments PM's job
+**A PSP times out but may have approved a charge.** Work through [ambiguous authorization and safe routing](cases/02-ambiguous-authorization-routing.md).
 
-- [What a Payments PM owns — archetypes, decision rights and example RACI](book/part-0/00-payments-pm-ownership.md)
-- [First 90 days: mapping systems, metrics, risk and partners](book/part-0/00a-first-90-days.md)
-- [Prioritization: obligations, financial integrity, reliability and growth](book/part-0/00b-prioritization-and-tradeoffs.md)
-- [PSP selection: partner scorecards, integrations and SLAs](book/part-0/00c-psp-selection-and-slas.md)
+**A marketplace must refund one seller while holding reserves for another.** Explore the [seller funds-flow and dispute case](cases/03-marketplace-reserve-refund-dispute.md).
 
-### Part I — Understanding Payments
+More practice: [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Solutions to all chapter exercises](answers/chapter-exercises.md).
 
-1. [What is a payment?](book/part-1/01-what-is-a-payment.md)
-2. [Who participates in a payment? The ecosystem](book/part-1/02-ecosystem.md)
-3. [How a card payment works: authorization to payout](book/part-1/03-card-payment-lifecycle.md)
-4. [Payment economics: interchange, MDR and exposure](book/part-1/04-payment-economics.md)
+## About this project
 
-### Part II — Payment Products and Infrastructure
+This is a **working manuscript (v0.6.1, 16 November 2026)**. Draft chapters, examples and executable case checks are available, but independent specialist review remains pending. It is educational material, not regulatory, legal, financial or scheme-operational advice. Provider, network and regulatory rules may change; verify current primary sources and contracts before implementation.
 
-5. [Merchant acquiring and onboarding](book/part-2/05-merchant-acquiring.md)
-   - **Deep dive:** [5A. Marketplaces, PayFacs and platform funds flow](book/part-2/05a-marketplaces-payfac-funds-flow.md)
-6. [Gateways and payment orchestration](book/part-2/06-gateways-orchestration.md)
-7. [Card issuing and tokenization](book/part-2/07-issuing-tokenization.md)
-   - **Deep dive:** [Network tokens, FPAN, DPAN and token lifecycles](book/part-2/07a-network-tokenization-fpan-dpan.md)
-8. [Wallets, QR and alternative payment methods](book/part-2/08-wallets-qr-apms.md)
-   - **Deep dive:** [8A. Card-present POS and offline acceptance](book/part-2/08a-card-present-pos-and-offline.md)
-9. [Bank transfers, instant payments and BNPL](book/part-2/09-transfers-real-time-bnpl.md)
-   - **Deep dive:** [9A. Cross-border FX, treasury and payouts](book/part-2/09a-cross-border-fx-and-treasury.md)
-
-### Part III — Building Payment Products
-
-10. [Checkout, payment state and customer experience](book/part-3/10-checkout-and-payment-state.md)
-    - **Deep dive:** [10A. Subscriptions, stored credentials and dunning](book/part-3/10a-subscriptions-stored-credentials-and-dunning.md)
-11. **Deep dive:** [EMV 3-D Secure: frictionless, challenge and liability](book/part-3/11-3d-secure.md)
-12. [Authorization optimization](book/part-3/12-authorization-optimization.md)
-13. [Payment fraud, risk decisions and controls](book/part-3/13-fraud-risk-and-payment-controls.md)
-    - **Deep dive:** [13A. Compliance, PCI scope, KYC/KYB/AML and control ownership](book/part-3/13a-compliance-and-control-ownership.md)
-    - **Deep dive:** [13B. Scam protection and a jurisdictional regulation map](book/part-3/13b-scams-and-regulatory-map.md)
-14. [The Payments PM's craft: discovery, metrics and delivery](book/part-3/14-payments-pm-craft.md)
-
-### Part IV — Operating and Scaling Payments
-
-15. **Deep dive:** [Chargebacks and disputes](book/part-4/15-chargebacks-and-disputes.md)
-16. **Deep dive:** [Three-party reconciliation: merchant, PSP and bank](book/part-4/16-three-way-reconciliation.md)
-    - **Deep dive:** [16A. Payments metrics and observability](book/part-4/16a-payment-metrics-and-observability.md)
-17. [Payment reliability, incidents and operations](book/part-4/17-reliability-and-payment-operations.md)
-
-### Part V — Modern and Emerging Payments · working drafts
-
-18. [Real-time payments, open banking and payment initiation](book/part-5/18-real-time-open-banking-payment-initiation.md)
-19. [Stablecoins, settlement and programmable money](book/part-5/19-stablecoins-programmable-money.md)
-20. **Deep dive:** [Agentic commerce, delegated credentials and customer consent](book/part-5/20-agentic-commerce-delegated-payments.md)
-
-**Practice:** [Agentic Checkout Intent & Permission Test](artifacts/agentic-checkout-intent-test.md) contains a deterministic, simulated-policy case and eight executable test fixtures. These check customer constraints but are not a production implementation of any payment protocol.
-
-See [ROADMAP.md](ROADMAP.md) for the editorial plan, known limitations and unfilled coverage areas.
-
-**Post-review quality patch (v0.5.1):** Singapore SRF and Protection from Scams Act scope, MAS stablecoin consultation dates and EU/US comparators, AP2 v0.2/FIDO governance, FATF Recommendation 16, treasury liquidity example and CSV-driven HarborCart metric checks. A [weekly external reference-link audit](.github/workflows/external-link-audit.yml) reports confirmed 404/410 failures separately from links that cannot be verified. Specialist review and exercise-answer coverage remain incomplete.
+Maintained by [@aditti30-prog](https://github.com/aditti30-prog). We welcome source-backed technical corrections: [how to contribute](CONTRIBUTING.md) · [primary-source audit](editorial/primary-source-audit-2026-11-16.md) · [specialist review](editorial/specialist-review-program.md) · [editorial roadmap](ROADMAP.md).
 
 ## Templates and worked artifacts
 
