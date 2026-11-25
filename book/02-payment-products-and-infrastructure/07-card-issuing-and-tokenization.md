@@ -6,6 +6,8 @@
 
 Describe the issuer's responsibilities, distinguish a card account from a physical card and a token, and design a card lifecycle that handles provisioning, approvals, controls and replacement.
 
+**Merchant lens:** A checkout PM reads issuing to understand why an issuer approves or declines, how card lifecycle changes affect stored credentials, and what network tokens can and cannot solve. Issuer program strategy, cardholder funding and BIN sponsorship are adjacent infrastructure/issuer PM disciplines—not the primary skills taught by this handbook.
+
 ## 7.1 What issuing means
 
 An issuer provides cardholders with access to a payment credential under a scheme/program arrangement and maintains the associated account relationship or program obligations. The issuer or its processor receives authorization messages and makes decisions using account status, available funds or credit, limits, fraud controls, merchant category and other signals. Depending on jurisdiction and program, an issuer sponsor, processor, program manager and fintech app may be separate participants.

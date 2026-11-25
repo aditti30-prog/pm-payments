@@ -22,9 +22,9 @@ Build the mental model: payment participants, messages, money movements and busi
 - **[How a card payment works, end to end](01-how-payments-work/03-how-card-payments-work.md)** — Follow authorization, capture, settlement and payout.
 - **[Who earns what? Payment pricing and economics](01-how-payments-work/04-payment-fees-interchange-and-mdr.md)** — Understand interchange, merchant discount rates, fees and exposure.
 
-## Core payment products: Acceptance, issuing and money movement
+## Merchant payment dependencies: Providers, credentials and money movement
 
-Learn the main products a payments team builds or integrates, and how those products fit together.
+Learn how the merchant uses and depends on acquiring, gateways, credentials and alternative payment rails. Issuer, PayFac, remittance and bank-side operating models are supporting context, not full role-training tracks.
 
 - **[Merchant acquiring and onboarding](02-payment-products-and-infrastructure/05-merchant-acquiring-and-onboarding.md)** — How merchants are verified, underwritten and enabled to accept payments.
 - **[Marketplaces, PayFacs and splitting funds](02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md)** — Who holds and owes seller funds, and how payout liabilities work.
@@ -60,7 +60,7 @@ Understand what happens after checkout—and how to prove that money and records
 
 ## What's next: Instant payments, stablecoins and AI agents
 
-Explore evolving payment methods and new product/accountability questions. These chapters are working drafts.
+**Optional merchant horizon-scanning:** Explore evolving acceptance, settlement and customer-consent questions. These working drafts are not specialist infrastructure training.
 
 - **[Real-time payments, open banking and account-to-account initiation](05-new-and-emerging-payments/18-instant-payments-open-banking-and-account-to-account.md)** — Bank-led payment initiation and instant-payment flows.
 - **[Stablecoins, settlement and programmable money](05-new-and-emerging-payments/19-stablecoins-and-programmable-payments.md)** — Token-based value transfer, redemption and operational dependencies.

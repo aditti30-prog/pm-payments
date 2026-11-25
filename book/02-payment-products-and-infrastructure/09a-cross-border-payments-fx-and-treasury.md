@@ -8,6 +8,8 @@
 
 Distinguish remittance from merchant acquiring payouts, quote currency versus settlement currency versus recipient currency, describe FX spread and rate locks, trace liquidity and correspondent-bank dependencies, and build a payout-reconciliation and exception flow.
 
+**Merchant lens:** For a normal retailer, the priority is cross-border *acceptance*: presentment versus settlement currency, cross-border and FX fees, the merchant's payout currency, refunds, and bank reconciliation. The remittance/beneficiary-payout flow in this chapter is additional context for **marketplaces or merchants that owe permitted international payouts**. It is not a curriculum for building a licensed remittance or treasury platform.
+
 ## 9A.1 A cross-border payment is not one atomic transfer
 
 A cross-border journey may involve a local debit, exchange, compliance screening, one or more intermediary institutions, a foreign local rail, and final beneficiary credit. A **message sent** is not **funds available**. Different legal and operating models hold funds at different stages.

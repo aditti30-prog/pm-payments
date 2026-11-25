@@ -28,9 +28,9 @@ A PM may build onboarding, payment forms, authorization routing and transaction 
 
 **Decision principle:** *delegating a control's execution* (for example to a PSP) does not necessarily delegate the regulated entity's accountability. A contract, PCI attestation or third-party certificate is evidence for assessment—not proof that every obligation has been transferred.
 
-### Which kind of Payments PM are you?
+### First identify the merchant's regulatory and contractual boundary
 
-A merchant's checkout PM, a PayFac onboarding PM, an issuer PM and a bank transfer PM have materially different obligations and contacts. Before drafting requirements, document **legal entity**, **jurisdictions**, **service classification**, **customer/merchant relationship**, **merchant of record**, **who touches funds**, **who holds cardholder data**, **third-party processors**, and **the authoritative compliance owner**.
+**Merchant lens:** A merchant accepting payments must establish its own PCI, payment-page, data-protection and contractual responsibilities, while identifying what compliance obligations belong to a PSP, acquirer or bank. A PayFac, issuer or licensed bank transfer provider may have materially different obligations that this chapter describes only for boundary awareness. Before drafting requirements, document **legal entity**, **jurisdictions**, **service classification**, **customer/merchant relationship**, **merchant of record**, **who touches funds**, **who holds cardholder data**, **third-party processors**, and **the authoritative compliance owner**.
 
 A payment feature can cross boundaries. A marketplace accepting card payments, onboarding sellers and controlling seller payouts might have obligations different from a retailer selling its own inventory even when the front-end checkout looks identical.
 

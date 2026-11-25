@@ -1,13 +1,13 @@
-# Part 0 · The job — What a Payments Product Manager owns
+# Part 0 · What a merchant-side Payments Product Manager owns
 
-**Audience:** PMs moving into payments, and experienced payments PMs moving across domains.  
+**Audience:** Product managers owning payment acceptance at merchants, marketplaces, retailers, subscription products and omnichannel businesses. Adjacent gateway, issuing, acquiring and banking roles are discussed only to make the merchant's dependencies and ownership boundaries clear.  
 **Estimated study time:** ~18 minutes · **Prerequisites:** None · **Status:** Editorial draft, 16 November 2026
 
 > **Guiding question:** What changes when you are accountable for a product whose outcomes must be correct in the app, in a processor, and in the ledger?
 
 ## Learning outcomes
 
-After this chapter, you should be able to (1) distinguish six Payments PM archetypes; (2) describe a PM's decision rights without pretending that PMs own scheme or regulatory decisions; (3) build a responsibility matrix for one payment change; and (4) frame a product decision across customer value, risk, economics, operability and compliance.
+After this chapter, you should be able to (1) identify the merchant Payments PM's remit and distinguish it from adjacent provider/infrastructure PM archetypes; (2) describe a PM's decision rights without pretending that PMs own scheme or regulatory decisions; (3) build a responsibility matrix for one payment change; and (4) frame a product decision across customer value, risk, economics, operability and compliance.
 
 ## 0.1 What is the job?
 
@@ -17,7 +17,9 @@ A checkout that displays **Success** can be wrong if capture failed. A payment t
 
 The PM's recurring output is a *defensible decision*: a problem statement, evidence, options, decision and rationale, requirements, guardrails, owner, launch criteria, and post-launch review. A roadmap alone is insufficient.
 
-## 0.2 Six archetypes — one title, different customers
+## 0.2 The merchant role versus adjacent payment industry roles
+
+**This handbook follows the first row—merchant checkout and payment acceptance.** Other rows are *counterparties or neighboring career tracks*, not promises that the handbook develops complete issuing, acquiring, gateway, or banking product-management expertise. A merchant may build internal orchestration, risk and tender platforms; in those cases their responsibilities remain merchant outcomes, not generalized infrastructure operating mandates.
 
 | Archetype | Primary customer | Representative product boundary | Common success measures | Where the PM needs partners |
 |---|---|---|---|---|
@@ -82,8 +84,8 @@ A fictional merchant observes that 1.3% of payment attempts end in a gateway tim
 
 1. **A PM says, “I'll raise issuer approval from 90% to 98%.”** What is wrong?  
    *Answer check:* The PM can influence routing, authentication, credential quality and request data, but cannot command issuer decisions; qualify the population, controllable levers, guardrails and target as a hypothesis.
-2. **An acquirer PM proposes instant merchant payouts.** Name three dependencies.  
-   *Answer check:* Settlement availability, liquidity/prefund or credit exposure, underwriting/reserves, reconciliation and applicable regulatory obligations.
+2. **A merchant PM considers switching to a PSP that promises earlier payouts.** Name three dependencies before making that decision.  
+   *Answer check:* The provider's settlement and bank-credit clocks, liquidity/financing and reserve terms, payout reconciliation, and implications for merchant cash flow. The merchant PM evaluates a partner promise rather than designing an acquirer's lending product.
 3. **A risk team's false-positive losses and a growth team's approval metrics conflict.** Who decides?  
    *Answer check:* Agree on risk appetite and decision rights in advance; evaluate legitimate-order conversion **and** fraud-adjusted contribution; escalate beyond the PM when approved control limits are implicated.
 

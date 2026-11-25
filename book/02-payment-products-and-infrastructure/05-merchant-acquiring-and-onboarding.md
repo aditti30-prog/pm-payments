@@ -6,6 +6,8 @@
 
 Explain the acquiring value proposition, differentiate merchant **KYB** from **credit/fraud underwriting**, understand why onboarding and payouts are coupled, and design a merchant lifecycle beyond an application form.
 
+**Merchant lens:** The merchant does not usually design acquirer underwriting policy. It needs to understand which evidence the acquiring partner requests, what limits/reserves can affect acceptance and settlement, and how merchant onboarding or changes of legal entity/MID impact customer checkout, payments and cash availability.
+
 ## 5.1 An acquirer makes merchants acceptable to a payment ecosystem
 
 In a card model, an acquiring institution enables a merchant to accept card transactions and participates in the scheme-facing and financial obligations involved. Merchant-facing product capabilities may include application, identity verification, risk classification, MID setup, terminal/API activation, pricing, refunds, dispute operations, reserve handling and payouts. A payment facilitator (payfac) may support sub-merchants under an acquiring arrangement. Details vary by market and program.

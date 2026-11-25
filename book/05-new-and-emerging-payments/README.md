@@ -1,6 +1,6 @@
 # What's next: Instant payments, stablecoins and AI agents
 
-Explore evolving payment methods and new product/accountability questions. These chapters are working drafts.
+**Optional merchant horizon-scanning modules:** Explore emerging payment acceptance and customer-consent models only insofar as they may affect merchant checkout, settlement, refunds and dispute accountability. They are working drafts, not bank, blockchain or protocol-development training.
 
 **[← Complete book contents](../README.md)** · **[← Project home](../../README.md)**
 

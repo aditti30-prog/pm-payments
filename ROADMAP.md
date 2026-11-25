@@ -2,7 +2,18 @@
 
 **Audience and scope:** Merchant-side Payments PMs responsible for online/in-store payment acceptance, payment methods, provider integrations, conversion, payment economics, risk, refunds, reconciliation, payouts and operations. Issuing, acquiring, gateway internals and scheme/banking regulation are explained for merchant-side dependencies, not as complete specialist infrastructure operating guidance.
 
-The textbook is organized around **the PM job → understanding payments → products/infrastructure → building → operating → emerging systems**. This structure does not replace detailed payment-system education with generic role advice.
+The handbook is organized around **the PM job → understanding payments → products/infrastructure → building → operating → emerging systems**. This structure does not replace detailed payment-system education with generic role advice.
+
+## Cohesion review (25 November 2026)
+
+- [x] Confirmed all 32 chapters and operational worksheets are on the protected main reading path; GitHub checks cover internal links, reading order and arithmetic.
+- [x] Clarified the merchant lens in the opening chapter and provider/issuing/acquiring/cross-border companion chapters; rewrote the opening merchant exercise.
+- [x] Labeled the second half of reconciliation as operational synthesis, and emerging systems as optional merchant horizon-scanning.
+- [ ] Reduce repetitive explanation in reconciliation once the merchant finance reviewer validates source contracts and accounting boundaries.
+- [ ] Add one integrated merchant case across fraud screening, checkout, routing, capture/refund and reconciliation with a rubric and a realistic synthetic dataset.
+- [ ] Deepen merchant acceptance journeys for QR, in-store, subscriptions and BNPL; short foundational chapters remain introductory.
+- [ ] Make every infrastructure-heavy chapter explicitly answer: what can the merchant PM decide, what evidence must they demand, and what remains with the provider?
+- [ ] Complete independent subject-matter review and provider/scheme-rule verification.
 
 ## Current manuscript status
 

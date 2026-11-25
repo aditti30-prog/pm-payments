@@ -6,10 +6,10 @@ The chapter names below are stable anchors. Return to the corresponding chapter 
 
 ## 00-what-a-payments-pm-owns
 
-**Chapter:** [Part 0 · The job — What a Payments Product Manager owns](../book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md)
+**Chapter:** [Part 0 · What a merchant-side Payments Product Manager owns](../book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md)
 
 1. **Issuer approval is not a PM-controlled switch.** Define the cohort (eligible card authorization attempts, issuer region, payment type and time window), establish baseline and counterfactual, and examine the controllable inputs: credential freshness, request data, 3DS integration, routing where permitted and customer recovery. A target of 98% must be a *testable hypothesis*, not a guarantee. Monitor unique-order success, fraudulent approvals, cost per paid order and disputes, not the attempt rate alone.
-2. **Instant payouts create a funding and loss decision.** First map the acquirer/PSP settlement clock, the bank-payout clock and the provider balance; identify whether the proposed speed requires prefunding or credit. Then define reserve/hold decisions, merchant underwriting and negative-balance recovery, beneficiary verification, bank cutoffs, reconciliation IDs and liquidity stress limits. The PM can propose a service tier; treasury, credit/risk, compliance and the provider must approve controls.
+2. **Earlier PSP payouts are a merchant-side partner decision.** Map when the provider actually settles funds versus when cash reaches the merchant bank account, and distinguish a transfer initiated from money received. Ask whether the promise uses prefunding/credit, introduces new fees or reserve terms, changes risk or contractual liability, and supports reliable payout IDs and reconciliation. The merchant PM evaluates cash-flow benefit versus incremental cost, exposure and provider dependence with merchant finance/treasury approval; designing the acquirer's underwriting or liquidity product is outside this handbook's remit.
 3. **There is no unilateral growth-versus-fraud override.** Agree on the risk appetite and who can change policy. Use legitimate *paid-order* conversion, false-positive rate by segment, confirmed fraud loss by matured cohort, dispute rate and loss-adjusted contribution. If a proposal breaches an approved control ceiling, route it through the required governance; experiment only inside approved limits.
 
 ---

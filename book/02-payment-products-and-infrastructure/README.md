@@ -1,6 +1,6 @@
-# Core payment products: Acceptance, issuing and money movement
+# Merchant payment dependencies: Providers, credentials and money movement
 
-Learn the main products a payments team builds or integrates, and how those products fit together.
+Learn what merchants need to know about provider integrations, payment methods, issuing behavior and money movement to make acceptance, routing and payout decisions. Provider/issuer product management is background context, not the primary training goal.
 
 **[← Complete book contents](../README.md)** · **[← Project home](../../README.md)**
 

@@ -131,7 +131,7 @@ Suggested scorecard: percentage of settled volume matched transaction-by-transac
 Finance owns financial policy and general-ledger treatment; treasury/bank operations own cash movement investigation; the PSP/acquirer owns its external ledger; engineering owns system integrity; the PM ensures the product offers reliable records, workflows and visibility across the process. The PM **does not** unilaterally decide accounting recognition or waive financial controls.
 
 
-## 16.8 Merchant reconciliation: from order to bank cash
+## 16.8 Put the pieces together: merchant reconciliation from order to bank cash
 
 This is a **merchant-side operating model**, not issuer, gateway, or acquiring scheme reconciliation. The merchant must account for what the customer owed, what was charged, what the PSP financially recognized, and what cash reached the merchant's bank. A three-way match is a useful shorthand, but it hides **four different tests**:
 
@@ -139,6 +139,8 @@ This is a **merchant-side operating model**, not issuer, gateway, or acquiring s
 2. **Merchant payment to provider:** Capture, refund, dispute, fee and adjustment events versus the provider's *financial journal/settlement* records. A webhook or successful API response is not a settlement entry; authorization is not capture.
 3. **Provider settlement to payout:** Sum settlement lines, fees, refunds, disputes, reserve movements, FX and adjustments using the **provider's settlement period and sign convention**, not the calendar date of the original order.
 4. **Payout to bank and finance ledger:** Prove cash receipt against payout transfer identifiers, legal entity, currency and destination account. Distinguish payout initiated, in transit, received, returned, and finance-posted.
+
+**Read this section as the operational synthesis of Sections 16.1–16.7**: the earlier sections explain records, IDs, exceptions and accounting ownership; this section assembles them into a repeatable daily matching-and-resolution workflow. The supporting checklist is an executable review aid rather than a separate fourth accounting ledger.
 
 A correct net bank credit can conceal missing transaction references, two offsetting errors or a customer refund that never completed. **The bank tie-out is necessary but never sufficient.**
 

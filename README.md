@@ -14,10 +14,10 @@ A free, open-source handbook for **merchant-side Payments PMs** at ecommerce com
 | --- | --- |
 | [What a Payments PM actually does](book/00-start-here-payments-pm-role/README.md) | Learn the responsibilities, decisions, partners and first steps of a Payments Product Manager. |
 | [Payment fundamentals and economics](book/01-how-payments-work/README.md) | Build the mental model: payment participants, messages, money movements and business economics. |
-| [Acquiring, gateways, issuing and payment methods](book/02-payment-products-and-infrastructure/README.md) | Learn the main products a payments team builds or integrates, and how those products fit together. |
+| [Payment providers, infrastructure dependencies and methods](book/02-payment-products-and-infrastructure/README.md) | Understand providers and rails from the merchant's selection, integration, risk, economics and operating perspective. |
 | [Checkout, fraud, authentication and PM craft](book/03-checkout-authorization-and-fraud/README.md) | Turn payment-system knowledge into safer checkout flows, better conversion and measurable product decisions. |
 | [Disputes, reconciliation and operations](book/04-disputes-reconciliation-and-operations/README.md) | Understand what happens after checkout—and how to prove that money and records agree. |
-| [New payment rails and agentic commerce](book/05-new-and-emerging-payments/README.md) | Explore evolving payment methods and new product/accountability questions. These chapters are working drafts. |
+| [New payment rails and agentic commerce](book/05-new-and-emerging-payments/README.md) | Optional merchant horizon-scanning for future acceptance, checkout and settlement choices; these chapters are working drafts. |
 
 Every section has its own readable chapter guide. You can **[see the complete table of contents](book/README.md)** without browsing technical filenames.
 
@@ -25,7 +25,7 @@ Every section has its own readable chapter guide. You can **[see the complete ta
 
 - **New to payments?** Start with [How money moves](book/01-how-payments-work/README.md) to understand the lifecycle, actors and economics. Then explore [core products](book/02-payment-products-and-infrastructure/README.md).
 - **Already a product manager?** Read [what a Payments PM owns](book/00-start-here-payments-pm-role/00-what-a-payments-pm-owns.md), then work through [checkout, authorization and fraud](book/03-checkout-authorization-and-fraud/README.md).
-- **Building or operating a payment platform?** Go to [disputes, reconciliation and reliability](book/04-disputes-reconciliation-and-operations/README.md) and use the linked PRDs and checklists.
+- **Responsible for merchant payment operations?** Go to [disputes, reconciliation and reliability](book/04-disputes-reconciliation-and-operations/README.md) and use the linked PRDs and checklists.
 - **Working on AI-led checkout or new payment rails?** Explore [emerging payments](book/05-new-and-emerging-payments/README.md) and the [agentic checkout intent test](artifacts/agentic-checkout-intent-test.md).
 
 ## Learn by solving a payment problem
