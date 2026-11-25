@@ -36,7 +36,7 @@ Every section has its own readable chapter guide. You can **[see the complete ta
 
 **A marketplace must refund one seller while holding reserves for another.** Explore the [seller funds-flow and dispute case](cases/03-marketplace-reserve-refund-dispute.md).
 
-**Two essential merchant playbooks:** [Reconciliation investigation and exception closure](artifacts/merchant-reconciliation-operations-checklist.md) · [Fraud framework: customer, transaction and context](artifacts/merchant-fraud-control-framework.md).
+**Merchant operating playbooks:** [PSP orchestration strategy and migration](artifacts/merchant-psp-routing-and-migration-playbook.md) · [Reconciliation investigation and exception closure](artifacts/merchant-reconciliation-operations-checklist.md) · [Fraud framework: customer, transaction and context](artifacts/merchant-fraud-control-framework.md).
 
 More practice: [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Solutions to all chapter exercises](answers/chapter-exercises.md).
 
@@ -61,6 +61,7 @@ Each artifact is linked from the chapter it supports. They are teaching template
 | [Subscription recovery PRD](artifacts/subscription-recovery-prd.md) | Specify retries, notices and truthful entitlements | [10A](book/03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md) |
 | [Compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md) | Assign control owners across product, risk and legal | [13A](book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) |
 | [Merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md) | Specify onboarding states and gates | [13A](book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) |
+| [Merchant PSP routing and migration](artifacts/merchant-psp-routing-and-migration-playbook.md) | Decide how and when to shift volume using resilience, success and cost | [6](book/02-payment-products-and-infrastructure/06-payment-gateways-routing-and-orchestration.md) |
 | [Merchant reconciliation investigation checklist](artifacts/merchant-reconciliation-operations-checklist.md) | Diagnose order-to-PSP-to-bank mismatches and prove exception closure | [16](book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md) |
 | [Merchant-side fraud framework worksheet](artifacts/merchant-fraud-control-framework.md) | Design customer/transaction/context signals and safe risk policy changes | [13](book/03-checkout-authorization-and-fraud/13-payment-fraud-and-risk-controls.md) |
 | [Metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md) | Define metrics, denominators and guardrails | [16A](book/04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md) |

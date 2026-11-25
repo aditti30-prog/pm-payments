@@ -28,7 +28,7 @@ Learn the main products a payments team builds or integrates, and how those prod
 
 - **[Merchant acquiring and onboarding](02-payment-products-and-infrastructure/05-merchant-acquiring-and-onboarding.md)** — How merchants are verified, underwritten and enabled to accept payments.
 - **[Marketplaces, PayFacs and splitting funds](02-payment-products-and-infrastructure/05a-marketplaces-payfacs-and-funds-flow.md)** — Who holds and owes seller funds, and how payout liabilities work.
-- **[Payment gateways and orchestration](02-payment-products-and-infrastructure/06-payment-gateways-routing-and-orchestration.md)** — Routing, retries, integrations and provider choice.
+- **[Payment gateways and orchestration](02-payment-products-and-infrastructure/06-payment-gateways-routing-and-orchestration.md)** — Merchant orchestration strategy balancing resilience, paid-order success, cost, retries and PSP migration.
 - **[Card issuing and tokenization](02-payment-products-and-infrastructure/07-card-issuing-and-tokenization.md)** — How cards are issued, secured and used.
 - **[Network tokens explained: FPAN, DPAN and stored credentials](02-payment-products-and-infrastructure/07a-network-tokens-and-card-credentials.md)** — Differentiate funding cards, device tokens and network tokens.
 - **[Digital wallets, QR payments and alternative payment methods](02-payment-products-and-infrastructure/08-wallets-qr-and-alternative-payment-methods.md)** — Acceptance and customer experience beyond card entry.
@@ -71,7 +71,7 @@ Explore evolving payment methods and new product/accountability questions. These
 
 **Learn by doing:** [Authorization decline lab](../cases/01-authorization-rate-drop.md) · [PSP timeout and retry lab](../cases/02-ambiguous-authorization-routing.md) · [Marketplace funds flow lab](../cases/03-marketplace-reserve-refund-dispute.md) · [HarborCart case study](../editorial/harborcart-case-lab.md).
 
-**Merchant operating worksheets:** [Reconciliation investigation](../artifacts/merchant-reconciliation-operations-checklist.md) · [Fraud signals and decisions](../artifacts/merchant-fraud-control-framework.md).
+**Merchant operating worksheets:** [PSP routing and migration](../artifacts/merchant-psp-routing-and-migration-playbook.md) · [Reconciliation investigation](../artifacts/merchant-reconciliation-operations-checklist.md) · [Fraud signals and decisions](../artifacts/merchant-fraud-control-framework.md).
 
 **Apply the learning:** [Templates and sample PRDs](../README.md#templates-and-worked-artifacts) · [Worked exercise answers](../answers/chapter-exercises.md) · [Payment terminology glossary](../references/glossary.md).
 
