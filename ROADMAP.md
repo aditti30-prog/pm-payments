@@ -1,4 +1,6 @@
-# Editorial roadmap
+# Editorial roadmap — Merchant Payments PM Handbook
+
+**Audience and scope:** Merchant-side Payments PMs responsible for online/in-store payment acceptance, payment methods, provider integrations, conversion, payment economics, risk, refunds, reconciliation, payouts and operations. Issuing, acquiring, gateway internals and scheme/banking regulation are explained for merchant-side dependencies, not as complete specialist infrastructure operating guidance.
 
 The textbook is organized around **the PM job → understanding payments → products/infrastructure → building → operating → emerging systems**. This structure does not replace detailed payment-system education with generic role advice.
 
@@ -64,6 +66,14 @@ The added chapters and examples are **drafts** requiring practitioner review; th
 - [x] Cross-linked both case labs from gateway, 3DS, authorization, acquiring/PayFac, disputes, reconciliation and payment-operations chapters.
 - [x] Extended the [specialist review packet](editorial/specialist-review-packet.md) with explicit counterexample tests and the [primary-source audit](editorial/primary-source-audit-2026-11-16.md) with provider-specific anchors.
 - [ ] **Unchanged:** No independent professional/scheme review or certified provider-contract validation has occurred. Automated tests establish consistency, not legal compliance or a commercially supportable design.
+
+## Merchant-side operating depth added (November 2026)
+
+- [x] Clarify merchant-side audience throughout the entry points; avoid promising full gateway, issuing, acquiring or fintech infrastructure training.
+- [x] Expand Chapter 16 to four merchant reconciliation passes, normalized sources, method-specific differences, discrepancy hypotheses, evidence-based exception closure and operating metrics.
+- [x] Expand Chapter 13 with a merchant fraud framework combining customer behavior, transaction behavior and transaction context; risk decisions, false-positive measurement and controlled rollout.
+- [x] Add practical merchant reconciliation and fraud worksheets.
+- [ ] Validate the new material with independent merchant finance, fraud, PSP operations and risk experts; provider/accounting rules remain implementation-specific.
 
 ## Planned improvements
 

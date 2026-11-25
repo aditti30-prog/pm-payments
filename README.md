@@ -1,8 +1,10 @@
-# The Payments PM Handbook
+# The Merchant Payments PM Handbook
 
-**Learn how payments work, how money moves, what can go wrong, and how product managers build reliable payment products.**
+**A practical handbook for product managers who accept, optimize and operate payments on the merchant side.**
 
-A free, open-source, practical handbook for product managers, engineers and fintech builders. It connects **payment mechanics** to **real product decisions**—from card authorization and merchant onboarding to fraud, payouts, reconciliation and AI-led commerce.
+A free, open-source handbook for **merchant-side Payments PMs** at ecommerce companies, retailers, marketplaces, subscription businesses and omnichannel merchants. It connects payment mechanics to merchant product decisions: checkout conversion, payment methods, authorization rates, fraud, refunds, acceptance cost, settlement, reconciliation and incident response.
+
+**Scope and expectations:** This is written for a **merchant integrating with and depending on payment infrastructure**, rather than for teams building the infrastructure itself. Gateways, acquirers, issuers, networks, wallets and emerging rails are explained so merchant PMs can select partners, understand behavior, specify integrations and manage outcomes. **It is not a complete operating manual for a payment gateway, fintech issuer, acquiring institution, bank, or payment network.** Those specialist areas appear as supporting context, not a promise of full infrastructure product training.
 
 **[Browse all 32 chapters](book/README.md)** · **[Try a real payments case](cases/01-authorization-rate-drop.md)** · **[Explore templates and PRDs](#templates-and-worked-artifacts)** · **[Worked chapter exercises](answers/chapter-exercises.md)**
 
@@ -34,6 +36,8 @@ Every section has its own readable chapter guide. You can **[see the complete ta
 
 **A marketplace must refund one seller while holding reserves for another.** Explore the [seller funds-flow and dispute case](cases/03-marketplace-reserve-refund-dispute.md).
 
+**Two essential merchant playbooks:** [Reconciliation investigation and exception closure](artifacts/merchant-reconciliation-operations-checklist.md) · [Fraud framework: customer, transaction and context](artifacts/merchant-fraud-control-framework.md).
+
 More practice: [HarborCart end-to-end case lab](editorial/harborcart-case-lab.md) · [Solutions to all chapter exercises](answers/chapter-exercises.md).
 
 ## About this project
@@ -57,6 +61,8 @@ Each artifact is linked from the chapter it supports. They are teaching template
 | [Subscription recovery PRD](artifacts/subscription-recovery-prd.md) | Specify retries, notices and truthful entitlements | [10A](book/03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md) |
 | [Compliance control-ownership matrix](artifacts/compliance-control-ownership-matrix.md) | Assign control owners across product, risk and legal | [13A](book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) |
 | [Merchant-onboarding PRD](artifacts/sample-prd-merchant-onboarding-controls.md) | Specify onboarding states and gates | [13A](book/03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md) |
+| [Merchant reconciliation investigation checklist](artifacts/merchant-reconciliation-operations-checklist.md) | Diagnose order-to-PSP-to-bank mismatches and prove exception closure | [16](book/04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md) |
+| [Merchant-side fraud framework worksheet](artifacts/merchant-fraud-control-framework.md) | Design customer/transaction/context signals and safe risk policy changes | [13](book/03-checkout-authorization-and-fraud/13-payment-fraud-and-risk-controls.md) |
 | [Metrics dashboard specification](artifacts/payments-metrics-dashboard-spec.md) | Define metrics, denominators and guardrails | [16A](book/04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md) |
 | [Incident review template](artifacts/payment-incident-review-template.md) | Run a payment incident review | [17](book/04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md) |
 | [Agentic checkout intent test](artifacts/agentic-checkout-intent-test.md) | Test delegated-purchase constraints | [20](book/05-new-and-emerging-payments/20-agentic-commerce-and-ai-payments.md) |

@@ -9,7 +9,7 @@ Understand what happens after checkout—and how to prove that money and records
 | Chapter | What you will learn |
 | --- | --- |
 | [Chargebacks and customer disputes](15-chargebacks-and-dispute-management.md) | Dispute lifecycles, evidence, liability and customer outcomes |
-| [Reconciling merchant, provider and bank records](16-payment-reconciliation-and-payouts.md) | Match captured sales, fees, refunds and payouts |
+| [Reconciling merchant, provider and bank records](16-payment-reconciliation-and-payouts.md) | Match orders, merchant captures, PSP journals and bank payouts; investigate and close discrepancies |
 | [Payment metrics and observability](16a-payment-performance-metrics-and-dashboards.md) | Define denominators, dashboards, alerts and guardrails |
 | [Keeping payment systems reliable](17-payment-outages-incidents-and-operations.md) | Incidents, failure recovery, operations and accountability |
 

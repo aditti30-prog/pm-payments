@@ -1,6 +1,6 @@
-# Read the Payments PM Handbook
+# Read the Merchant Payments PM Handbook
 
-This is the **reader-friendly table of contents** for a practical, 32-chapter guide to the systems, economics and product decisions behind modern payments. Choose a topic below—no need to decode the repository's file or folder names.
+This is a practical, 32-chapter guide to **merchant-side payment acceptance, optimization and operations**. It covers gateways, issuers, acquirers and fintech infrastructure **as systems a merchant relies on**, not as training to operate those businesses. Choose a topic below—no need to decode the repository's file or folder names.
 
 **New here?** Start with [How money moves](#payment-fundamentals-how-money-moves). **Already working in payments?** Jump to the problem you're solving.
 
@@ -44,7 +44,7 @@ Turn payment-system knowledge into safer checkout flows, better conversion and m
 - **[Subscriptions, saved cards and failed-payment recovery](03-checkout-authorization-and-fraud/10a-subscriptions-recurring-payments-and-dunning.md)** — Retries, recurring consent, dunning and entitlements.
 - **[3-D Secure: When and why customers are challenged](03-checkout-authorization-and-fraud/11-3d-secure-and-customer-authentication.md)** — Authentication, friction and liability trade-offs.
 - **[Improving payment authorization rates](03-checkout-authorization-and-fraud/12-improving-payment-authorization-rates.md)** — Diagnose declines and design safe optimization experiments.
-- **[Payment fraud and risk controls](03-checkout-authorization-and-fraud/13-payment-fraud-and-risk-controls.md)** — Balance loss prevention, customer experience and approval.
+- **[Payment fraud and risk controls](03-checkout-authorization-and-fraud/13-payment-fraud-and-risk-controls.md)** — Build a merchant risk framework using customer, transaction and contextual behavior.
 - **[Compliance ownership: PCI, KYC, KYB and AML](03-checkout-authorization-and-fraud/13a-compliance-pci-kyc-aml-and-ownership.md)** — Assign responsibilities without confusing standards, laws and provider controls.
 - **[Protecting customers from scams](03-checkout-authorization-and-fraud/13b-scams-and-customer-protection.md)** — Distinguish unauthorized fraud from authorized scams, with Singapore examples.
 - **[The craft of Payments PM: Discovery to delivery](03-checkout-authorization-and-fraud/14-how-to-manage-payment-products.md)** — Metrics, requirements, trade-offs and cross-functional execution.
@@ -54,7 +54,7 @@ Turn payment-system knowledge into safer checkout flows, better conversion and m
 Understand what happens after checkout—and how to prove that money and records agree.
 
 - **[Chargebacks and customer disputes](04-disputes-reconciliation-and-operations/15-chargebacks-and-dispute-management.md)** — Dispute lifecycles, evidence, liability and customer outcomes.
-- **[Reconciling merchant, provider and bank records](04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md)** — Match captured sales, fees, refunds and payouts.
+- **[Reconciling merchant, provider and bank records](04-disputes-reconciliation-and-operations/16-payment-reconciliation-and-payouts.md)** — Match merchant orders and tenders to PSP settlement and bank payouts; investigate and close discrepancies.
 - **[Payment metrics and observability](04-disputes-reconciliation-and-operations/16a-payment-performance-metrics-and-dashboards.md)** — Define denominators, dashboards, alerts and guardrails.
 - **[Keeping payment systems reliable](04-disputes-reconciliation-and-operations/17-payment-outages-incidents-and-operations.md)** — Incidents, failure recovery, operations and accountability.
 
@@ -70,6 +70,8 @@ Explore evolving payment methods and new product/accountability questions. These
 ---
 
 **Learn by doing:** [Authorization decline lab](../cases/01-authorization-rate-drop.md) · [PSP timeout and retry lab](../cases/02-ambiguous-authorization-routing.md) · [Marketplace funds flow lab](../cases/03-marketplace-reserve-refund-dispute.md) · [HarborCart case study](../editorial/harborcart-case-lab.md).
+
+**Merchant operating worksheets:** [Reconciliation investigation](../artifacts/merchant-reconciliation-operations-checklist.md) · [Fraud signals and decisions](../artifacts/merchant-fraud-control-framework.md).
 
 **Apply the learning:** [Templates and sample PRDs](../README.md#templates-and-worked-artifacts) · [Worked exercise answers](../answers/chapter-exercises.md) · [Payment terminology glossary](../references/glossary.md).
 
