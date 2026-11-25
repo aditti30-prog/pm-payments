@@ -6,7 +6,7 @@
 
 ## Learning outcomes
 
-Separate merchant fraud decisions, 3DS authentication, issuer authorization and post-transaction disputes; recognize common risk controls; define false-positive trade-offs and guardrails; and design a reviewable rule rollout.
+Build a merchant risk framework around **customer behavior**, **transaction behavior** and **transaction context**, distinguish merchant decisions from 3DS/issuer authorization and post-transaction disputes, and govern false positives, matured fraud losses and safe rollouts.
 
 ## 13.1 Several layers, several decision makers
 
@@ -43,7 +43,70 @@ A safe rollout plan specifies: target cohorts, eligibility constraints, approval
 
 Useful measures: confirmed fraud loss per value and per transactions, review precision where labels exist, false-decline proxies, manual review latency, 3DS challenge share and completion, issuer approval rate, successful paid orders, chargebacks after maturity, repeat customer contacts, and support escalations.
 
-## 13.5 Case: sudden spike in failed payments
+
+## 13.5 The merchant fraud framework: customer, transaction and context
+
+A merchant's objective is **reduce fraud-adjusted loss without needlessly losing legitimate orders**. The merchant does not replace issuer authorization, PSP risk controls, network monitoring or EMV 3DS; it controls its own order acceptance, risk-screening integration, eligible authentication requests, customer communication and fulfillment decisions, within risk/legal/provider constraints.
+
+Start by defining the threat: stolen-card purchase, account takeover, card testing, promotion/voucher abuse, refund/returns abuse, first-party misuse, or fraudulent fulfilment/delivery claims. Do not collapse these into one fraud label. Authorized-payment scams, issuer declines, technical timeouts and merchant fraud blocks are also distinct categories.
+
+**Three complementary signal pillars:**
+
+| Pillar | Signals a merchant can assess where legitimately available | What might falsely appear suspicious |
+|---|---|---|
+| **Customer behavior: who is acting?** | Account age, prior order/return history, device/account changes, login anomalies, new stored cards, new delivery addresses, voucher habits, familiar basket categories | First-time buyers, travel, gifts, shared devices, legitimate account recovery |
+| **Transaction behavior: what are they attempting?** | Order value relative to account/market baseline, number of cards and distinct attempts, retry velocity, many low-value attempts, rapid repeat orders, resalable items, atypical split payment, refund frequency | A PSP outage producing repeated failed attempts; a genuine seasonal shopping spree; legitimate multiple household orders |
+| **Transaction context: what surrounds this order?** | Local time, order channel, mobile/app version, sale campaign, currency, shipping vs billing information where lawful, card issuer geography, delivery or pickup/drop-off patterns, known provider incident | A shopper at night or abroad; a promotion spike; legitimate change in travel plans; a terminal outage |
+
+A single risk signal is **not a verdict**. Evaluate signal freshness, accuracy, purpose limitation and combinations within comparable cohorts. Time, geography or customer demographics alone must never be treated as proof of fraud. Do not collect raw PAN, sensitive authentication data or unnecessary personal information to power a merchant rule.
+
+### 13.5.1 Turn signals into a governed decision
+
+The product needs a policy decision **and** an observable customer state:
+
+| Candidate outcome | Merchant control and PM implications |
+|---|---|
+| Allow | Continue eligible checkout, retain decision/version for monitoring, measure downstream loss and fulfilment |
+| Request eligible authentication | Where method, market and PSP support it, attempt 3DS/step-up with clear UI, timeout and abandonment handling; issuer decides authentication and authorization |
+| Review or hold fulfilment | Hold dispatch (not necessarily the payment) under approved policy, with review SLA, support visibility and safe customer communication |
+| Reject/limit under approved policy | Apply risk-approved restrictions for corroborated abuse; provide safe appeal/recovery without disclosing exploitable rules |
+| Unknown/missing data | Fall back to explicitly approved behavior; do not turn a missing signal or PSP timeout into an automatic fraud conviction |
+
+**Illustrative combined-signal scenario:** A previously active account has a recent password reset, a new delivery address and device, and attempts several unusually expensive electronics purchases with two new cards. Customer history is one pillar, card/order velocity another, and location/channel/time context the third. A high-risk interpretation requires additional evidence and a **reversible** action: review or bounded fulfilment hold where authorized, not an irreversible blanket rejection. Compare against similar legitimate customers and account-recovery events.
+
+**Counterexample:** Payment failures surge during a PSP incident. Failed attempt velocity is elevated, but the cause may be merchant retry logic and unknown authorization outcomes. Before labeling card testing, distinguish unique order IDs, distinct credentials, signed payment events, PSP timeouts and issuer responses. A real PSP failure must not punish legitimate customers through the fraud engine.
+
+### 13.5.2 Event data and feature integrity
+
+Record a merchant risk decision ID linked to order/payment/attempt IDs, merchant account, pseudonymous customer/session identifiers where permitted, amount and currency, market/channel, signal and rule/model versions, event/ingestion time, outcome, reviewer override, fulfilment decision and later evidence label. Preserve *raw provider statuses* separately from the merchant risk decision. Deduplicate repeated webhooks; count truly distinct cards/attempts through appropriately authorized tokens, not raw card numbers; version velocity windows and fallback for missing features.
+
+A useful signal contract specifies: business hypothesis, event source, authorized use/retention, identity grain, time window, segment baseline, allowable missingness, decision latency budget, known false-positive patterns, owner and review date.
+
+### 13.5.3 Measure the trade-off correctly
+
+| Metric | Correct use and limitation |
+|---|---|
+| Confirmed fraud loss basis points | Confirmed fraud principal / matched **mature cohort** captured value × 10,000, not current-month GMV against unrelated historical losses |
+| Pre-PSP merchant block rate | Distinct risk-rejected orders / eligible evaluated orders; separate from issuer decline rate and 3DS failure |
+| Manual review rate and SLA | Reviewed/held order count, age, overturn rate, fulfilment delays and support impact |
+| False-positive proxy | Verified legitimate appeals, overturned reviews or controlled shadow/holdout estimates; blocked transactions have no subsequent chargeback outcome, so no chargeback does **not** prove the block was correct |
+| Authentication friction | 3DS challenge volume, completion, p95 latency, customer abandonment and valid liability treatment, by segment |
+| Loss-adjusted contribution | Legitimate successfully fulfilled margin less payment fees, expected matured fraud/chargebacks and review/servicing costs |
+| Disputes and scheme programs | Use relevant current network-defined numerators, denominators, windows and region-specific thresholds, not merchant-defined fraud loss bps as a substitute |
+
+### 13.5.4 Merchant PM rollout sequence
+
+1. **Threat and baseline:** Identify attack path and financially exposed actor; segment historic mature fraud outcomes and quantify legitimate funnel and review cost before proposing a rule.
+2. **Evidence and policy:** Review customer/transaction/context signals for data quality, seasonality, privacy and fairness; Risk owns thresholds, loss appetite and allowable actions. PM owns product-state and communication requirements.
+3. **Shadow mode:** Run candidate logic without blocking eligible traffic when safe, check signal availability, coverage and false-positive patterns. Beware selection bias: blocked orders do not later receive fraud labels.
+4. **Controlled release:** Decide eligible cohort, risk-approved comparison/holdout if appropriate, kill switch, decision latency SLO, reviewer capacity, rollback trigger and customer appeal. Do not relax mandatory controls for conversion.
+5. **Mature review:** Compare paid orders, legitimate customers harmed, manual workload, complaints and confirmed fraud/chargeback losses after labels mature. Track rule version, owner, overrides and the next review date.
+
+**Practice:** A returning customer buys expensive items at 2 a.m., after changing password and shipping address. The provider simultaneously has elevated timeouts. Separate the three signal pillars, identify what is *not* evidence of fraud, propose a reversible response with customer notice, and define the metric that would convince you the rule is damaging good orders.
+
+**Practical worksheet:** [Merchant fraud control framework](../../artifacts/merchant-fraud-control-framework.md) captures threats, signals, actions, responsibilities, guardrails and review.
+
+## 13.6 Case: sudden spike in failed payments
 
 The commerce team sees a higher decline rate after a risk rules release. Investigation should distinguish: blocked *before* PSP submission, 3DS challenges abandoned, PSP/acquirer rejections, issuer declines and unknown technical outcomes. A single “payment failure” category collapses distinct causes and makes rollback unsafe. The PM should request a segmented event map and data-quality verification before changing policy.
 
